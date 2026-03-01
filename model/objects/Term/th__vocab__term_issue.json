@@ -1,0 +1,11 @@
+{
+  "definition": "Issue (IS): a factual report of an observed problem, defect, risk, or inconsistency that may drive creation of a Change Intent.",
+  "denotes_entity_ids": [
+    "th:artifacts/issue"
+  ],
+  "id": "th:vocab/term_issue",
+  "kind": "Term",
+  "label": "Issue",
+  "short_name": "vocab.term_issue",
+  "status": "Draft"
+}

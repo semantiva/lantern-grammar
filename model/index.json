@@ -523,6 +523,18 @@
       "short_name": "vocab.term_gate"
     },
     {
+      "id": "th:vocab/term_issue",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_issue.json",
+      "short_name": "vocab.term_issue"
+    },
+    {
+      "id": "th:vocab/term_question",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_question.json",
+      "short_name": "vocab.term_question"
+    },
+    {
       "id": "th:vocab/term_spec",
       "kind": "Term",
       "locator": "model/objects/Term/th__vocab__term_spec.json",
