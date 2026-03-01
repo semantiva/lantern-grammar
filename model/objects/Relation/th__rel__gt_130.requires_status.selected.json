@@ -5,6 +5,6 @@
   "relation_type_id": "th:reltypes/requires_status",
   "short_name": "rel.gt_130.requires_status.selected",
   "source_entity_id": "th:gates/gt_130",
-  "status": "Draft",
+  "status": "Released",
   "target_entity_id": "th:statuses/selected"
 }

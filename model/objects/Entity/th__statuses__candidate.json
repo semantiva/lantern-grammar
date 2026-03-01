@@ -3,5 +3,5 @@
   "id": "th:statuses/candidate",
   "kind": "Entity",
   "short_name": "statuses.candidate",
-  "status": "Draft"
+  "status": "Released"
 }

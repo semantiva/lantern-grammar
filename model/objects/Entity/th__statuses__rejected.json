@@ -3,5 +3,5 @@
   "id": "th:statuses/rejected",
   "kind": "Entity",
   "short_name": "statuses.rejected",
-  "status": "Draft"
+  "status": "Released"
 }

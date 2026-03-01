@@ -3,5 +3,5 @@
   "id": "th:statuses/ready",
   "kind": "Entity",
   "short_name": "statuses.ready",
-  "status": "Draft"
+  "status": "Released"
 }

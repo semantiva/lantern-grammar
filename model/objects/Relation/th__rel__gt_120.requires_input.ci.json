@@ -5,6 +5,6 @@
   "relation_type_id": "th:reltypes/requires_input",
   "short_name": "rel.gt_120.requires_input.ci",
   "source_entity_id": "th:gates/gt_120",
-  "status": "Draft",
+  "status": "Released",
   "target_entity_id": "th:artifacts/ci"
 }

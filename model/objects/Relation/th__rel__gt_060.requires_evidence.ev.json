@@ -5,6 +5,6 @@
   "relation_type_id": "th:reltypes/requires_evidence",
   "short_name": "rel.gt_060.requires_evidence.ev",
   "source_entity_id": "th:gates/gt_060",
-  "status": "Draft",
+  "status": "Released",
   "target_entity_id": "th:records/ev"
 }

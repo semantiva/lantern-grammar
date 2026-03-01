@@ -3,5 +3,5 @@
   "id": "th:statuses/proposed",
   "kind": "Entity",
   "short_name": "statuses.proposed",
-  "status": "Draft"
+  "status": "Released"
 }
