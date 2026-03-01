@@ -1,0 +1,12 @@
+{
+  "definition": "Canonical term for Design Input Pack (DIP).",
+  "denotes_entity_ids": [
+    "th:artifacts/dip"
+  ],
+  "id": "th:vocab/term_dip",
+  "kind": "Term",
+  "label": "Design Input Pack",
+  "language": "en",
+  "short_name": "vocab.term_dip",
+  "status": "Draft"
+}

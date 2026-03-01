@@ -479,6 +479,108 @@
       "kind": "Entity",
       "locator": "model/objects/Entity/th__statuses__verified.json",
       "short_name": "statuses.verified"
+    },
+    {
+      "id": "th:vocab/term_arch",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_arch.json",
+      "short_name": "vocab.term_arch"
+    },
+    {
+      "id": "th:vocab/term_ch",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_ch.json",
+      "short_name": "vocab.term_ch"
+    },
+    {
+      "id": "th:vocab/term_ci",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_ci.json",
+      "short_name": "vocab.term_ci"
+    },
+    {
+      "id": "th:vocab/term_dec",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_dec.json",
+      "short_name": "vocab.term_dec"
+    },
+    {
+      "id": "th:vocab/term_dip",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_dip.json",
+      "short_name": "vocab.term_dip"
+    },
+    {
+      "id": "th:vocab/term_ev",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_ev.json",
+      "short_name": "vocab.term_ev"
+    },
+    {
+      "id": "th:vocab/term_gate",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_gate.json",
+      "short_name": "vocab.term_gate"
+    },
+    {
+      "id": "th:vocab/term_spec",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_spec.json",
+      "short_name": "vocab.term_spec"
+    },
+    {
+      "id": "th:vocab/term_status_addressed",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_status_addressed.json",
+      "short_name": "vocab.term_status_addressed"
+    },
+    {
+      "id": "th:vocab/term_status_approved",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_status_approved.json",
+      "short_name": "vocab.term_status_approved"
+    },
+    {
+      "id": "th:vocab/term_status_draft",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_status_draft.json",
+      "short_name": "vocab.term_status_draft"
+    },
+    {
+      "id": "th:vocab/term_status_proposed",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_status_proposed.json",
+      "short_name": "vocab.term_status_proposed"
+    },
+    {
+      "id": "th:vocab/term_status_ready",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_status_ready.json",
+      "short_name": "vocab.term_status_ready"
+    },
+    {
+      "id": "th:vocab/term_status_rejected",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_status_rejected.json",
+      "short_name": "vocab.term_status_rejected"
+    },
+    {
+      "id": "th:vocab/term_status_selected",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_status_selected.json",
+      "short_name": "vocab.term_status_selected"
+    },
+    {
+      "id": "th:vocab/term_status_superseded",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_status_superseded.json",
+      "short_name": "vocab.term_status_superseded"
+    },
+    {
+      "id": "th:vocab/term_status_verified",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_status_verified.json",
+      "short_name": "vocab.term_status_verified"
     }
   ],
   "index_version": "0.1.0"

@@ -6,7 +6,7 @@
     "properties": false,
     "relations": true,
     "valuesets": false,
-    "vocabulary": false
+    "vocabulary": true
   },
   "name": "Tier-H Model",
   "namespaces": [

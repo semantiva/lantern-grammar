@@ -1,0 +1,12 @@
+{
+  "definition": "Canonical term for Verified status.",
+  "denotes_entity_ids": [
+    "th:statuses/verified"
+  ],
+  "id": "th:vocab/term_status_verified",
+  "kind": "Term",
+  "label": "Verified",
+  "language": "en",
+  "short_name": "vocab.term_status_verified",
+  "status": "Draft"
+}

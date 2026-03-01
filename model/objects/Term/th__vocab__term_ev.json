@@ -1,0 +1,12 @@
+{
+  "definition": "Canonical term for Evidence record (EV).",
+  "denotes_entity_ids": [
+    "th:records/ev"
+  ],
+  "id": "th:vocab/term_ev",
+  "kind": "Term",
+  "label": "Evidence record",
+  "language": "en",
+  "short_name": "vocab.term_ev",
+  "status": "Draft"
+}
