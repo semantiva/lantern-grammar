@@ -1,0 +1,15 @@
+{
+  "definition": "GT-120 Change Increment Selection: selects exactly one Change Increment candidate to address a Ready Change Intent.",
+  "id": "th:gates/gt_120",
+  "kind": "Entity",
+  "relation_ids": [
+    "th:rel/gt_120.requires_evidence.dec",
+    "th:rel/gt_120.requires_evidence.ev",
+    "th:rel/gt_120.requires_input.ch",
+    "th:rel/gt_120.requires_input.ci",
+    "th:rel/gt_120.requires_status.candidate",
+    "th:rel/gt_120.requires_status.ready"
+  ],
+  "short_name": "gates.gt_120",
+  "status": "Draft"
+}

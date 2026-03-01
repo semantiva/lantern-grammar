@@ -1,0 +1,10 @@
+{
+  "definition": "GT-036 requires an Architecture Definition (ARCH) draft as input.",
+  "id": "th:rel/gt_036.requires_input.arch",
+  "kind": "Relation",
+  "relation_type_id": "th:reltypes/requires_input",
+  "short_name": "rel.gt_036.requires_input.arch",
+  "source_entity_id": "th:gates/gt_036",
+  "status": "Draft",
+  "target_entity_id": "th:artifacts/arch"
+}

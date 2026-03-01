@@ -1,0 +1,10 @@
+{
+  "definition": "GT-035 requires Evidence Record(s) covering SPEC derivation linkage, completeness, acceptance criteria, and validation target.",
+  "id": "th:rel/gt_035.requires_evidence.ev",
+  "kind": "Relation",
+  "relation_type_id": "th:reltypes/requires_evidence",
+  "short_name": "rel.gt_035.requires_evidence.ev",
+  "source_entity_id": "th:gates/gt_035",
+  "status": "Draft",
+  "target_entity_id": "th:records/ev"
+}

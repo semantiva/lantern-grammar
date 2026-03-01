@@ -1,0 +1,20 @@
+{
+  "model_id": "tier-h.model",
+  "model_version": "0.1.0-draft",
+  "modules": {
+    "entities": true,
+    "properties": false,
+    "relations": true,
+    "valuesets": false,
+    "vocabulary": false
+  },
+  "name": "Tier-H Model",
+  "namespaces": [
+    {
+      "prefix": "th",
+      "uri": "https://tier-h.semantiva.dev/ns#"
+    }
+  ],
+  "representation_version": "0.1.0",
+  "required_contract_version": "0.1.0"
+}

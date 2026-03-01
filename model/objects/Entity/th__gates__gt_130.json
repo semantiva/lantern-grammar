@@ -1,0 +1,15 @@
+{
+  "definition": "GT-130 Integration Verification: verifies that a Selected Change Increment has been integrated and the declared validation target signal is met.",
+  "id": "th:gates/gt_130",
+  "kind": "Entity",
+  "relation_ids": [
+    "th:rel/gt_130.requires_evidence.dec",
+    "th:rel/gt_130.requires_evidence.ev",
+    "th:rel/gt_130.requires_input.ch",
+    "th:rel/gt_130.requires_input.ci",
+    "th:rel/gt_130.requires_status.ready",
+    "th:rel/gt_130.requires_status.selected"
+  ],
+  "short_name": "gates.gt_130",
+  "status": "Draft"
+}

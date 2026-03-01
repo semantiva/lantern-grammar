@@ -1,0 +1,10 @@
+{
+  "definition": "GT-130 requires Evidence Record(s) covering integration diffs, gate checks, and the CH validation target signal.",
+  "id": "th:rel/gt_130.requires_evidence.ev",
+  "kind": "Relation",
+  "relation_type_id": "th:reltypes/requires_evidence",
+  "short_name": "rel.gt_130.requires_evidence.ev",
+  "source_entity_id": "th:gates/gt_130",
+  "status": "Draft",
+  "target_entity_id": "th:records/ev"
+}

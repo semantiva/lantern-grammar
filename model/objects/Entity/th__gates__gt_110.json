@@ -1,0 +1,15 @@
+{
+  "definition": "GT-110 Input Kit Readiness: confirms a Change Intent has sufficient pinned inputs and executable criteria to proceed to Change Increment authoring.",
+  "id": "th:gates/gt_110",
+  "kind": "Entity",
+  "relation_ids": [
+    "th:rel/gt_110.requires_evidence.dec",
+    "th:rel/gt_110.requires_evidence.ev",
+    "th:rel/gt_110.requires_input.arch",
+    "th:rel/gt_110.requires_input.ch",
+    "th:rel/gt_110.requires_input.spec",
+    "th:rel/gt_110.requires_status.proposed"
+  ],
+  "short_name": "gates.gt_110",
+  "status": "Draft"
+}

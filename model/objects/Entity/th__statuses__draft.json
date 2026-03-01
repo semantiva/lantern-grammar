@@ -1,0 +1,7 @@
+{
+  "definition": "Draft: initial working status indicating an artifact is in progress and has not been baselined.",
+  "id": "th:statuses/draft",
+  "kind": "Entity",
+  "short_name": "statuses.draft",
+  "status": "Draft"
+}

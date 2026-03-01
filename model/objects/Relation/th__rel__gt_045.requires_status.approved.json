@@ -1,0 +1,10 @@
+{
+  "definition": "GT-045 requires the input DIP to have status Approved.",
+  "id": "th:rel/gt_045.requires_status.approved",
+  "kind": "Relation",
+  "relation_type_id": "th:reltypes/requires_status",
+  "short_name": "rel.gt_045.requires_status.approved",
+  "source_entity_id": "th:gates/gt_045",
+  "status": "Draft",
+  "target_entity_id": "th:statuses/approved"
+}

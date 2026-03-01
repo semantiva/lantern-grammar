@@ -1,0 +1,7 @@
+{
+  "definition": "Requirements Specification (SPEC): a formal specification of requirements derived from a locked DIP.",
+  "id": "th:artifacts/spec",
+  "kind": "Entity",
+  "short_name": "artifacts.spec",
+  "status": "Draft"
+}

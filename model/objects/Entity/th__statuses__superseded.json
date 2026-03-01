@@ -1,0 +1,7 @@
+{
+  "definition": "Superseded: an artifact has been replaced by a newer approved baseline.",
+  "id": "th:statuses/superseded",
+  "kind": "Entity",
+  "short_name": "statuses.superseded",
+  "status": "Draft"
+}

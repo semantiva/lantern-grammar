@@ -1,0 +1,10 @@
+{
+  "definition": "GT-060 requires the input SPEC to have status Draft.",
+  "id": "th:rel/gt_060.requires_status.draft",
+  "kind": "Relation",
+  "relation_type_id": "th:reltypes/requires_status",
+  "short_name": "rel.gt_060.requires_status.draft",
+  "source_entity_id": "th:gates/gt_060",
+  "status": "Draft",
+  "target_entity_id": "th:statuses/draft"
+}

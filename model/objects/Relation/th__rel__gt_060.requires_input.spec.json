@@ -1,0 +1,10 @@
+{
+  "definition": "GT-060 requires a Requirements Specification (SPEC) as input.",
+  "id": "th:rel/gt_060.requires_input.spec",
+  "kind": "Relation",
+  "relation_type_id": "th:reltypes/requires_input",
+  "short_name": "rel.gt_060.requires_input.spec",
+  "source_entity_id": "th:gates/gt_060",
+  "status": "Draft",
+  "target_entity_id": "th:artifacts/spec"
+}

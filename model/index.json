@@ -1,0 +1,485 @@
+{
+  "entries": [
+    {
+      "id": "th:artifacts/arch",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__artifacts__arch.json",
+      "short_name": "artifacts.arch"
+    },
+    {
+      "id": "th:artifacts/ch",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__artifacts__ch.json",
+      "short_name": "artifacts.ch"
+    },
+    {
+      "id": "th:artifacts/ci",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__artifacts__ci.json",
+      "short_name": "artifacts.ci"
+    },
+    {
+      "id": "th:artifacts/dip",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__artifacts__dip.json",
+      "short_name": "artifacts.dip"
+    },
+    {
+      "id": "th:artifacts/issue",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__artifacts__issue.json",
+      "short_name": "artifacts.issue"
+    },
+    {
+      "id": "th:artifacts/question",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__artifacts__question.json",
+      "short_name": "artifacts.question"
+    },
+    {
+      "id": "th:artifacts/spec",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__artifacts__spec.json",
+      "short_name": "artifacts.spec"
+    },
+    {
+      "id": "th:gates/gt_030",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__gates__gt_030.json",
+      "short_name": "gates.gt_030"
+    },
+    {
+      "id": "th:gates/gt_035",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__gates__gt_035.json",
+      "short_name": "gates.gt_035"
+    },
+    {
+      "id": "th:gates/gt_036",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__gates__gt_036.json",
+      "short_name": "gates.gt_036"
+    },
+    {
+      "id": "th:gates/gt_045",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__gates__gt_045.json",
+      "short_name": "gates.gt_045"
+    },
+    {
+      "id": "th:gates/gt_050",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__gates__gt_050.json",
+      "short_name": "gates.gt_050"
+    },
+    {
+      "id": "th:gates/gt_060",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__gates__gt_060.json",
+      "short_name": "gates.gt_060"
+    },
+    {
+      "id": "th:gates/gt_110",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__gates__gt_110.json",
+      "short_name": "gates.gt_110"
+    },
+    {
+      "id": "th:gates/gt_120",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__gates__gt_120.json",
+      "short_name": "gates.gt_120"
+    },
+    {
+      "id": "th:gates/gt_130",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__gates__gt_130.json",
+      "short_name": "gates.gt_130"
+    },
+    {
+      "id": "th:records/dec",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__records__dec.json",
+      "short_name": "records.dec"
+    },
+    {
+      "id": "th:records/ev",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__records__ev.json",
+      "short_name": "records.ev"
+    },
+    {
+      "id": "th:rel/gt_030.requires_evidence.dec",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_030.requires_evidence.dec.json",
+      "short_name": "rel.gt_030.requires_evidence.dec"
+    },
+    {
+      "id": "th:rel/gt_030.requires_evidence.ev",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_030.requires_evidence.ev.json",
+      "short_name": "rel.gt_030.requires_evidence.ev"
+    },
+    {
+      "id": "th:rel/gt_030.requires_input.dip",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_030.requires_input.dip.json",
+      "short_name": "rel.gt_030.requires_input.dip"
+    },
+    {
+      "id": "th:rel/gt_030.requires_status.draft",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_030.requires_status.draft.json",
+      "short_name": "rel.gt_030.requires_status.draft"
+    },
+    {
+      "id": "th:rel/gt_035.requires_evidence.dec",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_035.requires_evidence.dec.json",
+      "short_name": "rel.gt_035.requires_evidence.dec"
+    },
+    {
+      "id": "th:rel/gt_035.requires_evidence.ev",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_035.requires_evidence.ev.json",
+      "short_name": "rel.gt_035.requires_evidence.ev"
+    },
+    {
+      "id": "th:rel/gt_035.requires_input.dip",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_035.requires_input.dip.json",
+      "short_name": "rel.gt_035.requires_input.dip"
+    },
+    {
+      "id": "th:rel/gt_035.requires_input.spec",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_035.requires_input.spec.json",
+      "short_name": "rel.gt_035.requires_input.spec"
+    },
+    {
+      "id": "th:rel/gt_035.requires_status.approved",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_035.requires_status.approved.json",
+      "short_name": "rel.gt_035.requires_status.approved"
+    },
+    {
+      "id": "th:rel/gt_035.requires_status.draft",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_035.requires_status.draft.json",
+      "short_name": "rel.gt_035.requires_status.draft"
+    },
+    {
+      "id": "th:rel/gt_036.requires_evidence.dec",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_036.requires_evidence.dec.json",
+      "short_name": "rel.gt_036.requires_evidence.dec"
+    },
+    {
+      "id": "th:rel/gt_036.requires_evidence.ev",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_036.requires_evidence.ev.json",
+      "short_name": "rel.gt_036.requires_evidence.ev"
+    },
+    {
+      "id": "th:rel/gt_036.requires_input.arch",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_036.requires_input.arch.json",
+      "short_name": "rel.gt_036.requires_input.arch"
+    },
+    {
+      "id": "th:rel/gt_036.requires_input.dip",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_036.requires_input.dip.json",
+      "short_name": "rel.gt_036.requires_input.dip"
+    },
+    {
+      "id": "th:rel/gt_036.requires_status.approved",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_036.requires_status.approved.json",
+      "short_name": "rel.gt_036.requires_status.approved"
+    },
+    {
+      "id": "th:rel/gt_036.requires_status.draft",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_036.requires_status.draft.json",
+      "short_name": "rel.gt_036.requires_status.draft"
+    },
+    {
+      "id": "th:rel/gt_045.requires_evidence.dec",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_045.requires_evidence.dec.json",
+      "short_name": "rel.gt_045.requires_evidence.dec"
+    },
+    {
+      "id": "th:rel/gt_045.requires_evidence.ev",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_045.requires_evidence.ev.json",
+      "short_name": "rel.gt_045.requires_evidence.ev"
+    },
+    {
+      "id": "th:rel/gt_045.requires_input.arch",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_045.requires_input.arch.json",
+      "short_name": "rel.gt_045.requires_input.arch"
+    },
+    {
+      "id": "th:rel/gt_045.requires_input.dip",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_045.requires_input.dip.json",
+      "short_name": "rel.gt_045.requires_input.dip"
+    },
+    {
+      "id": "th:rel/gt_045.requires_input.spec",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_045.requires_input.spec.json",
+      "short_name": "rel.gt_045.requires_input.spec"
+    },
+    {
+      "id": "th:rel/gt_045.requires_status.approved",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_045.requires_status.approved.json",
+      "short_name": "rel.gt_045.requires_status.approved"
+    },
+    {
+      "id": "th:rel/gt_045.requires_status.draft",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_045.requires_status.draft.json",
+      "short_name": "rel.gt_045.requires_status.draft"
+    },
+    {
+      "id": "th:rel/gt_050.requires_evidence.dec",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_050.requires_evidence.dec.json",
+      "short_name": "rel.gt_050.requires_evidence.dec"
+    },
+    {
+      "id": "th:rel/gt_050.requires_evidence.ev",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_050.requires_evidence.ev.json",
+      "short_name": "rel.gt_050.requires_evidence.ev"
+    },
+    {
+      "id": "th:rel/gt_050.requires_input.arch",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_050.requires_input.arch.json",
+      "short_name": "rel.gt_050.requires_input.arch"
+    },
+    {
+      "id": "th:rel/gt_050.requires_status.draft",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_050.requires_status.draft.json",
+      "short_name": "rel.gt_050.requires_status.draft"
+    },
+    {
+      "id": "th:rel/gt_060.requires_evidence.dec",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_060.requires_evidence.dec.json",
+      "short_name": "rel.gt_060.requires_evidence.dec"
+    },
+    {
+      "id": "th:rel/gt_060.requires_evidence.ev",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_060.requires_evidence.ev.json",
+      "short_name": "rel.gt_060.requires_evidence.ev"
+    },
+    {
+      "id": "th:rel/gt_060.requires_input.spec",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_060.requires_input.spec.json",
+      "short_name": "rel.gt_060.requires_input.spec"
+    },
+    {
+      "id": "th:rel/gt_060.requires_status.draft",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_060.requires_status.draft.json",
+      "short_name": "rel.gt_060.requires_status.draft"
+    },
+    {
+      "id": "th:rel/gt_110.requires_evidence.dec",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_110.requires_evidence.dec.json",
+      "short_name": "rel.gt_110.requires_evidence.dec"
+    },
+    {
+      "id": "th:rel/gt_110.requires_evidence.ev",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_110.requires_evidence.ev.json",
+      "short_name": "rel.gt_110.requires_evidence.ev"
+    },
+    {
+      "id": "th:rel/gt_110.requires_input.arch",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_110.requires_input.arch.json",
+      "short_name": "rel.gt_110.requires_input.arch"
+    },
+    {
+      "id": "th:rel/gt_110.requires_input.ch",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_110.requires_input.ch.json",
+      "short_name": "rel.gt_110.requires_input.ch"
+    },
+    {
+      "id": "th:rel/gt_110.requires_input.spec",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_110.requires_input.spec.json",
+      "short_name": "rel.gt_110.requires_input.spec"
+    },
+    {
+      "id": "th:rel/gt_110.requires_status.proposed",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_110.requires_status.proposed.json",
+      "short_name": "rel.gt_110.requires_status.proposed"
+    },
+    {
+      "id": "th:rel/gt_120.requires_evidence.dec",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_120.requires_evidence.dec.json",
+      "short_name": "rel.gt_120.requires_evidence.dec"
+    },
+    {
+      "id": "th:rel/gt_120.requires_evidence.ev",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_120.requires_evidence.ev.json",
+      "short_name": "rel.gt_120.requires_evidence.ev"
+    },
+    {
+      "id": "th:rel/gt_120.requires_input.ch",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_120.requires_input.ch.json",
+      "short_name": "rel.gt_120.requires_input.ch"
+    },
+    {
+      "id": "th:rel/gt_120.requires_input.ci",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_120.requires_input.ci.json",
+      "short_name": "rel.gt_120.requires_input.ci"
+    },
+    {
+      "id": "th:rel/gt_120.requires_status.candidate",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_120.requires_status.candidate.json",
+      "short_name": "rel.gt_120.requires_status.candidate"
+    },
+    {
+      "id": "th:rel/gt_120.requires_status.ready",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_120.requires_status.ready.json",
+      "short_name": "rel.gt_120.requires_status.ready"
+    },
+    {
+      "id": "th:rel/gt_130.requires_evidence.dec",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_130.requires_evidence.dec.json",
+      "short_name": "rel.gt_130.requires_evidence.dec"
+    },
+    {
+      "id": "th:rel/gt_130.requires_evidence.ev",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_130.requires_evidence.ev.json",
+      "short_name": "rel.gt_130.requires_evidence.ev"
+    },
+    {
+      "id": "th:rel/gt_130.requires_input.ch",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_130.requires_input.ch.json",
+      "short_name": "rel.gt_130.requires_input.ch"
+    },
+    {
+      "id": "th:rel/gt_130.requires_input.ci",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_130.requires_input.ci.json",
+      "short_name": "rel.gt_130.requires_input.ci"
+    },
+    {
+      "id": "th:rel/gt_130.requires_status.ready",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_130.requires_status.ready.json",
+      "short_name": "rel.gt_130.requires_status.ready"
+    },
+    {
+      "id": "th:rel/gt_130.requires_status.selected",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_130.requires_status.selected.json",
+      "short_name": "rel.gt_130.requires_status.selected"
+    },
+    {
+      "id": "th:reltypes/requires_evidence",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__reltypes__requires_evidence.json",
+      "short_name": "reltypes.requires_evidence"
+    },
+    {
+      "id": "th:reltypes/requires_input",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__reltypes__requires_input.json",
+      "short_name": "reltypes.requires_input"
+    },
+    {
+      "id": "th:reltypes/requires_status",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__reltypes__requires_status.json",
+      "short_name": "reltypes.requires_status"
+    },
+    {
+      "id": "th:statuses/addressed",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__statuses__addressed.json",
+      "short_name": "statuses.addressed"
+    },
+    {
+      "id": "th:statuses/approved",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__statuses__approved.json",
+      "short_name": "statuses.approved"
+    },
+    {
+      "id": "th:statuses/candidate",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__statuses__candidate.json",
+      "short_name": "statuses.candidate"
+    },
+    {
+      "id": "th:statuses/draft",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__statuses__draft.json",
+      "short_name": "statuses.draft"
+    },
+    {
+      "id": "th:statuses/proposed",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__statuses__proposed.json",
+      "short_name": "statuses.proposed"
+    },
+    {
+      "id": "th:statuses/ready",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__statuses__ready.json",
+      "short_name": "statuses.ready"
+    },
+    {
+      "id": "th:statuses/rejected",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__statuses__rejected.json",
+      "short_name": "statuses.rejected"
+    },
+    {
+      "id": "th:statuses/selected",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__statuses__selected.json",
+      "short_name": "statuses.selected"
+    },
+    {
+      "id": "th:statuses/superseded",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__statuses__superseded.json",
+      "short_name": "statuses.superseded"
+    },
+    {
+      "id": "th:statuses/verified",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__statuses__verified.json",
+      "short_name": "statuses.verified"
+    }
+  ],
+  "index_version": "0.1.0"
+}

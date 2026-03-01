@@ -1,0 +1,7 @@
+{
+  "definition": "Addressed: a Change Intent has been addressed by a verified Change Increment.",
+  "id": "th:statuses/addressed",
+  "kind": "Entity",
+  "short_name": "statuses.addressed",
+  "status": "Draft"
+}

@@ -1,0 +1,16 @@
+{
+  "definition": "GT-045 DIP/SPEC/ARCH Coherence Preflight: confirms there is no contradiction between a locked DIP and its derived SPEC and ARCH drafts.",
+  "id": "th:gates/gt_045",
+  "kind": "Entity",
+  "relation_ids": [
+    "th:rel/gt_045.requires_evidence.dec",
+    "th:rel/gt_045.requires_evidence.ev",
+    "th:rel/gt_045.requires_input.arch",
+    "th:rel/gt_045.requires_input.dip",
+    "th:rel/gt_045.requires_input.spec",
+    "th:rel/gt_045.requires_status.approved",
+    "th:rel/gt_045.requires_status.draft"
+  ],
+  "short_name": "gates.gt_045",
+  "status": "Draft"
+}

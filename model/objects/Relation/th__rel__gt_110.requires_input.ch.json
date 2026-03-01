@@ -1,0 +1,10 @@
+{
+  "definition": "GT-110 requires a Change Intent (CH) as input.",
+  "id": "th:rel/gt_110.requires_input.ch",
+  "kind": "Relation",
+  "relation_type_id": "th:reltypes/requires_input",
+  "short_name": "rel.gt_110.requires_input.ch",
+  "source_entity_id": "th:gates/gt_110",
+  "status": "Draft",
+  "target_entity_id": "th:artifacts/ch"
+}

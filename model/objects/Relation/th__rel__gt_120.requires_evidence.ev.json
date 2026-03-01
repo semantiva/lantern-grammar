@@ -1,0 +1,10 @@
+{
+  "definition": "GT-120 requires Evidence Record(s) covering candidate CI assessment and comparison against CH criteria.",
+  "id": "th:rel/gt_120.requires_evidence.ev",
+  "kind": "Relation",
+  "relation_type_id": "th:reltypes/requires_evidence",
+  "short_name": "rel.gt_120.requires_evidence.ev",
+  "source_entity_id": "th:gates/gt_120",
+  "status": "Draft",
+  "target_entity_id": "th:records/ev"
+}

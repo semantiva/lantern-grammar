@@ -1,0 +1,7 @@
+{
+  "definition": "Decision Record (DEC): a structured record of a gate decision outcome, referencing evidence and any waivers.",
+  "id": "th:records/dec",
+  "kind": "Entity",
+  "short_name": "records.dec",
+  "status": "Draft"
+}
