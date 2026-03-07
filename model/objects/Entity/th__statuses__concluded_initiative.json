@@ -1,0 +1,7 @@
+{
+  "definition": "Concluded: an Initiative is finished or formally closed.",
+  "id": "th:statuses/concluded_initiative",
+  "kind": "Entity",
+  "short_name": "statuses.concluded_initiative",
+  "status": "Draft"
+}

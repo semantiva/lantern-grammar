@@ -1,0 +1,7 @@
+{
+  "definition": "InProgress: an Initiative is currently being pursued through one or more related Change Intents.",
+  "id": "th:statuses/in_progress_initiative",
+  "kind": "Entity",
+  "short_name": "statuses.in_progress_initiative",
+  "status": "Draft"
+}

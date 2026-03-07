@@ -25,6 +25,12 @@
       "short_name": "artifacts.dip"
     },
     {
+      "id": "th:artifacts/initiative",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__artifacts__initiative.json",
+      "short_name": "artifacts.initiative"
+    },
+    {
       "id": "th:artifacts/issue",
       "kind": "Entity",
       "locator": "model/objects/Entity/th__artifacts__issue.json",
@@ -403,6 +409,18 @@
       "short_name": "rel.gt_130.requires_status.selected"
     },
     {
+      "id": "th:rel/initiative.decomposes_to.ch",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__initiative.decomposes_to.ch.json",
+      "short_name": "rel.initiative.decomposes_to.ch"
+    },
+    {
+      "id": "th:reltypes/decomposes_to",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__reltypes__decomposes_to.json",
+      "short_name": "reltypes.decomposes_to"
+    },
+    {
       "id": "th:reltypes/requires_evidence",
       "kind": "Entity",
       "locator": "model/objects/Entity/th__reltypes__requires_evidence.json",
@@ -445,16 +463,34 @@
       "short_name": "statuses.draft"
     },
     {
+      "id": "th:statuses/in_progress_initiative",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__statuses__in_progress_initiative.json",
+      "short_name": "statuses.in_progress_initiative"
+    },
+    {
       "id": "th:statuses/proposed",
       "kind": "Entity",
       "locator": "model/objects/Entity/th__statuses__proposed.json",
       "short_name": "statuses.proposed"
     },
     {
+      "id": "th:statuses/proposed_initiative",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__statuses__proposed_initiative.json",
+      "short_name": "statuses.proposed_initiative"
+    },
+    {
       "id": "th:statuses/ready",
       "kind": "Entity",
       "locator": "model/objects/Entity/th__statuses__ready.json",
       "short_name": "statuses.ready"
+    },
+    {
+      "id": "th:statuses/ready_initiative",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__statuses__ready_initiative.json",
+      "short_name": "statuses.ready_initiative"
     },
     {
       "id": "th:statuses/rejected",
@@ -467,6 +503,12 @@
       "kind": "Entity",
       "locator": "model/objects/Entity/th__statuses__selected.json",
       "short_name": "statuses.selected"
+    },
+    {
+      "id": "th:statuses/concluded_initiative",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__statuses__concluded_initiative.json",
+      "short_name": "statuses.concluded_initiative"
     },
     {
       "id": "th:statuses/superseded",
@@ -521,6 +563,12 @@
       "kind": "Term",
       "locator": "model/objects/Term/th__vocab__term_gate.json",
       "short_name": "vocab.term_gate"
+    },
+    {
+      "id": "th:vocab/term_initiative",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_initiative.json",
+      "short_name": "vocab.term_initiative"
     },
     {
       "id": "th:vocab/term_issue",
@@ -595,5 +643,5 @@
       "short_name": "vocab.term_status_verified"
     }
   ],
-  "index_version": "0.1.0"
+  "index_version": "0.1.1"
 }

@@ -1,0 +1,7 @@
+{
+  "definition": "Ready: an Initiative is sufficiently defined and approved for active decomposition and execution planning.",
+  "id": "th:statuses/ready_initiative",
+  "kind": "Entity",
+  "short_name": "statuses.ready_initiative",
+  "status": "Draft"
+}

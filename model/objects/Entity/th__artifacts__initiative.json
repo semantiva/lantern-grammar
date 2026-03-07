@@ -1,0 +1,7 @@
+{
+  "definition": "Initiative: a bounded planning object representing a larger intended outcome that decomposes into one or more Change Intents (CH).",
+  "id": "th:artifacts/initiative",
+  "kind": "Entity",
+  "short_name": "artifacts.initiative",
+  "status": "Draft"
+}
