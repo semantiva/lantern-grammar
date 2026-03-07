@@ -3,5 +3,5 @@
   "id": "th:statuses/ready_initiative",
   "kind": "Entity",
   "short_name": "statuses.ready_initiative",
-  "status": "Draft"
+  "status": "Released"
 }

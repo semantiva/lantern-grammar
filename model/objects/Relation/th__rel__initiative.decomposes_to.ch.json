@@ -5,6 +5,6 @@
   "relation_type_id": "th:reltypes/decomposes_to",
   "short_name": "rel.initiative.decomposes_to.ch",
   "source_entity_id": "th:artifacts/initiative",
-  "status": "Draft",
+  "status": "Released",
   "target_entity_id": "th:artifacts/ch"
 }
