@@ -1,0 +1,12 @@
+{
+  "definition": "Canonical term for Design Baseline (DB).",
+  "denotes_entity_ids": [
+    "th:artifacts/db"
+  ],
+  "id": "th:vocab/term_db",
+  "kind": "Term",
+  "label": "Design Baseline",
+  "language": "en",
+  "short_name": "vocab.term_db",
+  "status": "Released"
+}

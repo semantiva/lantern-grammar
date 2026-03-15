@@ -19,6 +19,18 @@
       "short_name": "artifacts.ci"
     },
     {
+      "id": "th:artifacts/db",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__artifacts__db.json",
+      "short_name": "artifacts.db"
+    },
+    {
+      "id": "th:artifacts/dc",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__artifacts__dc.json",
+      "short_name": "artifacts.dc"
+    },
+    {
       "id": "th:artifacts/dip",
       "kind": "Entity",
       "locator": "model/objects/Entity/th__artifacts__dip.json",
@@ -47,6 +59,12 @@
       "kind": "Entity",
       "locator": "model/objects/Entity/th__artifacts__spec.json",
       "short_name": "artifacts.spec"
+    },
+    {
+      "id": "th:artifacts/td",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__artifacts__td.json",
+      "short_name": "artifacts.td"
     },
     {
       "id": "th:gates/gt_030",
@@ -89,6 +107,12 @@
       "kind": "Entity",
       "locator": "model/objects/Entity/th__gates__gt_110.json",
       "short_name": "gates.gt_110"
+    },
+    {
+      "id": "th:gates/gt_115",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__gates__gt_115.json",
+      "short_name": "gates.gt_115"
     },
     {
       "id": "th:gates/gt_120",
@@ -331,10 +355,82 @@
       "short_name": "rel.gt_110.requires_input.spec"
     },
     {
+      "id": "th:rel/gt_110.requires_input.td",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_110.requires_input.td.json",
+      "short_name": "rel.gt_110.requires_input.td"
+    },
+    {
+      "id": "th:rel/gt_110.requires_status.approved",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_110.requires_status.approved.json",
+      "short_name": "rel.gt_110.requires_status.approved"
+    },
+    {
       "id": "th:rel/gt_110.requires_status.proposed",
       "kind": "Relation",
       "locator": "model/objects/Relation/th__rel__gt_110.requires_status.proposed.json",
       "short_name": "rel.gt_110.requires_status.proposed"
+    },
+    {
+      "id": "th:rel/gt_115.requires_evidence.dec",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_115.requires_evidence.dec.json",
+      "short_name": "rel.gt_115.requires_evidence.dec"
+    },
+    {
+      "id": "th:rel/gt_115.requires_evidence.ev",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_115.requires_evidence.ev.json",
+      "short_name": "rel.gt_115.requires_evidence.ev"
+    },
+    {
+      "id": "th:rel/gt_115.requires_input.arch",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_115.requires_input.arch.json",
+      "short_name": "rel.gt_115.requires_input.arch"
+    },
+    {
+      "id": "th:rel/gt_115.requires_input.ch",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_115.requires_input.ch.json",
+      "short_name": "rel.gt_115.requires_input.ch"
+    },
+    {
+      "id": "th:rel/gt_115.requires_input.dc",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_115.requires_input.dc.json",
+      "short_name": "rel.gt_115.requires_input.dc"
+    },
+    {
+      "id": "th:rel/gt_115.requires_input.spec",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_115.requires_input.spec.json",
+      "short_name": "rel.gt_115.requires_input.spec"
+    },
+    {
+      "id": "th:rel/gt_115.requires_input.td",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_115.requires_input.td.json",
+      "short_name": "rel.gt_115.requires_input.td"
+    },
+    {
+      "id": "th:rel/gt_115.requires_status.approved",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_115.requires_status.approved.json",
+      "short_name": "rel.gt_115.requires_status.approved"
+    },
+    {
+      "id": "th:rel/gt_115.requires_status.candidate",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_115.requires_status.candidate.json",
+      "short_name": "rel.gt_115.requires_status.candidate"
+    },
+    {
+      "id": "th:rel/gt_115.requires_status.ready",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_115.requires_status.ready.json",
+      "short_name": "rel.gt_115.requires_status.ready"
     },
     {
       "id": "th:rel/gt_120.requires_evidence.dec",
@@ -359,6 +455,24 @@
       "kind": "Relation",
       "locator": "model/objects/Relation/th__rel__gt_120.requires_input.ci.json",
       "short_name": "rel.gt_120.requires_input.ci"
+    },
+    {
+      "id": "th:rel/gt_120.requires_input.db",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_120.requires_input.db.json",
+      "short_name": "rel.gt_120.requires_input.db"
+    },
+    {
+      "id": "th:rel/gt_120.requires_input.td",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_120.requires_input.td.json",
+      "short_name": "rel.gt_120.requires_input.td"
+    },
+    {
+      "id": "th:rel/gt_120.requires_status.approved",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_120.requires_status.approved.json",
+      "short_name": "rel.gt_120.requires_status.approved"
     },
     {
       "id": "th:rel/gt_120.requires_status.candidate",
@@ -395,6 +509,24 @@
       "kind": "Relation",
       "locator": "model/objects/Relation/th__rel__gt_130.requires_input.ci.json",
       "short_name": "rel.gt_130.requires_input.ci"
+    },
+    {
+      "id": "th:rel/gt_130.requires_input.db",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_130.requires_input.db.json",
+      "short_name": "rel.gt_130.requires_input.db"
+    },
+    {
+      "id": "th:rel/gt_130.requires_input.td",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_130.requires_input.td.json",
+      "short_name": "rel.gt_130.requires_input.td"
+    },
+    {
+      "id": "th:rel/gt_130.requires_status.approved",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/th__rel__gt_130.requires_status.approved.json",
+      "short_name": "rel.gt_130.requires_status.approved"
     },
     {
       "id": "th:rel/gt_130.requires_status.ready",
@@ -457,6 +589,12 @@
       "short_name": "statuses.candidate"
     },
     {
+      "id": "th:statuses/concluded_initiative",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/th__statuses__concluded_initiative.json",
+      "short_name": "statuses.concluded_initiative"
+    },
+    {
       "id": "th:statuses/draft",
       "kind": "Entity",
       "locator": "model/objects/Entity/th__statuses__draft.json",
@@ -505,12 +643,6 @@
       "short_name": "statuses.selected"
     },
     {
-      "id": "th:statuses/concluded_initiative",
-      "kind": "Entity",
-      "locator": "model/objects/Entity/th__statuses__concluded_initiative.json",
-      "short_name": "statuses.concluded_initiative"
-    },
-    {
       "id": "th:statuses/superseded",
       "kind": "Entity",
       "locator": "model/objects/Entity/th__statuses__superseded.json",
@@ -539,6 +671,18 @@
       "kind": "Term",
       "locator": "model/objects/Term/th__vocab__term_ci.json",
       "short_name": "vocab.term_ci"
+    },
+    {
+      "id": "th:vocab/term_db",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_db.json",
+      "short_name": "vocab.term_db"
+    },
+    {
+      "id": "th:vocab/term_dc",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_dc.json",
+      "short_name": "vocab.term_dc"
     },
     {
       "id": "th:vocab/term_dec",
@@ -641,7 +785,13 @@
       "kind": "Term",
       "locator": "model/objects/Term/th__vocab__term_status_verified.json",
       "short_name": "vocab.term_status_verified"
+    },
+    {
+      "id": "th:vocab/term_td",
+      "kind": "Term",
+      "locator": "model/objects/Term/th__vocab__term_td.json",
+      "short_name": "vocab.term_td"
     }
   ],
-  "index_version": "0.1.1"
+  "index_version": "0.1.0"
 }

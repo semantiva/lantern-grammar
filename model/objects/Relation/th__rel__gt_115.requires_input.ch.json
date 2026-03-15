@@ -1,0 +1,10 @@
+{
+  "definition": "GT-115 requires a Ready Change Intent (CH) as the governing requirement anchor.",
+  "id": "th:rel/gt_115.requires_input.ch",
+  "kind": "Relation",
+  "relation_type_id": "th:reltypes/requires_input",
+  "short_name": "rel.gt_115.requires_input.ch",
+  "source_entity_id": "th:gates/gt_115",
+  "status": "Released",
+  "target_entity_id": "th:artifacts/ch"
+}

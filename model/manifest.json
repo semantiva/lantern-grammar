@@ -1,6 +1,6 @@
 {
   "model_id": "tier-h.model",
-  "model_version": "0.1.1",
+  "model_version": "0.2.0",
   "modules": {
     "entities": true,
     "properties": false,

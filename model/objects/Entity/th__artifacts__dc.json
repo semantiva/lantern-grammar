@@ -1,0 +1,7 @@
+{
+  "definition": "Design Candidate (DC): a candidate design artifact evaluated after Change Intent readiness and before implementation selection.",
+  "id": "th:artifacts/dc",
+  "kind": "Entity",
+  "short_name": "artifacts.dc",
+  "status": "Released"
+}

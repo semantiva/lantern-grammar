@@ -1,0 +1,10 @@
+{
+  "definition": "GT-115 requires candidate status for the Design Candidates under comparison.",
+  "id": "th:rel/gt_115.requires_status.candidate",
+  "kind": "Relation",
+  "relation_type_id": "th:reltypes/requires_status",
+  "short_name": "rel.gt_115.requires_status.candidate",
+  "source_entity_id": "th:gates/gt_115",
+  "status": "Released",
+  "target_entity_id": "th:statuses/candidate"
+}

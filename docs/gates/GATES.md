@@ -1,7 +1,7 @@
 > **OPTIONAL / Non-authoritative documentation — not model truth.**
 >
 > This file is preserved for context only. The authoritative semantic content is in the ECT-conforming model
-> objects under `model/`. This document is a *semantic summary* of gate concepts and
+> objects under `model/`. This document is a semantic summary of gate concepts and
 > their dependencies on artifact classes, record classes, and status values. It is not a
 > workflow/process specification.
 
@@ -25,11 +25,6 @@ Record classes referenced:
 - Evidence record(s) (EV-###)
 - Decision record(s) (DEC-###)
 
-Essence alignment:
-- Requirements
-- Stakeholders
-- Way of Working
-
 ## GT-035: SPEC Draft Derivation Preflight (from locked DIP)
 Purpose:
 - Define the concept of checking a SPEC draft for derivation linkage to a DIP baseline.
@@ -46,10 +41,6 @@ Record classes referenced:
 - Evidence record(s) (EV-###)
 - Decision record(s) (DEC-###)
 
-Essence alignment:
-- Requirements
-- Way of Working
-
 ## GT-036: ARCH Draft Derivation Preflight (from locked DIP)
 Purpose:
 - Define the concept of checking an ARCH draft for derivation linkage to a DIP baseline.
@@ -65,10 +56,6 @@ Semantic dependencies:
 Record classes referenced:
 - Evidence record(s) (EV-###)
 - Decision record(s) (DEC-###)
-
-Essence alignment:
-- Software System
-- Way of Working
 
 ## GT-045: DIP/SPEC/ARCH Coherence Preflight
 Purpose:
@@ -87,12 +74,6 @@ Record classes referenced:
 - Evidence record(s) (EV-###)
 - Decision record(s) (DEC-###)
 
-Essence alignment:
-- Requirements
-- Software System
-- Way of Working
-
-
 ## GT-050: Architecture Definition Readiness (ARCH baseline readiness)
 Purpose:
 - Define the concept of ARCH baseline readiness as a prerequisite input for downstream change work.
@@ -108,10 +89,6 @@ Semantic dependencies:
 Record classes referenced:
 - Evidence record(s) (EV-###)
 - Decision record(s) (DEC-###)
-
-Essence alignment:
-- Software System
-- Way of Working
 
 ## GT-060: Requirements Specification Readiness (SPEC baseline readiness)
 Purpose:
@@ -129,26 +106,21 @@ Record classes referenced:
 - Evidence record(s) (EV-###)
 - Decision record(s) (DEC-###)
 
-Essence alignment:
-- Requirements
-- Stakeholders
-- Way of Working
-
 ## GT-110: Input Kit Readiness (Entry Gate)
 Purpose:
-- Define the concept of CH input-kit sufficiency for proceeding to CI authoring.
+- Define the concept of CH input-kit sufficiency for proceeding to design selection.
 
 Semantic dependencies:
 - Artifact classes referenced:
   - Change Intent (CH-####)
-  - (Optional) Architecture Definition (ARCH-####)
-  - (Optional) Requirements Specification (SPEC-####)
+  - Test Definition (TD-####)
+  - Architecture Definition (ARCH-####)
+  - Requirements Specification (SPEC-####)
   - (Optional) Issue (IS-####)
 - Status values referenced:
   - Proposed (for CH)
   - Ready
-  - Approved (for ARCH/SPEC)
-  - Draft (for ARCH/SPEC)
+  - Approved (for TD/ARCH/SPEC)
   - Superseded (for ARCH/SPEC)
   - Addressed (for dependency CH, if referenced)
 
@@ -156,21 +128,39 @@ Record classes referenced:
 - Evidence record(s) (EV-###)
 - Decision record(s) (DEC-###)
 
-Essence alignment:
-- Requirements
-- Stakeholders
-- Way of Working
-
-## GT-120: Change Increment Selection (Selection Gate)
+## GT-115: Design Baseline Selection (Design Lock Gate)
 Purpose:
-- Define the concept of selecting a single CI candidate to address a CH.
+- Define the concept of selecting a single design candidate and approving a design baseline before implementation selection.
 
 Semantic dependencies:
 - Artifact classes referenced:
   - Change Intent (CH-####)
+  - Test Definition (TD-####)
+  - Design Candidate (DC-####-<uuid>)
+  - Architecture Definition (ARCH-####)
+  - Requirements Specification (SPEC-####)
+- Status values referenced:
+  - Ready (for CH)
+  - Approved (for TD/ARCH/SPEC)
+  - Candidate (for DC)
+
+Record classes referenced:
+- Evidence record(s) (EV-###)
+- Decision record(s) (DEC-###)
+
+## GT-120: Change Increment Selection (Implementation Selection Gate)
+Purpose:
+- Define the concept of selecting a single CI candidate against a locked Change Intent, Design Baseline, and Test Definition set.
+
+Semantic dependencies:
+- Artifact classes referenced:
+  - Change Intent (CH-####)
+  - Design Baseline (DB-####)
+  - Test Definition (TD-####)
   - Change Increment (CI-####-*)
 - Status values referenced:
   - Ready (for CH)
+  - Approved (for DB/TD)
   - Candidate
   - Selected
   - Rejected
@@ -179,21 +169,19 @@ Record classes referenced:
 - Evidence record(s) (EV-###)
 - Decision record(s) (DEC-###)
 
-Essence alignment:
-- Requirements
-- Work
-- Way of Working
-
 ## GT-130: Integration Verification (Exit Gate)
 Purpose:
-- Define the concept of verifying integration for a selected CI and validating the target signal.
+- Define the concept of verifying integration for a selected CI against the locked CH, DB, and TD baseline.
 
 Semantic dependencies:
 - Artifact classes referenced:
   - Change Intent (CH-####)
+  - Design Baseline (DB-####)
+  - Test Definition (TD-####)
   - Change Increment (CI-####-*)
 - Status values referenced:
   - Ready (for CH)
+  - Approved (for DB/TD)
   - Selected (for CI)
   - Verified
   - Addressed
@@ -201,8 +189,3 @@ Semantic dependencies:
 Record classes referenced:
 - Evidence record(s) (EV-###)
 - Decision record(s) (DEC-###)
-
-Essence alignment:
-- Software System
-- Requirements
-- Work
