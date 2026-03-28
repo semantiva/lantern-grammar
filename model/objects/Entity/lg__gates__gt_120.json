@@ -1,0 +1,18 @@
+{
+  "definition": "GT-120 Change Increment Selection: selects exactly one Change Increment candidate to address a Ready Change Intent against an approved Design Baseline and approved Test Definitions.",
+  "id": "lg:gates/gt_120",
+  "kind": "Entity",
+  "relation_ids": [
+    "lg:rel/gt_120.requires_evidence.dec",
+    "lg:rel/gt_120.requires_evidence.ev",
+    "lg:rel/gt_120.requires_input.ch",
+    "lg:rel/gt_120.requires_input.ci",
+    "lg:rel/gt_120.requires_input.db",
+    "lg:rel/gt_120.requires_input.td",
+    "lg:rel/gt_120.requires_status.approved",
+    "lg:rel/gt_120.requires_status.candidate",
+    "lg:rel/gt_120.requires_status.ready"
+  ],
+  "short_name": "gates.gt_120",
+  "status": "Released"
+}

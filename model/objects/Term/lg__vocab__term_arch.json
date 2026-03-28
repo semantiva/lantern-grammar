@@ -1,0 +1,12 @@
+{
+  "definition": "Canonical term for Architecture Definition (ARCH).",
+  "denotes_entity_ids": [
+    "lg:artifacts/arch"
+  ],
+  "id": "lg:vocab/term_arch",
+  "kind": "Term",
+  "label": "Architecture Definition",
+  "language": "en",
+  "short_name": "vocab.term_arch",
+  "status": "Released"
+}

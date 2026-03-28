@@ -1,0 +1,7 @@
+{
+  "definition": "Issue (IS): an intake-originated issue that may drive the creation of a Change Intent.",
+  "id": "lg:artifacts/issue",
+  "kind": "Entity",
+  "short_name": "artifacts.issue",
+  "status": "Released"
+}

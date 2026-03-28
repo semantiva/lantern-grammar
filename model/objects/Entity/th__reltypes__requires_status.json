@@ -1,7 +1,0 @@
-{
-  "definition": "Relation type: the source gate requires the target status as a prerequisite condition on one or more of its inputs.",
-  "id": "th:reltypes/requires_status",
-  "kind": "Entity",
-  "short_name": "reltypes.requires_status",
-  "status": "Released"
-}

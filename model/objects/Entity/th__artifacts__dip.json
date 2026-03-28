@@ -1,7 +1,0 @@
-{
-  "definition": "Design Input Pack (DIP): a baselined collection of upstream inputs that anchors derivation of SPEC and ARCH.",
-  "id": "th:artifacts/dip",
-  "kind": "Entity",
-  "short_name": "artifacts.dip",
-  "status": "Released"
-}

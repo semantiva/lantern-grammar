@@ -1,0 +1,10 @@
+{
+  "definition": "GT-130 requires a Change Intent (CH) as input.",
+  "id": "lg:rel/gt_130.requires_input.ch",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_input",
+  "short_name": "rel.gt_130.requires_input.ch",
+  "source_entity_id": "lg:gates/gt_130",
+  "status": "Released",
+  "target_entity_id": "lg:artifacts/ch"
+}

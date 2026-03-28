@@ -1,0 +1,7 @@
+{
+  "definition": "Change Increment (CI): a concrete implementation candidate that addresses a Change Intent.",
+  "id": "lg:artifacts/ci",
+  "kind": "Entity",
+  "short_name": "artifacts.ci",
+  "status": "Released"
+}

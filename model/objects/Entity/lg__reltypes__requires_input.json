@@ -1,0 +1,7 @@
+{
+  "definition": "Relation type: the source gate requires the target artifact class as an input.",
+  "id": "lg:reltypes/requires_input",
+  "kind": "Entity",
+  "short_name": "reltypes.requires_input",
+  "status": "Released"
+}

@@ -1,0 +1,10 @@
+{
+  "definition": "GT-036 requires the input ARCH to have status Draft.",
+  "id": "lg:rel/gt_036.requires_status.draft",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_status",
+  "short_name": "rel.gt_036.requires_status.draft",
+  "source_entity_id": "lg:gates/gt_036",
+  "status": "Released",
+  "target_entity_id": "lg:statuses/draft"
+}

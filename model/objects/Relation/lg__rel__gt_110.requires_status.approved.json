@@ -1,0 +1,10 @@
+{
+  "definition": "GT-110 requires approved status for the upstream approved baselines it consumes, including Test Definitions and any approved ARCH/SPEC inputs.",
+  "id": "lg:rel/gt_110.requires_status.approved",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_status",
+  "short_name": "rel.gt_110.requires_status.approved",
+  "source_entity_id": "lg:gates/gt_110",
+  "status": "Released",
+  "target_entity_id": "lg:statuses/approved"
+}

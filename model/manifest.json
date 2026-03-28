@@ -1,5 +1,5 @@
 {
-  "model_id": "tier-h.model",
+  "model_id": "lantern-grammar.model",
   "model_version": "0.2.0",
   "modules": {
     "entities": true,
@@ -8,11 +8,11 @@
     "valuesets": false,
     "vocabulary": true
   },
-  "name": "Tier-H Model",
+  "name": "Lantern Grammar",
   "namespaces": [
     {
-      "prefix": "th",
-      "uri": "https://tier-h.semantiva.dev/ns#"
+      "prefix": "lg",
+      "uri": "https://lantern.semantiva.dev/grammar/ns#"
     }
   ],
   "representation_version": "0.1.0",

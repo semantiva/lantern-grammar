@@ -1,795 +1,795 @@
 {
   "entries": [
     {
-      "id": "th:artifacts/arch",
+      "id": "lg:artifacts/arch",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__artifacts__arch.json",
+      "locator": "model/objects/Entity/lg__artifacts__arch.json",
       "short_name": "artifacts.arch"
     },
     {
-      "id": "th:artifacts/ch",
+      "id": "lg:artifacts/ch",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__artifacts__ch.json",
+      "locator": "model/objects/Entity/lg__artifacts__ch.json",
       "short_name": "artifacts.ch"
     },
     {
-      "id": "th:artifacts/ci",
+      "id": "lg:artifacts/ci",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__artifacts__ci.json",
+      "locator": "model/objects/Entity/lg__artifacts__ci.json",
       "short_name": "artifacts.ci"
     },
     {
-      "id": "th:artifacts/db",
+      "id": "lg:artifacts/db",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__artifacts__db.json",
+      "locator": "model/objects/Entity/lg__artifacts__db.json",
       "short_name": "artifacts.db"
     },
     {
-      "id": "th:artifacts/dc",
+      "id": "lg:artifacts/dc",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__artifacts__dc.json",
+      "locator": "model/objects/Entity/lg__artifacts__dc.json",
       "short_name": "artifacts.dc"
     },
     {
-      "id": "th:artifacts/dip",
+      "id": "lg:artifacts/dip",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__artifacts__dip.json",
+      "locator": "model/objects/Entity/lg__artifacts__dip.json",
       "short_name": "artifacts.dip"
     },
     {
-      "id": "th:artifacts/initiative",
+      "id": "lg:artifacts/initiative",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__artifacts__initiative.json",
+      "locator": "model/objects/Entity/lg__artifacts__initiative.json",
       "short_name": "artifacts.initiative"
     },
     {
-      "id": "th:artifacts/issue",
+      "id": "lg:artifacts/issue",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__artifacts__issue.json",
+      "locator": "model/objects/Entity/lg__artifacts__issue.json",
       "short_name": "artifacts.issue"
     },
     {
-      "id": "th:artifacts/question",
+      "id": "lg:artifacts/question",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__artifacts__question.json",
+      "locator": "model/objects/Entity/lg__artifacts__question.json",
       "short_name": "artifacts.question"
     },
     {
-      "id": "th:artifacts/spec",
+      "id": "lg:artifacts/spec",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__artifacts__spec.json",
+      "locator": "model/objects/Entity/lg__artifacts__spec.json",
       "short_name": "artifacts.spec"
     },
     {
-      "id": "th:artifacts/td",
+      "id": "lg:artifacts/td",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__artifacts__td.json",
+      "locator": "model/objects/Entity/lg__artifacts__td.json",
       "short_name": "artifacts.td"
     },
     {
-      "id": "th:gates/gt_030",
+      "id": "lg:gates/gt_030",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__gates__gt_030.json",
+      "locator": "model/objects/Entity/lg__gates__gt_030.json",
       "short_name": "gates.gt_030"
     },
     {
-      "id": "th:gates/gt_035",
+      "id": "lg:gates/gt_035",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__gates__gt_035.json",
+      "locator": "model/objects/Entity/lg__gates__gt_035.json",
       "short_name": "gates.gt_035"
     },
     {
-      "id": "th:gates/gt_036",
+      "id": "lg:gates/gt_036",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__gates__gt_036.json",
+      "locator": "model/objects/Entity/lg__gates__gt_036.json",
       "short_name": "gates.gt_036"
     },
     {
-      "id": "th:gates/gt_045",
+      "id": "lg:gates/gt_045",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__gates__gt_045.json",
+      "locator": "model/objects/Entity/lg__gates__gt_045.json",
       "short_name": "gates.gt_045"
     },
     {
-      "id": "th:gates/gt_050",
+      "id": "lg:gates/gt_050",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__gates__gt_050.json",
+      "locator": "model/objects/Entity/lg__gates__gt_050.json",
       "short_name": "gates.gt_050"
     },
     {
-      "id": "th:gates/gt_060",
+      "id": "lg:gates/gt_060",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__gates__gt_060.json",
+      "locator": "model/objects/Entity/lg__gates__gt_060.json",
       "short_name": "gates.gt_060"
     },
     {
-      "id": "th:gates/gt_110",
+      "id": "lg:gates/gt_110",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__gates__gt_110.json",
+      "locator": "model/objects/Entity/lg__gates__gt_110.json",
       "short_name": "gates.gt_110"
     },
     {
-      "id": "th:gates/gt_115",
+      "id": "lg:gates/gt_115",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__gates__gt_115.json",
+      "locator": "model/objects/Entity/lg__gates__gt_115.json",
       "short_name": "gates.gt_115"
     },
     {
-      "id": "th:gates/gt_120",
+      "id": "lg:gates/gt_120",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__gates__gt_120.json",
+      "locator": "model/objects/Entity/lg__gates__gt_120.json",
       "short_name": "gates.gt_120"
     },
     {
-      "id": "th:gates/gt_130",
+      "id": "lg:gates/gt_130",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__gates__gt_130.json",
+      "locator": "model/objects/Entity/lg__gates__gt_130.json",
       "short_name": "gates.gt_130"
     },
     {
-      "id": "th:records/dec",
+      "id": "lg:records/dec",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__records__dec.json",
+      "locator": "model/objects/Entity/lg__records__dec.json",
       "short_name": "records.dec"
     },
     {
-      "id": "th:records/ev",
+      "id": "lg:records/ev",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__records__ev.json",
+      "locator": "model/objects/Entity/lg__records__ev.json",
       "short_name": "records.ev"
     },
     {
-      "id": "th:rel/gt_030.requires_evidence.dec",
+      "id": "lg:rel/gt_030.requires_evidence.dec",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_030.requires_evidence.dec.json",
+      "locator": "model/objects/Relation/lg__rel__gt_030.requires_evidence.dec.json",
       "short_name": "rel.gt_030.requires_evidence.dec"
     },
     {
-      "id": "th:rel/gt_030.requires_evidence.ev",
+      "id": "lg:rel/gt_030.requires_evidence.ev",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_030.requires_evidence.ev.json",
+      "locator": "model/objects/Relation/lg__rel__gt_030.requires_evidence.ev.json",
       "short_name": "rel.gt_030.requires_evidence.ev"
     },
     {
-      "id": "th:rel/gt_030.requires_input.dip",
+      "id": "lg:rel/gt_030.requires_input.dip",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_030.requires_input.dip.json",
+      "locator": "model/objects/Relation/lg__rel__gt_030.requires_input.dip.json",
       "short_name": "rel.gt_030.requires_input.dip"
     },
     {
-      "id": "th:rel/gt_030.requires_status.draft",
+      "id": "lg:rel/gt_030.requires_status.draft",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_030.requires_status.draft.json",
+      "locator": "model/objects/Relation/lg__rel__gt_030.requires_status.draft.json",
       "short_name": "rel.gt_030.requires_status.draft"
     },
     {
-      "id": "th:rel/gt_035.requires_evidence.dec",
+      "id": "lg:rel/gt_035.requires_evidence.dec",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_035.requires_evidence.dec.json",
+      "locator": "model/objects/Relation/lg__rel__gt_035.requires_evidence.dec.json",
       "short_name": "rel.gt_035.requires_evidence.dec"
     },
     {
-      "id": "th:rel/gt_035.requires_evidence.ev",
+      "id": "lg:rel/gt_035.requires_evidence.ev",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_035.requires_evidence.ev.json",
+      "locator": "model/objects/Relation/lg__rel__gt_035.requires_evidence.ev.json",
       "short_name": "rel.gt_035.requires_evidence.ev"
     },
     {
-      "id": "th:rel/gt_035.requires_input.dip",
+      "id": "lg:rel/gt_035.requires_input.dip",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_035.requires_input.dip.json",
+      "locator": "model/objects/Relation/lg__rel__gt_035.requires_input.dip.json",
       "short_name": "rel.gt_035.requires_input.dip"
     },
     {
-      "id": "th:rel/gt_035.requires_input.spec",
+      "id": "lg:rel/gt_035.requires_input.spec",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_035.requires_input.spec.json",
+      "locator": "model/objects/Relation/lg__rel__gt_035.requires_input.spec.json",
       "short_name": "rel.gt_035.requires_input.spec"
     },
     {
-      "id": "th:rel/gt_035.requires_status.approved",
+      "id": "lg:rel/gt_035.requires_status.approved",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_035.requires_status.approved.json",
+      "locator": "model/objects/Relation/lg__rel__gt_035.requires_status.approved.json",
       "short_name": "rel.gt_035.requires_status.approved"
     },
     {
-      "id": "th:rel/gt_035.requires_status.draft",
+      "id": "lg:rel/gt_035.requires_status.draft",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_035.requires_status.draft.json",
+      "locator": "model/objects/Relation/lg__rel__gt_035.requires_status.draft.json",
       "short_name": "rel.gt_035.requires_status.draft"
     },
     {
-      "id": "th:rel/gt_036.requires_evidence.dec",
+      "id": "lg:rel/gt_036.requires_evidence.dec",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_036.requires_evidence.dec.json",
+      "locator": "model/objects/Relation/lg__rel__gt_036.requires_evidence.dec.json",
       "short_name": "rel.gt_036.requires_evidence.dec"
     },
     {
-      "id": "th:rel/gt_036.requires_evidence.ev",
+      "id": "lg:rel/gt_036.requires_evidence.ev",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_036.requires_evidence.ev.json",
+      "locator": "model/objects/Relation/lg__rel__gt_036.requires_evidence.ev.json",
       "short_name": "rel.gt_036.requires_evidence.ev"
     },
     {
-      "id": "th:rel/gt_036.requires_input.arch",
+      "id": "lg:rel/gt_036.requires_input.arch",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_036.requires_input.arch.json",
+      "locator": "model/objects/Relation/lg__rel__gt_036.requires_input.arch.json",
       "short_name": "rel.gt_036.requires_input.arch"
     },
     {
-      "id": "th:rel/gt_036.requires_input.dip",
+      "id": "lg:rel/gt_036.requires_input.dip",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_036.requires_input.dip.json",
+      "locator": "model/objects/Relation/lg__rel__gt_036.requires_input.dip.json",
       "short_name": "rel.gt_036.requires_input.dip"
     },
     {
-      "id": "th:rel/gt_036.requires_status.approved",
+      "id": "lg:rel/gt_036.requires_status.approved",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_036.requires_status.approved.json",
+      "locator": "model/objects/Relation/lg__rel__gt_036.requires_status.approved.json",
       "short_name": "rel.gt_036.requires_status.approved"
     },
     {
-      "id": "th:rel/gt_036.requires_status.draft",
+      "id": "lg:rel/gt_036.requires_status.draft",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_036.requires_status.draft.json",
+      "locator": "model/objects/Relation/lg__rel__gt_036.requires_status.draft.json",
       "short_name": "rel.gt_036.requires_status.draft"
     },
     {
-      "id": "th:rel/gt_045.requires_evidence.dec",
+      "id": "lg:rel/gt_045.requires_evidence.dec",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_045.requires_evidence.dec.json",
+      "locator": "model/objects/Relation/lg__rel__gt_045.requires_evidence.dec.json",
       "short_name": "rel.gt_045.requires_evidence.dec"
     },
     {
-      "id": "th:rel/gt_045.requires_evidence.ev",
+      "id": "lg:rel/gt_045.requires_evidence.ev",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_045.requires_evidence.ev.json",
+      "locator": "model/objects/Relation/lg__rel__gt_045.requires_evidence.ev.json",
       "short_name": "rel.gt_045.requires_evidence.ev"
     },
     {
-      "id": "th:rel/gt_045.requires_input.arch",
+      "id": "lg:rel/gt_045.requires_input.arch",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_045.requires_input.arch.json",
+      "locator": "model/objects/Relation/lg__rel__gt_045.requires_input.arch.json",
       "short_name": "rel.gt_045.requires_input.arch"
     },
     {
-      "id": "th:rel/gt_045.requires_input.dip",
+      "id": "lg:rel/gt_045.requires_input.dip",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_045.requires_input.dip.json",
+      "locator": "model/objects/Relation/lg__rel__gt_045.requires_input.dip.json",
       "short_name": "rel.gt_045.requires_input.dip"
     },
     {
-      "id": "th:rel/gt_045.requires_input.spec",
+      "id": "lg:rel/gt_045.requires_input.spec",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_045.requires_input.spec.json",
+      "locator": "model/objects/Relation/lg__rel__gt_045.requires_input.spec.json",
       "short_name": "rel.gt_045.requires_input.spec"
     },
     {
-      "id": "th:rel/gt_045.requires_status.approved",
+      "id": "lg:rel/gt_045.requires_status.approved",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_045.requires_status.approved.json",
+      "locator": "model/objects/Relation/lg__rel__gt_045.requires_status.approved.json",
       "short_name": "rel.gt_045.requires_status.approved"
     },
     {
-      "id": "th:rel/gt_045.requires_status.draft",
+      "id": "lg:rel/gt_045.requires_status.draft",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_045.requires_status.draft.json",
+      "locator": "model/objects/Relation/lg__rel__gt_045.requires_status.draft.json",
       "short_name": "rel.gt_045.requires_status.draft"
     },
     {
-      "id": "th:rel/gt_050.requires_evidence.dec",
+      "id": "lg:rel/gt_050.requires_evidence.dec",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_050.requires_evidence.dec.json",
+      "locator": "model/objects/Relation/lg__rel__gt_050.requires_evidence.dec.json",
       "short_name": "rel.gt_050.requires_evidence.dec"
     },
     {
-      "id": "th:rel/gt_050.requires_evidence.ev",
+      "id": "lg:rel/gt_050.requires_evidence.ev",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_050.requires_evidence.ev.json",
+      "locator": "model/objects/Relation/lg__rel__gt_050.requires_evidence.ev.json",
       "short_name": "rel.gt_050.requires_evidence.ev"
     },
     {
-      "id": "th:rel/gt_050.requires_input.arch",
+      "id": "lg:rel/gt_050.requires_input.arch",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_050.requires_input.arch.json",
+      "locator": "model/objects/Relation/lg__rel__gt_050.requires_input.arch.json",
       "short_name": "rel.gt_050.requires_input.arch"
     },
     {
-      "id": "th:rel/gt_050.requires_status.draft",
+      "id": "lg:rel/gt_050.requires_status.draft",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_050.requires_status.draft.json",
+      "locator": "model/objects/Relation/lg__rel__gt_050.requires_status.draft.json",
       "short_name": "rel.gt_050.requires_status.draft"
     },
     {
-      "id": "th:rel/gt_060.requires_evidence.dec",
+      "id": "lg:rel/gt_060.requires_evidence.dec",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_060.requires_evidence.dec.json",
+      "locator": "model/objects/Relation/lg__rel__gt_060.requires_evidence.dec.json",
       "short_name": "rel.gt_060.requires_evidence.dec"
     },
     {
-      "id": "th:rel/gt_060.requires_evidence.ev",
+      "id": "lg:rel/gt_060.requires_evidence.ev",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_060.requires_evidence.ev.json",
+      "locator": "model/objects/Relation/lg__rel__gt_060.requires_evidence.ev.json",
       "short_name": "rel.gt_060.requires_evidence.ev"
     },
     {
-      "id": "th:rel/gt_060.requires_input.spec",
+      "id": "lg:rel/gt_060.requires_input.spec",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_060.requires_input.spec.json",
+      "locator": "model/objects/Relation/lg__rel__gt_060.requires_input.spec.json",
       "short_name": "rel.gt_060.requires_input.spec"
     },
     {
-      "id": "th:rel/gt_060.requires_status.draft",
+      "id": "lg:rel/gt_060.requires_status.draft",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_060.requires_status.draft.json",
+      "locator": "model/objects/Relation/lg__rel__gt_060.requires_status.draft.json",
       "short_name": "rel.gt_060.requires_status.draft"
     },
     {
-      "id": "th:rel/gt_110.requires_evidence.dec",
+      "id": "lg:rel/gt_110.requires_evidence.dec",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_110.requires_evidence.dec.json",
+      "locator": "model/objects/Relation/lg__rel__gt_110.requires_evidence.dec.json",
       "short_name": "rel.gt_110.requires_evidence.dec"
     },
     {
-      "id": "th:rel/gt_110.requires_evidence.ev",
+      "id": "lg:rel/gt_110.requires_evidence.ev",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_110.requires_evidence.ev.json",
+      "locator": "model/objects/Relation/lg__rel__gt_110.requires_evidence.ev.json",
       "short_name": "rel.gt_110.requires_evidence.ev"
     },
     {
-      "id": "th:rel/gt_110.requires_input.arch",
+      "id": "lg:rel/gt_110.requires_input.arch",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_110.requires_input.arch.json",
+      "locator": "model/objects/Relation/lg__rel__gt_110.requires_input.arch.json",
       "short_name": "rel.gt_110.requires_input.arch"
     },
     {
-      "id": "th:rel/gt_110.requires_input.ch",
+      "id": "lg:rel/gt_110.requires_input.ch",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_110.requires_input.ch.json",
+      "locator": "model/objects/Relation/lg__rel__gt_110.requires_input.ch.json",
       "short_name": "rel.gt_110.requires_input.ch"
     },
     {
-      "id": "th:rel/gt_110.requires_input.spec",
+      "id": "lg:rel/gt_110.requires_input.spec",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_110.requires_input.spec.json",
+      "locator": "model/objects/Relation/lg__rel__gt_110.requires_input.spec.json",
       "short_name": "rel.gt_110.requires_input.spec"
     },
     {
-      "id": "th:rel/gt_110.requires_input.td",
+      "id": "lg:rel/gt_110.requires_input.td",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_110.requires_input.td.json",
+      "locator": "model/objects/Relation/lg__rel__gt_110.requires_input.td.json",
       "short_name": "rel.gt_110.requires_input.td"
     },
     {
-      "id": "th:rel/gt_110.requires_status.approved",
+      "id": "lg:rel/gt_110.requires_status.approved",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_110.requires_status.approved.json",
+      "locator": "model/objects/Relation/lg__rel__gt_110.requires_status.approved.json",
       "short_name": "rel.gt_110.requires_status.approved"
     },
     {
-      "id": "th:rel/gt_110.requires_status.proposed",
+      "id": "lg:rel/gt_110.requires_status.proposed",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_110.requires_status.proposed.json",
+      "locator": "model/objects/Relation/lg__rel__gt_110.requires_status.proposed.json",
       "short_name": "rel.gt_110.requires_status.proposed"
     },
     {
-      "id": "th:rel/gt_115.requires_evidence.dec",
+      "id": "lg:rel/gt_115.requires_evidence.dec",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_115.requires_evidence.dec.json",
+      "locator": "model/objects/Relation/lg__rel__gt_115.requires_evidence.dec.json",
       "short_name": "rel.gt_115.requires_evidence.dec"
     },
     {
-      "id": "th:rel/gt_115.requires_evidence.ev",
+      "id": "lg:rel/gt_115.requires_evidence.ev",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_115.requires_evidence.ev.json",
+      "locator": "model/objects/Relation/lg__rel__gt_115.requires_evidence.ev.json",
       "short_name": "rel.gt_115.requires_evidence.ev"
     },
     {
-      "id": "th:rel/gt_115.requires_input.arch",
+      "id": "lg:rel/gt_115.requires_input.arch",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_115.requires_input.arch.json",
+      "locator": "model/objects/Relation/lg__rel__gt_115.requires_input.arch.json",
       "short_name": "rel.gt_115.requires_input.arch"
     },
     {
-      "id": "th:rel/gt_115.requires_input.ch",
+      "id": "lg:rel/gt_115.requires_input.ch",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_115.requires_input.ch.json",
+      "locator": "model/objects/Relation/lg__rel__gt_115.requires_input.ch.json",
       "short_name": "rel.gt_115.requires_input.ch"
     },
     {
-      "id": "th:rel/gt_115.requires_input.dc",
+      "id": "lg:rel/gt_115.requires_input.dc",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_115.requires_input.dc.json",
+      "locator": "model/objects/Relation/lg__rel__gt_115.requires_input.dc.json",
       "short_name": "rel.gt_115.requires_input.dc"
     },
     {
-      "id": "th:rel/gt_115.requires_input.spec",
+      "id": "lg:rel/gt_115.requires_input.spec",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_115.requires_input.spec.json",
+      "locator": "model/objects/Relation/lg__rel__gt_115.requires_input.spec.json",
       "short_name": "rel.gt_115.requires_input.spec"
     },
     {
-      "id": "th:rel/gt_115.requires_input.td",
+      "id": "lg:rel/gt_115.requires_input.td",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_115.requires_input.td.json",
+      "locator": "model/objects/Relation/lg__rel__gt_115.requires_input.td.json",
       "short_name": "rel.gt_115.requires_input.td"
     },
     {
-      "id": "th:rel/gt_115.requires_status.approved",
+      "id": "lg:rel/gt_115.requires_status.approved",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_115.requires_status.approved.json",
+      "locator": "model/objects/Relation/lg__rel__gt_115.requires_status.approved.json",
       "short_name": "rel.gt_115.requires_status.approved"
     },
     {
-      "id": "th:rel/gt_115.requires_status.candidate",
+      "id": "lg:rel/gt_115.requires_status.candidate",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_115.requires_status.candidate.json",
+      "locator": "model/objects/Relation/lg__rel__gt_115.requires_status.candidate.json",
       "short_name": "rel.gt_115.requires_status.candidate"
     },
     {
-      "id": "th:rel/gt_115.requires_status.ready",
+      "id": "lg:rel/gt_115.requires_status.ready",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_115.requires_status.ready.json",
+      "locator": "model/objects/Relation/lg__rel__gt_115.requires_status.ready.json",
       "short_name": "rel.gt_115.requires_status.ready"
     },
     {
-      "id": "th:rel/gt_120.requires_evidence.dec",
+      "id": "lg:rel/gt_120.requires_evidence.dec",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_120.requires_evidence.dec.json",
+      "locator": "model/objects/Relation/lg__rel__gt_120.requires_evidence.dec.json",
       "short_name": "rel.gt_120.requires_evidence.dec"
     },
     {
-      "id": "th:rel/gt_120.requires_evidence.ev",
+      "id": "lg:rel/gt_120.requires_evidence.ev",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_120.requires_evidence.ev.json",
+      "locator": "model/objects/Relation/lg__rel__gt_120.requires_evidence.ev.json",
       "short_name": "rel.gt_120.requires_evidence.ev"
     },
     {
-      "id": "th:rel/gt_120.requires_input.ch",
+      "id": "lg:rel/gt_120.requires_input.ch",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_120.requires_input.ch.json",
+      "locator": "model/objects/Relation/lg__rel__gt_120.requires_input.ch.json",
       "short_name": "rel.gt_120.requires_input.ch"
     },
     {
-      "id": "th:rel/gt_120.requires_input.ci",
+      "id": "lg:rel/gt_120.requires_input.ci",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_120.requires_input.ci.json",
+      "locator": "model/objects/Relation/lg__rel__gt_120.requires_input.ci.json",
       "short_name": "rel.gt_120.requires_input.ci"
     },
     {
-      "id": "th:rel/gt_120.requires_input.db",
+      "id": "lg:rel/gt_120.requires_input.db",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_120.requires_input.db.json",
+      "locator": "model/objects/Relation/lg__rel__gt_120.requires_input.db.json",
       "short_name": "rel.gt_120.requires_input.db"
     },
     {
-      "id": "th:rel/gt_120.requires_input.td",
+      "id": "lg:rel/gt_120.requires_input.td",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_120.requires_input.td.json",
+      "locator": "model/objects/Relation/lg__rel__gt_120.requires_input.td.json",
       "short_name": "rel.gt_120.requires_input.td"
     },
     {
-      "id": "th:rel/gt_120.requires_status.approved",
+      "id": "lg:rel/gt_120.requires_status.approved",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_120.requires_status.approved.json",
+      "locator": "model/objects/Relation/lg__rel__gt_120.requires_status.approved.json",
       "short_name": "rel.gt_120.requires_status.approved"
     },
     {
-      "id": "th:rel/gt_120.requires_status.candidate",
+      "id": "lg:rel/gt_120.requires_status.candidate",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_120.requires_status.candidate.json",
+      "locator": "model/objects/Relation/lg__rel__gt_120.requires_status.candidate.json",
       "short_name": "rel.gt_120.requires_status.candidate"
     },
     {
-      "id": "th:rel/gt_120.requires_status.ready",
+      "id": "lg:rel/gt_120.requires_status.ready",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_120.requires_status.ready.json",
+      "locator": "model/objects/Relation/lg__rel__gt_120.requires_status.ready.json",
       "short_name": "rel.gt_120.requires_status.ready"
     },
     {
-      "id": "th:rel/gt_130.requires_evidence.dec",
+      "id": "lg:rel/gt_130.requires_evidence.dec",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_130.requires_evidence.dec.json",
+      "locator": "model/objects/Relation/lg__rel__gt_130.requires_evidence.dec.json",
       "short_name": "rel.gt_130.requires_evidence.dec"
     },
     {
-      "id": "th:rel/gt_130.requires_evidence.ev",
+      "id": "lg:rel/gt_130.requires_evidence.ev",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_130.requires_evidence.ev.json",
+      "locator": "model/objects/Relation/lg__rel__gt_130.requires_evidence.ev.json",
       "short_name": "rel.gt_130.requires_evidence.ev"
     },
     {
-      "id": "th:rel/gt_130.requires_input.ch",
+      "id": "lg:rel/gt_130.requires_input.ch",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_130.requires_input.ch.json",
+      "locator": "model/objects/Relation/lg__rel__gt_130.requires_input.ch.json",
       "short_name": "rel.gt_130.requires_input.ch"
     },
     {
-      "id": "th:rel/gt_130.requires_input.ci",
+      "id": "lg:rel/gt_130.requires_input.ci",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_130.requires_input.ci.json",
+      "locator": "model/objects/Relation/lg__rel__gt_130.requires_input.ci.json",
       "short_name": "rel.gt_130.requires_input.ci"
     },
     {
-      "id": "th:rel/gt_130.requires_input.db",
+      "id": "lg:rel/gt_130.requires_input.db",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_130.requires_input.db.json",
+      "locator": "model/objects/Relation/lg__rel__gt_130.requires_input.db.json",
       "short_name": "rel.gt_130.requires_input.db"
     },
     {
-      "id": "th:rel/gt_130.requires_input.td",
+      "id": "lg:rel/gt_130.requires_input.td",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_130.requires_input.td.json",
+      "locator": "model/objects/Relation/lg__rel__gt_130.requires_input.td.json",
       "short_name": "rel.gt_130.requires_input.td"
     },
     {
-      "id": "th:rel/gt_130.requires_status.approved",
+      "id": "lg:rel/gt_130.requires_status.approved",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_130.requires_status.approved.json",
+      "locator": "model/objects/Relation/lg__rel__gt_130.requires_status.approved.json",
       "short_name": "rel.gt_130.requires_status.approved"
     },
     {
-      "id": "th:rel/gt_130.requires_status.ready",
+      "id": "lg:rel/gt_130.requires_status.ready",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_130.requires_status.ready.json",
+      "locator": "model/objects/Relation/lg__rel__gt_130.requires_status.ready.json",
       "short_name": "rel.gt_130.requires_status.ready"
     },
     {
-      "id": "th:rel/gt_130.requires_status.selected",
+      "id": "lg:rel/gt_130.requires_status.selected",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__gt_130.requires_status.selected.json",
+      "locator": "model/objects/Relation/lg__rel__gt_130.requires_status.selected.json",
       "short_name": "rel.gt_130.requires_status.selected"
     },
     {
-      "id": "th:rel/initiative.decomposes_to.ch",
+      "id": "lg:rel/initiative.decomposes_to.ch",
       "kind": "Relation",
-      "locator": "model/objects/Relation/th__rel__initiative.decomposes_to.ch.json",
+      "locator": "model/objects/Relation/lg__rel__initiative.decomposes_to.ch.json",
       "short_name": "rel.initiative.decomposes_to.ch"
     },
     {
-      "id": "th:reltypes/decomposes_to",
+      "id": "lg:reltypes/decomposes_to",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__reltypes__decomposes_to.json",
+      "locator": "model/objects/Entity/lg__reltypes__decomposes_to.json",
       "short_name": "reltypes.decomposes_to"
     },
     {
-      "id": "th:reltypes/requires_evidence",
+      "id": "lg:reltypes/requires_evidence",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__reltypes__requires_evidence.json",
+      "locator": "model/objects/Entity/lg__reltypes__requires_evidence.json",
       "short_name": "reltypes.requires_evidence"
     },
     {
-      "id": "th:reltypes/requires_input",
+      "id": "lg:reltypes/requires_input",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__reltypes__requires_input.json",
+      "locator": "model/objects/Entity/lg__reltypes__requires_input.json",
       "short_name": "reltypes.requires_input"
     },
     {
-      "id": "th:reltypes/requires_status",
+      "id": "lg:reltypes/requires_status",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__reltypes__requires_status.json",
+      "locator": "model/objects/Entity/lg__reltypes__requires_status.json",
       "short_name": "reltypes.requires_status"
     },
     {
-      "id": "th:statuses/addressed",
+      "id": "lg:statuses/addressed",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__statuses__addressed.json",
+      "locator": "model/objects/Entity/lg__statuses__addressed.json",
       "short_name": "statuses.addressed"
     },
     {
-      "id": "th:statuses/approved",
+      "id": "lg:statuses/approved",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__statuses__approved.json",
+      "locator": "model/objects/Entity/lg__statuses__approved.json",
       "short_name": "statuses.approved"
     },
     {
-      "id": "th:statuses/candidate",
+      "id": "lg:statuses/candidate",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__statuses__candidate.json",
+      "locator": "model/objects/Entity/lg__statuses__candidate.json",
       "short_name": "statuses.candidate"
     },
     {
-      "id": "th:statuses/concluded_initiative",
+      "id": "lg:statuses/concluded_initiative",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__statuses__concluded_initiative.json",
+      "locator": "model/objects/Entity/lg__statuses__concluded_initiative.json",
       "short_name": "statuses.concluded_initiative"
     },
     {
-      "id": "th:statuses/draft",
+      "id": "lg:statuses/draft",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__statuses__draft.json",
+      "locator": "model/objects/Entity/lg__statuses__draft.json",
       "short_name": "statuses.draft"
     },
     {
-      "id": "th:statuses/in_progress_initiative",
+      "id": "lg:statuses/in_progress_initiative",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__statuses__in_progress_initiative.json",
+      "locator": "model/objects/Entity/lg__statuses__in_progress_initiative.json",
       "short_name": "statuses.in_progress_initiative"
     },
     {
-      "id": "th:statuses/proposed",
+      "id": "lg:statuses/proposed",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__statuses__proposed.json",
+      "locator": "model/objects/Entity/lg__statuses__proposed.json",
       "short_name": "statuses.proposed"
     },
     {
-      "id": "th:statuses/proposed_initiative",
+      "id": "lg:statuses/proposed_initiative",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__statuses__proposed_initiative.json",
+      "locator": "model/objects/Entity/lg__statuses__proposed_initiative.json",
       "short_name": "statuses.proposed_initiative"
     },
     {
-      "id": "th:statuses/ready",
+      "id": "lg:statuses/ready",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__statuses__ready.json",
+      "locator": "model/objects/Entity/lg__statuses__ready.json",
       "short_name": "statuses.ready"
     },
     {
-      "id": "th:statuses/ready_initiative",
+      "id": "lg:statuses/ready_initiative",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__statuses__ready_initiative.json",
+      "locator": "model/objects/Entity/lg__statuses__ready_initiative.json",
       "short_name": "statuses.ready_initiative"
     },
     {
-      "id": "th:statuses/rejected",
+      "id": "lg:statuses/rejected",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__statuses__rejected.json",
+      "locator": "model/objects/Entity/lg__statuses__rejected.json",
       "short_name": "statuses.rejected"
     },
     {
-      "id": "th:statuses/selected",
+      "id": "lg:statuses/selected",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__statuses__selected.json",
+      "locator": "model/objects/Entity/lg__statuses__selected.json",
       "short_name": "statuses.selected"
     },
     {
-      "id": "th:statuses/superseded",
+      "id": "lg:statuses/superseded",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__statuses__superseded.json",
+      "locator": "model/objects/Entity/lg__statuses__superseded.json",
       "short_name": "statuses.superseded"
     },
     {
-      "id": "th:statuses/verified",
+      "id": "lg:statuses/verified",
       "kind": "Entity",
-      "locator": "model/objects/Entity/th__statuses__verified.json",
+      "locator": "model/objects/Entity/lg__statuses__verified.json",
       "short_name": "statuses.verified"
     },
     {
-      "id": "th:vocab/term_arch",
+      "id": "lg:vocab/term_arch",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_arch.json",
+      "locator": "model/objects/Term/lg__vocab__term_arch.json",
       "short_name": "vocab.term_arch"
     },
     {
-      "id": "th:vocab/term_ch",
+      "id": "lg:vocab/term_ch",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_ch.json",
+      "locator": "model/objects/Term/lg__vocab__term_ch.json",
       "short_name": "vocab.term_ch"
     },
     {
-      "id": "th:vocab/term_ci",
+      "id": "lg:vocab/term_ci",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_ci.json",
+      "locator": "model/objects/Term/lg__vocab__term_ci.json",
       "short_name": "vocab.term_ci"
     },
     {
-      "id": "th:vocab/term_db",
+      "id": "lg:vocab/term_db",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_db.json",
+      "locator": "model/objects/Term/lg__vocab__term_db.json",
       "short_name": "vocab.term_db"
     },
     {
-      "id": "th:vocab/term_dc",
+      "id": "lg:vocab/term_dc",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_dc.json",
+      "locator": "model/objects/Term/lg__vocab__term_dc.json",
       "short_name": "vocab.term_dc"
     },
     {
-      "id": "th:vocab/term_dec",
+      "id": "lg:vocab/term_dec",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_dec.json",
+      "locator": "model/objects/Term/lg__vocab__term_dec.json",
       "short_name": "vocab.term_dec"
     },
     {
-      "id": "th:vocab/term_dip",
+      "id": "lg:vocab/term_dip",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_dip.json",
+      "locator": "model/objects/Term/lg__vocab__term_dip.json",
       "short_name": "vocab.term_dip"
     },
     {
-      "id": "th:vocab/term_ev",
+      "id": "lg:vocab/term_ev",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_ev.json",
+      "locator": "model/objects/Term/lg__vocab__term_ev.json",
       "short_name": "vocab.term_ev"
     },
     {
-      "id": "th:vocab/term_gate",
+      "id": "lg:vocab/term_gate",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_gate.json",
+      "locator": "model/objects/Term/lg__vocab__term_gate.json",
       "short_name": "vocab.term_gate"
     },
     {
-      "id": "th:vocab/term_initiative",
+      "id": "lg:vocab/term_initiative",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_initiative.json",
+      "locator": "model/objects/Term/lg__vocab__term_initiative.json",
       "short_name": "vocab.term_initiative"
     },
     {
-      "id": "th:vocab/term_issue",
+      "id": "lg:vocab/term_issue",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_issue.json",
+      "locator": "model/objects/Term/lg__vocab__term_issue.json",
       "short_name": "vocab.term_issue"
     },
     {
-      "id": "th:vocab/term_question",
+      "id": "lg:vocab/term_question",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_question.json",
+      "locator": "model/objects/Term/lg__vocab__term_question.json",
       "short_name": "vocab.term_question"
     },
     {
-      "id": "th:vocab/term_spec",
+      "id": "lg:vocab/term_spec",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_spec.json",
+      "locator": "model/objects/Term/lg__vocab__term_spec.json",
       "short_name": "vocab.term_spec"
     },
     {
-      "id": "th:vocab/term_status_addressed",
+      "id": "lg:vocab/term_status_addressed",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_status_addressed.json",
+      "locator": "model/objects/Term/lg__vocab__term_status_addressed.json",
       "short_name": "vocab.term_status_addressed"
     },
     {
-      "id": "th:vocab/term_status_approved",
+      "id": "lg:vocab/term_status_approved",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_status_approved.json",
+      "locator": "model/objects/Term/lg__vocab__term_status_approved.json",
       "short_name": "vocab.term_status_approved"
     },
     {
-      "id": "th:vocab/term_status_draft",
+      "id": "lg:vocab/term_status_draft",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_status_draft.json",
+      "locator": "model/objects/Term/lg__vocab__term_status_draft.json",
       "short_name": "vocab.term_status_draft"
     },
     {
-      "id": "th:vocab/term_status_proposed",
+      "id": "lg:vocab/term_status_proposed",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_status_proposed.json",
+      "locator": "model/objects/Term/lg__vocab__term_status_proposed.json",
       "short_name": "vocab.term_status_proposed"
     },
     {
-      "id": "th:vocab/term_status_ready",
+      "id": "lg:vocab/term_status_ready",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_status_ready.json",
+      "locator": "model/objects/Term/lg__vocab__term_status_ready.json",
       "short_name": "vocab.term_status_ready"
     },
     {
-      "id": "th:vocab/term_status_rejected",
+      "id": "lg:vocab/term_status_rejected",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_status_rejected.json",
+      "locator": "model/objects/Term/lg__vocab__term_status_rejected.json",
       "short_name": "vocab.term_status_rejected"
     },
     {
-      "id": "th:vocab/term_status_selected",
+      "id": "lg:vocab/term_status_selected",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_status_selected.json",
+      "locator": "model/objects/Term/lg__vocab__term_status_selected.json",
       "short_name": "vocab.term_status_selected"
     },
     {
-      "id": "th:vocab/term_status_superseded",
+      "id": "lg:vocab/term_status_superseded",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_status_superseded.json",
+      "locator": "model/objects/Term/lg__vocab__term_status_superseded.json",
       "short_name": "vocab.term_status_superseded"
     },
     {
-      "id": "th:vocab/term_status_verified",
+      "id": "lg:vocab/term_status_verified",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_status_verified.json",
+      "locator": "model/objects/Term/lg__vocab__term_status_verified.json",
       "short_name": "vocab.term_status_verified"
     },
     {
-      "id": "th:vocab/term_td",
+      "id": "lg:vocab/term_td",
       "kind": "Term",
-      "locator": "model/objects/Term/th__vocab__term_td.json",
+      "locator": "model/objects/Term/lg__vocab__term_td.json",
       "short_name": "vocab.term_td"
     }
   ],

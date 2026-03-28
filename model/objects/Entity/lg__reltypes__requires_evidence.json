@@ -1,0 +1,7 @@
+{
+  "definition": "Relation type: the source gate requires the target record class as evidence.",
+  "id": "lg:reltypes/requires_evidence",
+  "kind": "Entity",
+  "short_name": "reltypes.requires_evidence",
+  "status": "Released"
+}

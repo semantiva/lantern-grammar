@@ -1,7 +1,0 @@
-{
-  "definition": "Question: a tracked uncertainty or open issue that may block gate progression until resolved or waived.",
-  "id": "th:artifacts/question",
-  "kind": "Entity",
-  "short_name": "artifacts.question",
-  "status": "Released"
-}

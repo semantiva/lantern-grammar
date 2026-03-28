@@ -1,7 +1,0 @@
-{
-  "definition": "Design Baseline (DB): the authoritative selected design artifact approved by GT-115 and consumed by downstream implementation selection and verification.",
-  "id": "th:artifacts/db",
-  "kind": "Entity",
-  "short_name": "artifacts.db",
-  "status": "Released"
-}

@@ -1,0 +1,13 @@
+{
+  "definition": "GT-030 Design Input Pack Lock: confirms a DIP is structurally complete and locks it as the upstream SSOT anchor for derivation into SPEC and ARCH drafts.",
+  "id": "lg:gates/gt_030",
+  "kind": "Entity",
+  "relation_ids": [
+    "lg:rel/gt_030.requires_evidence.dec",
+    "lg:rel/gt_030.requires_evidence.ev",
+    "lg:rel/gt_030.requires_input.dip",
+    "lg:rel/gt_030.requires_status.draft"
+  ],
+  "short_name": "gates.gt_030",
+  "status": "Released"
+}

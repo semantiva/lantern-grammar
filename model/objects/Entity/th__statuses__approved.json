@@ -1,7 +1,0 @@
-{
-  "definition": "Approved: artifact has passed its baseline readiness gate and is locked as an upstream input.",
-  "id": "th:statuses/approved",
-  "kind": "Entity",
-  "short_name": "statuses.approved",
-  "status": "Released"
-}

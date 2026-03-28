@@ -1,7 +1,0 @@
-{
-  "definition": "Test Definition (TD): an authoritative upstream test-definition baseline that specifies what must be tested, what evidence is required, and how success is judged for a Change Intent before design or implementation selection.",
-  "id": "th:artifacts/td",
-  "kind": "Entity",
-  "short_name": "artifacts.td",
-  "status": "Released"
-}

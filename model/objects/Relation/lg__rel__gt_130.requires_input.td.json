@@ -1,0 +1,10 @@
+{
+  "definition": "GT-130 requires approved Test Definitions (TD) as the locked testing reference during integration verification.",
+  "id": "lg:rel/gt_130.requires_input.td",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_input",
+  "short_name": "rel.gt_130.requires_input.td",
+  "source_entity_id": "lg:gates/gt_130",
+  "status": "Released",
+  "target_entity_id": "lg:artifacts/td"
+}

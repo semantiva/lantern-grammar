@@ -1,0 +1,12 @@
+{
+  "definition": "Canonical term for Design Candidate (DC).",
+  "denotes_entity_ids": [
+    "lg:artifacts/dc"
+  ],
+  "id": "lg:vocab/term_dc",
+  "kind": "Term",
+  "label": "Design Candidate",
+  "language": "en",
+  "short_name": "vocab.term_dc",
+  "status": "Released"
+}

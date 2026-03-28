@@ -1,0 +1,13 @@
+{
+  "definition": "GT-060 Requirements Specification Readiness: establishes that a Requirements Specification is complete and stable enough to be baselined as an upstream input.",
+  "id": "lg:gates/gt_060",
+  "kind": "Entity",
+  "relation_ids": [
+    "lg:rel/gt_060.requires_evidence.dec",
+    "lg:rel/gt_060.requires_evidence.ev",
+    "lg:rel/gt_060.requires_input.spec",
+    "lg:rel/gt_060.requires_status.draft"
+  ],
+  "short_name": "gates.gt_060",
+  "status": "Released"
+}

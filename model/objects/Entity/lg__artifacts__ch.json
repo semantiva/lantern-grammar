@@ -1,0 +1,7 @@
+{
+  "definition": "Change Intent (CH): a declared intent to change the system, with problem statement, scope, constraints, and validation target.",
+  "id": "lg:artifacts/ch",
+  "kind": "Entity",
+  "short_name": "artifacts.ch",
+  "status": "Released"
+}

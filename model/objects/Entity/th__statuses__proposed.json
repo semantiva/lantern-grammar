@@ -1,7 +1,0 @@
-{
-  "definition": "Proposed: a Change Intent has been formulated but has not yet passed the Input Kit Readiness gate.",
-  "id": "th:statuses/proposed",
-  "kind": "Entity",
-  "short_name": "statuses.proposed",
-  "status": "Released"
-}

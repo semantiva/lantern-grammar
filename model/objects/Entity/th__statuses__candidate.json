@@ -1,7 +1,0 @@
-{
-  "definition": "Candidate: a Change Increment is proposed as a candidate to address a Change Intent.",
-  "id": "th:statuses/candidate",
-  "kind": "Entity",
-  "short_name": "statuses.candidate",
-  "status": "Released"
-}

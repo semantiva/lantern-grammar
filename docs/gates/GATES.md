@@ -1,13 +1,13 @@
 > **OPTIONAL / Non-authoritative documentation — not model truth.**
 >
-> This file is preserved for context only. The authoritative semantic content is in the ECT-conforming model
+> This file is preserved for context only. The authoritative semantic content is in the ECT-conforming Lantern Grammar model
 > objects under `model/`. This document is a semantic summary of gate concepts and
 > their dependencies on artifact classes, record classes, and status values. It is not a
 > workflow/process specification.
 
 # GATES - Gate Definitions
 
-This document defines gate concepts and their semantic dependencies.
+This document defines gate concepts and their semantic dependencies as captured in Lantern Grammar.
 
 Gate ID convention: `GT-###`
 

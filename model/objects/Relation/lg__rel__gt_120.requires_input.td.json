@@ -1,0 +1,10 @@
+{
+  "definition": "GT-120 requires approved Test Definitions (TD) as the locked testing baseline for implementation selection.",
+  "id": "lg:rel/gt_120.requires_input.td",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_input",
+  "short_name": "rel.gt_120.requires_input.td",
+  "source_entity_id": "lg:gates/gt_120",
+  "status": "Released",
+  "target_entity_id": "lg:artifacts/td"
+}

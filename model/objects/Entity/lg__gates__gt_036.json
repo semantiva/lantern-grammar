@@ -1,0 +1,15 @@
+{
+  "definition": "GT-036 ARCH Draft Derivation Preflight: confirms an ARCH draft exists, is derived from a locked DIP, and is structurally ready to proceed toward ARCH baseline readiness.",
+  "id": "lg:gates/gt_036",
+  "kind": "Entity",
+  "relation_ids": [
+    "lg:rel/gt_036.requires_evidence.dec",
+    "lg:rel/gt_036.requires_evidence.ev",
+    "lg:rel/gt_036.requires_input.arch",
+    "lg:rel/gt_036.requires_input.dip",
+    "lg:rel/gt_036.requires_status.approved",
+    "lg:rel/gt_036.requires_status.draft"
+  ],
+  "short_name": "gates.gt_036",
+  "status": "Released"
+}

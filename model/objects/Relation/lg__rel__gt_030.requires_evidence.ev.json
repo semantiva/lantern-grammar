@@ -1,0 +1,10 @@
+{
+  "definition": "GT-030 requires Evidence Record(s) covering completeness, source inventory, and baseline locator checks.",
+  "id": "lg:rel/gt_030.requires_evidence.ev",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_evidence",
+  "short_name": "rel.gt_030.requires_evidence.ev",
+  "source_entity_id": "lg:gates/gt_030",
+  "status": "Released",
+  "target_entity_id": "lg:records/ev"
+}

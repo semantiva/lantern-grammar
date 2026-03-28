@@ -1,0 +1,10 @@
+{
+  "definition": "GT-110 conditionally requires referenced Architecture Definitions (ARCH) as inputs; each SHOULD be Approved, or an explicit waiver is required.",
+  "id": "lg:rel/gt_110.requires_input.arch",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_input",
+  "short_name": "rel.gt_110.requires_input.arch",
+  "source_entity_id": "lg:gates/gt_110",
+  "status": "Released",
+  "target_entity_id": "lg:artifacts/arch"
+}

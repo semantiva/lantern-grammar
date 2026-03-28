@@ -1,0 +1,10 @@
+{
+  "definition": "GT-110 conditionally requires referenced Requirements Specifications (SPEC) as inputs; each SHOULD be Approved, or an explicit waiver is required.",
+  "id": "lg:rel/gt_110.requires_input.spec",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_input",
+  "short_name": "rel.gt_110.requires_input.spec",
+  "source_entity_id": "lg:gates/gt_110",
+  "status": "Released",
+  "target_entity_id": "lg:artifacts/spec"
+}

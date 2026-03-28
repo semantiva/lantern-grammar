@@ -1,0 +1,12 @@
+{
+  "definition": "Canonical term for Proposed status.",
+  "denotes_entity_ids": [
+    "lg:statuses/proposed"
+  ],
+  "id": "lg:vocab/term_status_proposed",
+  "kind": "Term",
+  "label": "Proposed",
+  "language": "en",
+  "short_name": "vocab.term_status_proposed",
+  "status": "Released"
+}

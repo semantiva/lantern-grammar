@@ -1,0 +1,10 @@
+{
+  "definition": "GT-050 requires Evidence Record(s) covering completeness, baseline locator, and review outcome.",
+  "id": "lg:rel/gt_050.requires_evidence.ev",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_evidence",
+  "short_name": "rel.gt_050.requires_evidence.ev",
+  "source_entity_id": "lg:gates/gt_050",
+  "status": "Released",
+  "target_entity_id": "lg:records/ev"
+}

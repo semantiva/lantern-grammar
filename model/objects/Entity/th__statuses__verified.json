@@ -1,7 +1,0 @@
-{
-  "definition": "Verified: a Change Increment has passed integration verification.",
-  "id": "th:statuses/verified",
-  "kind": "Entity",
-  "short_name": "statuses.verified",
-  "status": "Released"
-}

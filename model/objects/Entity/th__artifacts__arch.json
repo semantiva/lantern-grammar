@@ -1,7 +1,0 @@
-{
-  "definition": "Architecture Definition (ARCH): a formal architecture definition derived from a locked DIP.",
-  "id": "th:artifacts/arch",
-  "kind": "Entity",
-  "short_name": "artifacts.arch",
-  "status": "Released"
-}

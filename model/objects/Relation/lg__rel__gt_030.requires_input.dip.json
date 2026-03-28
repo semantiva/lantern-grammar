@@ -1,0 +1,10 @@
+{
+  "definition": "GT-030 requires a Design Input Pack (DIP) as input.",
+  "id": "lg:rel/gt_030.requires_input.dip",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_input",
+  "short_name": "rel.gt_030.requires_input.dip",
+  "source_entity_id": "lg:gates/gt_030",
+  "status": "Released",
+  "target_entity_id": "lg:artifacts/dip"
+}

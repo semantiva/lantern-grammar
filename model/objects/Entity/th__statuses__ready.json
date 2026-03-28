@@ -1,7 +1,0 @@
-{
-  "definition": "Ready: a Change Intent has passed the Input Kit Readiness gate and is eligible for Change Increment work.",
-  "id": "th:statuses/ready",
-  "kind": "Entity",
-  "short_name": "statuses.ready",
-  "status": "Released"
-}

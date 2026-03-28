@@ -1,7 +1,0 @@
-{
-  "definition": "Selected: a Change Increment has been chosen from among candidates to address a Change Intent.",
-  "id": "th:statuses/selected",
-  "kind": "Entity",
-  "short_name": "statuses.selected",
-  "status": "Released"
-}

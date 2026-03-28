@@ -1,0 +1,10 @@
+{
+  "definition": "GT-030 requires a Decision Record recording the gate outcome and referencing evidence.",
+  "id": "lg:rel/gt_030.requires_evidence.dec",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_evidence",
+  "short_name": "rel.gt_030.requires_evidence.dec",
+  "source_entity_id": "lg:gates/gt_030",
+  "status": "Released",
+  "target_entity_id": "lg:records/dec"
+}

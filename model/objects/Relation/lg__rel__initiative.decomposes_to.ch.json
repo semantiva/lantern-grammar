@@ -1,0 +1,10 @@
+{
+  "definition": "An Initiative decomposes to one or more Change Intents.",
+  "id": "lg:rel/initiative.decomposes_to.ch",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/decomposes_to",
+  "short_name": "rel.initiative.decomposes_to.ch",
+  "source_entity_id": "lg:artifacts/initiative",
+  "status": "Released",
+  "target_entity_id": "lg:artifacts/ch"
+}

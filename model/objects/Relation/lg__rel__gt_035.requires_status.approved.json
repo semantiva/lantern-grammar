@@ -1,0 +1,10 @@
+{
+  "definition": "GT-035 requires the input DIP to have status Approved (locked via GT-030).",
+  "id": "lg:rel/gt_035.requires_status.approved",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_status",
+  "short_name": "rel.gt_035.requires_status.approved",
+  "source_entity_id": "lg:gates/gt_035",
+  "status": "Released",
+  "target_entity_id": "lg:statuses/approved"
+}

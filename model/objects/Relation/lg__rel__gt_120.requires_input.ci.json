@@ -1,0 +1,10 @@
+{
+  "definition": "GT-120 requires one or more Change Increments (CI) as input candidates.",
+  "id": "lg:rel/gt_120.requires_input.ci",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_input",
+  "short_name": "rel.gt_120.requires_input.ci",
+  "source_entity_id": "lg:gates/gt_120",
+  "status": "Released",
+  "target_entity_id": "lg:artifacts/ci"
+}

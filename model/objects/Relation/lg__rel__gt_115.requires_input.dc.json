@@ -1,0 +1,10 @@
+{
+  "definition": "GT-115 requires one or more Design Candidates (DC) as the candidate design pool.",
+  "id": "lg:rel/gt_115.requires_input.dc",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_input",
+  "short_name": "rel.gt_115.requires_input.dc",
+  "source_entity_id": "lg:gates/gt_115",
+  "status": "Released",
+  "target_entity_id": "lg:artifacts/dc"
+}

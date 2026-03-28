@@ -1,0 +1,7 @@
+{
+  "definition": "decomposes_to: the source planning object is decomposed into one or more smaller execution-target objects.",
+  "id": "lg:reltypes/decomposes_to",
+  "kind": "Entity",
+  "short_name": "reltypes.decomposes_to",
+  "status": "Released"
+}

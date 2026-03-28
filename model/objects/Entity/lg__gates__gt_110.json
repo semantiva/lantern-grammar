@@ -1,0 +1,17 @@
+{
+  "definition": "GT-110 Input Kit Readiness: checks whether a proposed Change Intent has sufficient approved upstream inputs, including approved Test Definitions, to proceed to design selection.",
+  "id": "lg:gates/gt_110",
+  "kind": "Entity",
+  "relation_ids": [
+    "lg:rel/gt_110.requires_evidence.dec",
+    "lg:rel/gt_110.requires_evidence.ev",
+    "lg:rel/gt_110.requires_input.arch",
+    "lg:rel/gt_110.requires_input.ch",
+    "lg:rel/gt_110.requires_input.spec",
+    "lg:rel/gt_110.requires_input.td",
+    "lg:rel/gt_110.requires_status.approved",
+    "lg:rel/gt_110.requires_status.proposed"
+  ],
+  "short_name": "gates.gt_110",
+  "status": "Released"
+}

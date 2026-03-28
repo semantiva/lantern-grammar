@@ -1,0 +1,18 @@
+{
+  "definition": "GT-130 Integration Verification: verifies a selected Change Increment against a Ready Change Intent, an approved Design Baseline, and approved Test Definitions.",
+  "id": "lg:gates/gt_130",
+  "kind": "Entity",
+  "relation_ids": [
+    "lg:rel/gt_130.requires_evidence.dec",
+    "lg:rel/gt_130.requires_evidence.ev",
+    "lg:rel/gt_130.requires_input.ch",
+    "lg:rel/gt_130.requires_input.ci",
+    "lg:rel/gt_130.requires_input.db",
+    "lg:rel/gt_130.requires_input.td",
+    "lg:rel/gt_130.requires_status.approved",
+    "lg:rel/gt_130.requires_status.ready",
+    "lg:rel/gt_130.requires_status.selected"
+  ],
+  "short_name": "gates.gt_130",
+  "status": "Released"
+}

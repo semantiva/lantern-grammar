@@ -1,0 +1,10 @@
+{
+  "definition": "GT-045 requires a Requirements Specification (SPEC) draft as input.",
+  "id": "lg:rel/gt_045.requires_input.spec",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_input",
+  "short_name": "rel.gt_045.requires_input.spec",
+  "source_entity_id": "lg:gates/gt_045",
+  "status": "Released",
+  "target_entity_id": "lg:artifacts/spec"
+}

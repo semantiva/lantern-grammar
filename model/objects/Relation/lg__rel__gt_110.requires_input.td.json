@@ -1,0 +1,10 @@
+{
+  "definition": "GT-110 requires one or more approved Test Definitions (TD) as input.",
+  "id": "lg:rel/gt_110.requires_input.td",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_input",
+  "short_name": "rel.gt_110.requires_input.td",
+  "source_entity_id": "lg:gates/gt_110",
+  "status": "Released",
+  "target_entity_id": "lg:artifacts/td"
+}

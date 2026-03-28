@@ -1,7 +1,0 @@
-{
-  "definition": "Evidence Record (EV): a structured record of evidence gathered during gate evaluation.",
-  "id": "th:records/ev",
-  "kind": "Entity",
-  "short_name": "records.ev",
-  "status": "Released"
-}

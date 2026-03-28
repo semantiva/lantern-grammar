@@ -1,0 +1,13 @@
+{
+  "definition": "GT-050 Architecture Definition Readiness: establishes that an Architecture Definition is complete and stable enough to be baselined as an upstream input.",
+  "id": "lg:gates/gt_050",
+  "kind": "Entity",
+  "relation_ids": [
+    "lg:rel/gt_050.requires_evidence.dec",
+    "lg:rel/gt_050.requires_evidence.ev",
+    "lg:rel/gt_050.requires_input.arch",
+    "lg:rel/gt_050.requires_status.draft"
+  ],
+  "short_name": "gates.gt_050",
+  "status": "Released"
+}

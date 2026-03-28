@@ -1,0 +1,10 @@
+{
+  "definition": "GT-115 requires Architecture Definition (ARCH) input as the approved architecture baseline for design selection.",
+  "id": "lg:rel/gt_115.requires_input.arch",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_input",
+  "short_name": "rel.gt_115.requires_input.arch",
+  "source_entity_id": "lg:gates/gt_115",
+  "status": "Released",
+  "target_entity_id": "lg:artifacts/arch"
+}
