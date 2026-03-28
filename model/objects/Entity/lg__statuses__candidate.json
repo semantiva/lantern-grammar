@@ -1,5 +1,5 @@
 {
-  "definition": "Candidate: a Change Increment is proposed as a candidate to address a Change Intent.",
+  "definition": "Candidate: an artifact is proposed as a selectable candidate within a governed comparison or selection context.",
   "id": "lg:statuses/candidate",
   "kind": "Entity",
   "short_name": "statuses.candidate",

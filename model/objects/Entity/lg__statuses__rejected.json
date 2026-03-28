@@ -1,5 +1,5 @@
 {
-  "definition": "Rejected: a Change Increment candidate was not selected.",
+  "definition": "Rejected: a candidate artifact was considered but not chosen within a governed comparison or selection context.",
   "id": "lg:statuses/rejected",
   "kind": "Entity",
   "short_name": "statuses.rejected",

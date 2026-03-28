@@ -1,5 +1,5 @@
 {
-  "definition": "Selected: a Change Increment has been chosen from among candidates to address a Change Intent.",
+  "definition": "Selected: an artifact has been chosen from among candidates within a governed comparison or selection context.",
   "id": "lg:statuses/selected",
   "kind": "Entity",
   "short_name": "statuses.selected",
