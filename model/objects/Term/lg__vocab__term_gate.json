@@ -2,12 +2,10 @@
   "definition": "Canonical term for lifecycle gates in the Lantern Grammar semantic surface.",
   "denotes_entity_ids": [
     "lg:gates/gt_030",
-    "lg:gates/gt_035",
-    "lg:gates/gt_036",
-    "lg:gates/gt_045",
     "lg:gates/gt_050",
     "lg:gates/gt_060",
     "lg:gates/gt_110",
+    "lg:gates/gt_115",
     "lg:gates/gt_120",
     "lg:gates/gt_130"
   ],

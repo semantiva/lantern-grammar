@@ -1,0 +1,7 @@
+{
+  "definition": "Draft: an Initiative identified but not sufficiently formulated for formal proposal. This status allows initiatives to exist in the governance graph before decomposition work begins.",
+  "id": "lg:statuses/draft_initiative",
+  "kind": "Entity",
+  "short_name": "statuses.draft_initiative",
+  "status": "Released"
+}

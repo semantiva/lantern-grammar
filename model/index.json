@@ -73,24 +73,6 @@
       "short_name": "gates.gt_030"
     },
     {
-      "id": "lg:gates/gt_035",
-      "kind": "Entity",
-      "locator": "model/objects/Entity/lg__gates__gt_035.json",
-      "short_name": "gates.gt_035"
-    },
-    {
-      "id": "lg:gates/gt_036",
-      "kind": "Entity",
-      "locator": "model/objects/Entity/lg__gates__gt_036.json",
-      "short_name": "gates.gt_036"
-    },
-    {
-      "id": "lg:gates/gt_045",
-      "kind": "Entity",
-      "locator": "model/objects/Entity/lg__gates__gt_045.json",
-      "short_name": "gates.gt_045"
-    },
-    {
       "id": "lg:gates/gt_050",
       "kind": "Entity",
       "locator": "model/objects/Entity/lg__gates__gt_050.json",
@@ -163,120 +145,6 @@
       "short_name": "rel.gt_030.requires_status.draft"
     },
     {
-      "id": "lg:rel/gt_035.requires_evidence.dec",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_035.requires_evidence.dec.json",
-      "short_name": "rel.gt_035.requires_evidence.dec"
-    },
-    {
-      "id": "lg:rel/gt_035.requires_evidence.ev",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_035.requires_evidence.ev.json",
-      "short_name": "rel.gt_035.requires_evidence.ev"
-    },
-    {
-      "id": "lg:rel/gt_035.requires_input.dip",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_035.requires_input.dip.json",
-      "short_name": "rel.gt_035.requires_input.dip"
-    },
-    {
-      "id": "lg:rel/gt_035.requires_input.spec",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_035.requires_input.spec.json",
-      "short_name": "rel.gt_035.requires_input.spec"
-    },
-    {
-      "id": "lg:rel/gt_035.requires_status.approved",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_035.requires_status.approved.json",
-      "short_name": "rel.gt_035.requires_status.approved"
-    },
-    {
-      "id": "lg:rel/gt_035.requires_status.draft",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_035.requires_status.draft.json",
-      "short_name": "rel.gt_035.requires_status.draft"
-    },
-    {
-      "id": "lg:rel/gt_036.requires_evidence.dec",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_036.requires_evidence.dec.json",
-      "short_name": "rel.gt_036.requires_evidence.dec"
-    },
-    {
-      "id": "lg:rel/gt_036.requires_evidence.ev",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_036.requires_evidence.ev.json",
-      "short_name": "rel.gt_036.requires_evidence.ev"
-    },
-    {
-      "id": "lg:rel/gt_036.requires_input.arch",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_036.requires_input.arch.json",
-      "short_name": "rel.gt_036.requires_input.arch"
-    },
-    {
-      "id": "lg:rel/gt_036.requires_input.dip",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_036.requires_input.dip.json",
-      "short_name": "rel.gt_036.requires_input.dip"
-    },
-    {
-      "id": "lg:rel/gt_036.requires_status.approved",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_036.requires_status.approved.json",
-      "short_name": "rel.gt_036.requires_status.approved"
-    },
-    {
-      "id": "lg:rel/gt_036.requires_status.draft",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_036.requires_status.draft.json",
-      "short_name": "rel.gt_036.requires_status.draft"
-    },
-    {
-      "id": "lg:rel/gt_045.requires_evidence.dec",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_045.requires_evidence.dec.json",
-      "short_name": "rel.gt_045.requires_evidence.dec"
-    },
-    {
-      "id": "lg:rel/gt_045.requires_evidence.ev",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_045.requires_evidence.ev.json",
-      "short_name": "rel.gt_045.requires_evidence.ev"
-    },
-    {
-      "id": "lg:rel/gt_045.requires_input.arch",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_045.requires_input.arch.json",
-      "short_name": "rel.gt_045.requires_input.arch"
-    },
-    {
-      "id": "lg:rel/gt_045.requires_input.dip",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_045.requires_input.dip.json",
-      "short_name": "rel.gt_045.requires_input.dip"
-    },
-    {
-      "id": "lg:rel/gt_045.requires_input.spec",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_045.requires_input.spec.json",
-      "short_name": "rel.gt_045.requires_input.spec"
-    },
-    {
-      "id": "lg:rel/gt_045.requires_status.approved",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_045.requires_status.approved.json",
-      "short_name": "rel.gt_045.requires_status.approved"
-    },
-    {
-      "id": "lg:rel/gt_045.requires_status.draft",
-      "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_045.requires_status.draft.json",
-      "short_name": "rel.gt_045.requires_status.draft"
-    },
-    {
       "id": "lg:rel/gt_050.requires_evidence.dec",
       "kind": "Relation",
       "locator": "model/objects/Relation/lg__rel__gt_050.requires_evidence.dec.json",
@@ -293,6 +161,18 @@
       "kind": "Relation",
       "locator": "model/objects/Relation/lg__rel__gt_050.requires_input.arch.json",
       "short_name": "rel.gt_050.requires_input.arch"
+    },
+    {
+      "id": "lg:rel/gt_050.requires_input.dip",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/lg__rel__gt_050.requires_input.dip.json",
+      "short_name": "rel.gt_050.requires_input.dip"
+    },
+    {
+      "id": "lg:rel/gt_050.requires_status.approved",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/lg__rel__gt_050.requires_status.approved.json",
+      "short_name": "rel.gt_050.requires_status.approved"
     },
     {
       "id": "lg:rel/gt_050.requires_status.draft",
@@ -313,10 +193,22 @@
       "short_name": "rel.gt_060.requires_evidence.ev"
     },
     {
+      "id": "lg:rel/gt_060.requires_input.dip",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/lg__rel__gt_060.requires_input.dip.json",
+      "short_name": "rel.gt_060.requires_input.dip"
+    },
+    {
       "id": "lg:rel/gt_060.requires_input.spec",
       "kind": "Relation",
       "locator": "model/objects/Relation/lg__rel__gt_060.requires_input.spec.json",
       "short_name": "rel.gt_060.requires_input.spec"
+    },
+    {
+      "id": "lg:rel/gt_060.requires_status.approved",
+      "kind": "Relation",
+      "locator": "model/objects/Relation/lg__rel__gt_060.requires_status.approved.json",
+      "short_name": "rel.gt_060.requires_status.approved"
     },
     {
       "id": "lg:rel/gt_060.requires_status.draft",
@@ -599,6 +491,12 @@
       "kind": "Entity",
       "locator": "model/objects/Entity/lg__statuses__draft.json",
       "short_name": "statuses.draft"
+    },
+    {
+      "id": "lg:statuses/draft_initiative",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/lg__statuses__draft_initiative.json",
+      "short_name": "statuses.draft_initiative"
     },
     {
       "id": "lg:statuses/in_progress_initiative",

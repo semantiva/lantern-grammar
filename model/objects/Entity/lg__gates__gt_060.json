@@ -5,7 +5,9 @@
   "relation_ids": [
     "lg:rel/gt_060.requires_evidence.dec",
     "lg:rel/gt_060.requires_evidence.ev",
+    "lg:rel/gt_060.requires_input.dip",
     "lg:rel/gt_060.requires_input.spec",
+    "lg:rel/gt_060.requires_status.approved",
     "lg:rel/gt_060.requires_status.draft"
   ],
   "short_name": "gates.gt_060",
