@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "lantern-grammar"
-version = "0.2.1"
+version = "0.3.0"
 description = "Authoritative semantic model for Lantern governed workflow"
 readme = "README.md"
 requires-python = ">=3.11"

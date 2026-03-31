@@ -201,7 +201,7 @@ class TestGetEntity:
             )
 
     def test_all_gates_present(self, grammar):
-        for gate in ("gt_030", "gt_035", "gt_036", "gt_045", "gt_050",
+        for gate in ("gt_030", "gt_050",
                      "gt_060", "gt_110", "gt_115", "gt_120", "gt_130"):
             gate_id = f"lg:gates/{gate}"
             assert grammar.get_entity(gate_id) is not None, (
@@ -435,7 +435,7 @@ class TestGateDependencies:
         assert len(deps["relation_ids"]) > 0
 
     def test_all_gates_queriable(self, grammar):
-        for gate in ("gt_030", "gt_035", "gt_036", "gt_045", "gt_050",
+        for gate in ("gt_030", "gt_050",
                      "gt_060", "gt_110", "gt_115", "gt_120", "gt_130"):
             gate_id = f"lg:gates/{gate}"
             deps = grammar.gate_dependencies(gate_id)
