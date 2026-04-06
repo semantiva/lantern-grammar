@@ -1,3 +1,17 @@
+# Copyright 2025 Lantern Authors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 """Shared pytest fixtures for lantern-grammar tests."""
 
 import json
@@ -20,10 +34,7 @@ _MODEL_DIR = _PROJECT_ROOT / "model"
 @pytest.fixture(scope="session")
 def model_dir() -> Path:
     """Return the path to the authoritative model/ directory."""
-    assert _MODEL_DIR.is_dir(), (
-        f"model/ not found at {_MODEL_DIR}. "
-        "Run tests from the lantern-grammar project root."
-    )
+    assert _MODEL_DIR.is_dir(), f"model/ not found at {_MODEL_DIR}. " "Run tests from the lantern-grammar project root."
     return _MODEL_DIR
 
 
@@ -36,6 +47,7 @@ def grammar(model_dir: Path) -> Grammar:
 # ---------------------------------------------------------------------------
 # Malformed-model fixtures (created in tmp_path)
 # ---------------------------------------------------------------------------
+
 
 @pytest.fixture()
 def empty_dir(tmp_path: Path) -> Path:
@@ -69,9 +81,7 @@ def dir_manifest_missing_fields(tmp_path: Path) -> Path:
     """A directory with a manifest.json that lacks required fields."""
     d = tmp_path / "missing_fields"
     d.mkdir()
-    (d / "manifest.json").write_text(
-        json.dumps({"representation_version": "0.1.0"}), encoding="utf-8"
-    )
+    (d / "manifest.json").write_text(json.dumps({"representation_version": "0.1.0"}), encoding="utf-8")
     (d / "index.json").write_text(json.dumps({"entries": []}), encoding="utf-8")
     return d
 
@@ -81,9 +91,7 @@ def dir_index_missing_entries(tmp_path: Path) -> Path:
     """A directory with manifest.json but index.json missing 'entries' key."""
     d = tmp_path / "no_entries"
     d.mkdir()
-    (d / "manifest.json").write_text(
-        json.dumps({"model_id": "x", "model_version": "0.0.1"}), encoding="utf-8"
-    )
+    (d / "manifest.json").write_text(json.dumps({"model_id": "x", "model_version": "0.0.1"}), encoding="utf-8")
     (d / "index.json").write_text(json.dumps({"other": []}), encoding="utf-8")
     return d
 
@@ -92,6 +100,7 @@ def dir_index_missing_entries(tmp_path: Path) -> Path:
 def dir_broken_xref(tmp_path: Path, model_dir: Path) -> Path:
     """A model copy with one relation that references a non-existent entity."""
     import shutil
+
     d = tmp_path / "broken_xref"
     shutil.copytree(model_dir, d)
     # Corrupt one relation file

@@ -1,0 +1,150 @@
+name: CI Pipeline
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'  # Trigger the build job only on version tags (e.g., v0.3.0)
+
+env:
+  project_name: lantern-grammar
+  python_version: '3.11'
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.python_version }}
+
+      - name: Install dependencies
+        run: |
+          pip install setuptools wheel build pylint ruff mypy black
+
+      - name: Run pylint
+        run: |
+          pylint --fail-under=7.5 src/lantern_grammar/
+
+      - name: Run ruff
+        run: |
+          ruff check src/lantern_grammar/
+
+      - name: Run mypy
+        run: |
+          mypy src/lantern_grammar/
+
+      - name: Run black format check
+        run: |
+          black --check src/lantern_grammar/ tests/ scripts/
+
+      - name: Check license headers
+        run: |
+          python scripts/check_license_headers.py
+
+      - name: Validate version alignment
+        run: |
+          VERSION_FILE=$(cat version.txt | tr -d ' \n')
+          VERSION_TOML=$(grep -m1 "version = {file" pyproject.toml && echo "dynamic" || grep "version = " pyproject.toml | grep -oE "[0-9]+\.[0-9]+\.[0-9]+")
+          MANIFEST_VERSION=$(grep "model_version" model/manifest.json | grep -oE "[0-9]+\.[0-9]+\.[0-9]+")
+          if [ "$VERSION_FILE" != "$MANIFEST_VERSION" ]; then
+            echo "❌ Version mismatch: version.txt=$VERSION_FILE model_version=$MANIFEST_VERSION"
+            exit 1
+          fi
+          echo "✅ Versions aligned: $VERSION_FILE"
+
+  test:
+    runs-on: ubuntu-latest
+    needs: linting
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.python_version }}
+
+      - name: Install dependencies
+        run: |
+          pip install setuptools wheel build pytest coverage
+
+      - name: Run pytest with coverage
+        run: |
+          coverage run -m pytest --maxfail=1 -q -s
+
+      - name: Display coverage report
+        run: |
+          coverage report
+
+  build:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.python_version }}
+
+      - name: Install build tools
+        run: |
+          pip install setuptools wheel build cyclonedx-bom
+
+      - name: Build package
+        run: |
+          python -m build
+
+      - name: Generate SBOM
+        run: |
+          pip install --upgrade cyclonedx-bom
+          cyclonedx-bom --output-format json --output-file sbom.spdx.json
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: |
+            dist/
+            sbom.spdx.json
+
+  publish:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+    permissions:
+      id-token: write
+    environment:
+      name: pypi
+      url: https://pypi.org/p/lantern-grammar
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.python_version }}
+
+      - name: Install build tools
+        run: |
+          pip install setuptools wheel build twine
+
+      - name: Build package
+        run: |
+          python -m build
+
+      - name: Publish to PyPI
+        run: |
+          python -m twine upload dist/* --skip-existing
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}

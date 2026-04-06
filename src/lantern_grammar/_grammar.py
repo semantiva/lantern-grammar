@@ -1,3 +1,17 @@
+# Copyright 2025 Lantern Authors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 """Core Grammar class — the read-only projection of Lantern Grammar model data.
 
 This module is an implementation detail.  Consumers should import only from
@@ -70,6 +84,7 @@ _GATE_PREFIX = "lg:gates/"
 # Grammar
 # ---------------------------------------------------------------------------
 
+
 class Grammar:
     """Read-only projection of the released Lantern Grammar model.
 
@@ -94,15 +109,9 @@ class Grammar:
         # All collections are built once and never mutated after this point,
         # giving the thread-safety guarantee in the contract.
         self._manifest: MappingProxyType = MappingProxyType(dict(manifest_data))
-        self._entities: dict[str, MappingProxyType] = {
-            k: MappingProxyType(v) for k, v in entities.items()
-        }
-        self._relations: dict[str, MappingProxyType] = {
-            k: MappingProxyType(v) for k, v in relations.items()
-        }
-        self._terms: dict[str, MappingProxyType] = {
-            k: MappingProxyType(v) for k, v in terms.items()
-        }
+        self._entities: dict[str, MappingProxyType] = {k: MappingProxyType(v) for k, v in entities.items()}
+        self._relations: dict[str, MappingProxyType] = {k: MappingProxyType(v) for k, v in relations.items()}
+        self._terms: dict[str, MappingProxyType] = {k: MappingProxyType(v) for k, v in terms.items()}
         self._package_version = package_version
 
     # --- Stable construction contract ---
@@ -147,9 +156,7 @@ class Grammar:
         if not p.exists():
             raise FileNotFoundError(f"Grammar model directory not found: {path}")
         if not p.is_dir():
-            raise LanternGrammarLoadError(
-                f"Grammar model path is not a directory: {path}"
-            )
+            raise LanternGrammarLoadError(f"Grammar model path is not a directory: {path}")
         return cls._load_from_path(p)
 
     @classmethod
@@ -160,9 +167,7 @@ class Grammar:
 
         index_data = _load_json_file(model_dir / "index.json", "index.json")
         if "entries" not in index_data:
-            raise LanternGrammarLoadError(
-                "index.json missing required 'entries' field"
-            )
+            raise LanternGrammarLoadError("index.json missing required 'entries' field")
 
         entities: dict = {}
         relations: dict = {}
@@ -174,9 +179,7 @@ class Grammar:
             locator: Optional[str] = entry.get("locator")
 
             if not (entry_id and entry_kind and locator):
-                raise LanternGrammarLoadError(
-                    f"Index entry missing required fields (id/kind/locator): {entry}"
-                )
+                raise LanternGrammarLoadError(f"Index entry missing required fields (id/kind/locator): {entry}")
 
             # Locators are of the form "model/objects/<Kind>/<file>.json",
             # expressed relative to the repository root with "model/" as the
@@ -288,20 +291,11 @@ class Grammar:
                 "relation_type_id, source_entity_id, or target_entity_id"
             )
         for rel in self._relations.values():
-            if (
-                relation_type_id is not None
-                and rel.get("relation_type_id") != relation_type_id
-            ):
+            if relation_type_id is not None and rel.get("relation_type_id") != relation_type_id:
                 continue
-            if (
-                source_entity_id is not None
-                and rel.get("source_entity_id") != source_entity_id
-            ):
+            if source_entity_id is not None and rel.get("source_entity_id") != source_entity_id:
                 continue
-            if (
-                target_entity_id is not None
-                and rel.get("target_entity_id") != target_entity_id
-            ):
+            if target_entity_id is not None and rel.get("target_entity_id") != target_entity_id:
                 continue
             yield rel
 
@@ -360,10 +354,7 @@ class Grammar:
         """
         entity = self._entities.get(gate_id)
         if entity is None or not gate_id.startswith(_GATE_PREFIX):
-            raise KeyError(
-                f"Gate not found in model: {gate_id!r}.  "
-                "Gate IDs must start with 'lg:gates/'."
-            )
+            raise KeyError(f"Gate not found in model: {gate_id!r}.  " "Gate IDs must start with 'lg:gates/'.")
 
         requires_input: list[str] = []
         requires_evidence: list[str] = []
@@ -384,13 +375,15 @@ class Grammar:
             elif rtype == _REQUIRES_STATUS:
                 requires_status.append(target)
 
-        return MappingProxyType({
-            "gate_id": gate_id,
-            "requires_input": tuple(requires_input),
-            "requires_evidence": tuple(requires_evidence),
-            "requires_status": tuple(requires_status),
-            "relation_ids": tuple(relation_ids),
-        })
+        return MappingProxyType(
+            {
+                "gate_id": gate_id,
+                "requires_input": tuple(requires_input),
+                "requires_evidence": tuple(requires_evidence),
+                "requires_status": tuple(requires_status),
+                "relation_ids": tuple(relation_ids),
+            }
+        )
 
     # --- Integrity validation ---
 
@@ -425,36 +418,26 @@ class Grammar:
             tgt = rel.get("target_entity_id")
             rtype = rel.get("relation_type_id")
             if src and src not in self._entities:
-                errors.append(
-                    f"Relation {rel_id!r}: source_entity_id {src!r} "
-                    "not found in entity index"
-                )
+                errors.append(f"Relation {rel_id!r}: source_entity_id {src!r} " "not found in entity index")
             if tgt and tgt not in self._entities:
-                errors.append(
-                    f"Relation {rel_id!r}: target_entity_id {tgt!r} "
-                    "not found in entity index"
-                )
+                errors.append(f"Relation {rel_id!r}: target_entity_id {tgt!r} " "not found in entity index")
             if rtype and rtype not in self._entities:
-                errors.append(
-                    f"Relation {rel_id!r}: relation_type_id {rtype!r} "
-                    "not found in entity index"
-                )
+                errors.append(f"Relation {rel_id!r}: relation_type_id {rtype!r} " "not found in entity index")
 
         # --- Gate relation_ids cross-references ---
         for entity_id, entity in self._entities.items():
             if entity_id.startswith(_GATE_PREFIX):
                 for rel_id in entity.get("relation_ids", []):
                     if rel_id not in self._relations:
-                        errors.append(
-                            f"Gate {entity_id!r}: relation_id {rel_id!r} "
-                            "not found in relation index"
-                        )
+                        errors.append(f"Gate {entity_id!r}: relation_id {rel_id!r} " "not found in relation index")
 
-        return MappingProxyType({
-            "ok": len(errors) == 0,
-            "errors": tuple(errors),
-            "warnings": tuple(warnings),
-        })
+        return MappingProxyType(
+            {
+                "ok": len(errors) == 0,
+                "errors": tuple(errors),
+                "warnings": tuple(warnings),
+            }
+        )
 
     def __repr__(self) -> str:
         model_id = self._manifest.get("model_id", "?")
@@ -470,6 +453,7 @@ class Grammar:
 # Private helpers
 # ---------------------------------------------------------------------------
 
+
 def _load_json_file(path: Path, label: str) -> dict:
     """Load a JSON file, raising LanternGrammarLoadError on failure."""
     if not path.exists():
@@ -477,28 +461,23 @@ def _load_json_file(path: Path, label: str) -> dict:
     try:
         return json.loads(path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as exc:
-        raise LanternGrammarLoadError(
-            f"Failed to parse {label}: {exc}"
-        ) from exc
+        raise LanternGrammarLoadError(f"Failed to parse {label}: {exc}") from exc
     except OSError as exc:
-        raise LanternGrammarLoadError(
-            f"Failed to read {label}: {exc}"
-        ) from exc
+        raise LanternGrammarLoadError(f"Failed to read {label}: {exc}") from exc
 
 
 def _require_fields(data: dict, fields: tuple, source: str) -> None:
     """Raise LanternGrammarLoadError if any of *fields* is absent from *data*."""
     for field in fields:
         if field not in data:
-            raise LanternGrammarLoadError(
-                f"{source} missing required field: {field!r}"
-            )
+            raise LanternGrammarLoadError(f"{source} missing required field: {field!r}")
 
 
 def _get_package_version() -> str:
     """Return installed package version, or 'unknown' if unavailable."""
     try:
         from importlib.metadata import version
+
         return version("lantern-grammar")
     except Exception:
         return "unknown"

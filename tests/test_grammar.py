@@ -1,3 +1,17 @@
+# Copyright 2025 Lantern Authors
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 """Comprehensive tests for the lantern-grammar public API.
 
 Coverage targets (all from DN-LGR-PROP-004 stable contract):
@@ -26,6 +40,7 @@ from lantern_grammar import Grammar, LanternGrammarLoadError
 # Construction — Grammar.load()
 # ===========================================================================
 
+
 class TestLoad:
     def test_load_returns_grammar_instance(self):
         grammar = Grammar.load()
@@ -42,14 +57,12 @@ class TestLoad:
 
     def test_load_has_relations(self):
         grammar = Grammar.load()
-        count = sum(1 for _ in grammar.find_relations(
-            relation_type_id="lg:reltypes/requires_input"
-        ))
+        count = sum(1 for _ in grammar.find_relations(relation_type_id="lg:reltypes/requires_input"))
         assert count > 0
 
     def test_load_has_terms(self):
         grammar = Grammar.load()
-        term = grammar.get_term("lg:vocab/term_ch")
+        grammar.get_term("lg:vocab/term_ch")
         # Term may not be in index; if Grammar.load() worked we have a Grammar
         assert isinstance(grammar, Grammar)
 
@@ -57,6 +70,7 @@ class TestLoad:
 # ===========================================================================
 # Construction — Grammar.from_directory()
 # ===========================================================================
+
 
 class TestFromDirectory:
     def test_returns_grammar_instance(self, model_dir):
@@ -105,6 +119,7 @@ class TestFromDirectory:
 # Manifest and version metadata
 # ===========================================================================
 
+
 class TestManifest:
     def test_manifest_returns_mapping(self, grammar):
         m = grammar.manifest()
@@ -145,6 +160,7 @@ class TestManifest:
 # ===========================================================================
 # Entity access
 # ===========================================================================
+
 
 class TestGetEntity:
     def test_known_artifact_entity(self, grammar):
@@ -191,22 +207,23 @@ class TestGetEntity:
 
     def test_all_artifact_families_present(self, grammar):
         expected = [
-            "lg:artifacts/arch", "lg:artifacts/ch", "lg:artifacts/ci",
-            "lg:artifacts/db", "lg:artifacts/dc", "lg:artifacts/dip",
-            "lg:artifacts/initiative", "lg:artifacts/spec", "lg:artifacts/td",
+            "lg:artifacts/arch",
+            "lg:artifacts/ch",
+            "lg:artifacts/ci",
+            "lg:artifacts/db",
+            "lg:artifacts/dc",
+            "lg:artifacts/dip",
+            "lg:artifacts/initiative",
+            "lg:artifacts/spec",
+            "lg:artifacts/td",
         ]
         for artifact_id in expected:
-            assert grammar.get_entity(artifact_id) is not None, (
-                f"Missing artifact entity: {artifact_id}"
-            )
+            assert grammar.get_entity(artifact_id) is not None, f"Missing artifact entity: {artifact_id}"
 
     def test_all_gates_present(self, grammar):
-        for gate in ("gt_030", "gt_050",
-                     "gt_060", "gt_110", "gt_115", "gt_120", "gt_130"):
+        for gate in ("gt_030", "gt_050", "gt_060", "gt_110", "gt_115", "gt_120", "gt_130"):
             gate_id = f"lg:gates/{gate}"
-            assert grammar.get_entity(gate_id) is not None, (
-                f"Missing gate entity: {gate_id}"
-            )
+            assert grammar.get_entity(gate_id) is not None, f"Missing gate entity: {gate_id}"
 
 
 class TestIterEntities:
@@ -233,9 +250,7 @@ class TestIterEntities:
             assert e.get("status") == "Released"
 
     def test_combined_filter(self, grammar):
-        released_gates = list(
-            grammar.iter_entities(prefix="lg:gates/", status="Released")
-        )
+        released_gates = list(grammar.iter_entities(prefix="lg:gates/", status="Released"))
         assert len(released_gates) > 0
         for g in released_gates:
             assert g["id"].startswith("lg:gates/")
@@ -248,14 +263,13 @@ class TestIterEntities:
     def test_each_entity_has_required_fields(self, grammar):
         for e in grammar.iter_entities():
             for field in ("id", "kind", "short_name"):
-                assert field in e, (
-                    f"Entity {e.get('id')!r} missing field {field!r}"
-                )
+                assert field in e, f"Entity {e.get('id')!r} missing field {field!r}"
 
 
 # ===========================================================================
 # Relation access
 # ===========================================================================
+
 
 class TestGetRelation:
     def test_known_relation(self, grammar):
@@ -264,8 +278,16 @@ class TestGetRelation:
 
     def test_relation_has_required_fields(self, grammar):
         r = grammar.get_relation("lg:rel/gt_115.requires_input.ch")
-        for field in ("id", "kind", "short_name", "definition", "status",
-                      "relation_type_id", "source_entity_id", "target_entity_id"):
+        for field in (
+            "id",
+            "kind",
+            "short_name",
+            "definition",
+            "status",
+            "relation_type_id",
+            "source_entity_id",
+            "target_entity_id",
+        ):
             assert field in r, f"Missing field {field!r}"
 
     def test_relation_source_target(self, grammar):
@@ -284,34 +306,30 @@ class TestGetRelation:
 
 class TestFindRelations:
     def test_by_relation_type_id(self, grammar):
-        rels = list(grammar.find_relations(
-            relation_type_id="lg:reltypes/requires_input"
-        ))
+        rels = list(grammar.find_relations(relation_type_id="lg:reltypes/requires_input"))
         assert len(rels) > 0
         for r in rels:
             assert r["relation_type_id"] == "lg:reltypes/requires_input"
 
     def test_by_source_entity_id(self, grammar):
-        rels = list(grammar.find_relations(
-            source_entity_id="lg:gates/gt_115"
-        ))
+        rels = list(grammar.find_relations(source_entity_id="lg:gates/gt_115"))
         assert len(rels) > 0
         for r in rels:
             assert r["source_entity_id"] == "lg:gates/gt_115"
 
     def test_by_target_entity_id(self, grammar):
-        rels = list(grammar.find_relations(
-            target_entity_id="lg:artifacts/ch"
-        ))
+        rels = list(grammar.find_relations(target_entity_id="lg:artifacts/ch"))
         assert len(rels) > 0
         for r in rels:
             assert r["target_entity_id"] == "lg:artifacts/ch"
 
     def test_combined_filters(self, grammar):
-        rels = list(grammar.find_relations(
-            relation_type_id="lg:reltypes/requires_input",
-            source_entity_id="lg:gates/gt_115",
-        ))
+        rels = list(
+            grammar.find_relations(
+                relation_type_id="lg:reltypes/requires_input",
+                source_entity_id="lg:gates/gt_115",
+            )
+        )
         assert len(rels) > 0
         for r in rels:
             assert r["relation_type_id"] == "lg:reltypes/requires_input"
@@ -322,21 +340,18 @@ class TestFindRelations:
             list(grammar.find_relations())
 
     def test_non_matching_filter_returns_empty(self, grammar):
-        rels = list(grammar.find_relations(
-            source_entity_id="lg:gates/NONEXISTENT"
-        ))
+        rels = list(grammar.find_relations(source_entity_id="lg:gates/NONEXISTENT"))
         assert rels == []
 
     def test_decomposes_to_relation_present(self, grammar):
-        rels = list(grammar.find_relations(
-            relation_type_id="lg:reltypes/decomposes_to"
-        ))
+        rels = list(grammar.find_relations(relation_type_id="lg:reltypes/decomposes_to"))
         assert len(rels) > 0
 
 
 # ===========================================================================
 # Term lookup
 # ===========================================================================
+
 
 class TestGetTerm:
     def test_known_term(self, grammar):
@@ -387,6 +402,7 @@ class TestFindTerms:
 # Gate-dependency queries
 # ===========================================================================
 
+
 class TestGateDependencies:
     def test_gt115_returns_mapping(self, grammar):
         deps = grammar.gate_dependencies("lg:gates/gt_115")
@@ -394,8 +410,7 @@ class TestGateDependencies:
 
     def test_gt115_has_stable_keys(self, grammar):
         deps = grammar.gate_dependencies("lg:gates/gt_115")
-        for key in ("gate_id", "requires_input", "requires_evidence",
-                    "requires_status", "relation_ids"):
+        for key in ("gate_id", "requires_input", "requires_evidence", "requires_status", "relation_ids"):
             assert key in deps, f"Missing stable key {key!r}"
 
     def test_gate_id_matches(self, grammar):
@@ -435,8 +450,7 @@ class TestGateDependencies:
         assert len(deps["relation_ids"]) > 0
 
     def test_all_gates_queriable(self, grammar):
-        for gate in ("gt_030", "gt_050",
-                     "gt_060", "gt_110", "gt_115", "gt_120", "gt_130"):
+        for gate in ("gt_030", "gt_050", "gt_060", "gt_110", "gt_115", "gt_120", "gt_130"):
             gate_id = f"lg:gates/{gate}"
             deps = grammar.gate_dependencies(gate_id)
             assert deps["gate_id"] == gate_id
@@ -465,6 +479,7 @@ class TestGateDependencies:
 # ===========================================================================
 # Integrity validation
 # ===========================================================================
+
 
 class TestValidateIntegrity:
     def test_valid_model_returns_ok_true(self, grammar):
@@ -506,12 +521,14 @@ class TestValidateIntegrity:
 # LanternGrammarLoadError contract
 # ===========================================================================
 
+
 class TestLanternGrammarLoadError:
     def test_is_exception_subclass(self):
         assert issubclass(LanternGrammarLoadError, Exception)
 
     def test_importable_directly(self):
         from lantern_grammar import LanternGrammarLoadError as E
+
         assert E is LanternGrammarLoadError
 
     def test_can_be_raised_and_caught(self):
@@ -526,6 +543,7 @@ class TestLanternGrammarLoadError:
 # ===========================================================================
 # Thread-safety guarantee
 # ===========================================================================
+
 
 class TestThreadSafety:
     def test_concurrent_reads_are_safe(self, grammar):
@@ -543,8 +561,11 @@ class TestThreadSafety:
                 errors.append(str(exc))
 
         gates = [
-            "lg:gates/gt_030", "lg:gates/gt_110", "lg:gates/gt_115",
-            "lg:gates/gt_120", "lg:gates/gt_130",
+            "lg:gates/gt_030",
+            "lg:gates/gt_110",
+            "lg:gates/gt_115",
+            "lg:gates/gt_120",
+            "lg:gates/gt_130",
         ]
         threads = [threading.Thread(target=worker, args=(g,)) for g in gates * 4]
         for t in threads:
@@ -559,6 +580,7 @@ class TestThreadSafety:
 # ===========================================================================
 # repr
 # ===========================================================================
+
 
 class TestRepr:
     def test_repr_contains_model_id(self, grammar):

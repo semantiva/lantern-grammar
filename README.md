@@ -149,5 +149,10 @@ Experimental helpers, if any, live under `lantern_grammar.experimental` and
 carry no compatibility guarantee until explicitly promoted into this
 documentation.
 
-See governance note `DN-LGR-PROP-003` for the full versioning rules and
-`DN-LGR-PROP-004` for the method-level API contract.
+## License
+
+Lantern Grammar is released under the **Apache License 2.0**.
+
+See [LICENSE](LICENSE) for the full license text.
+
+**Copyright 2025 Lantern Authors**
