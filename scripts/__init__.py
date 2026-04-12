@@ -53,4 +53,5 @@ HEADER_PATTERN = re.compile(
 )
 
 INCLUDE_DIRS: Iterable[str] = ["src/lantern_grammar", "tests", "scripts"]
+INCLUDE_FILES: Iterable[str] = ["setup.py"]
 EXTENSIONS = [".py"]

@@ -18,8 +18,12 @@
 
 import os
 import sys
+from pathlib import Path
 
-from scripts import HEADER_PATTERN, INCLUDE_DIRS, EXTENSIONS
+if __package__ in {None, ""}:
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from scripts import EXTENSIONS, HEADER_PATTERN, INCLUDE_DIRS, INCLUDE_FILES
 
 
 def has_header(filepath: str) -> bool:
@@ -31,6 +35,15 @@ def has_header(filepath: str) -> bool:
 def main() -> None:
     """Check all Python files for license headers."""
     missing_files = []
+
+    for filepath in INCLUDE_FILES:
+        if not os.path.exists(filepath):
+            continue
+        if not has_header(filepath):
+            print(f"❌ Missing header: {filepath}")
+            missing_files.append(filepath)
+        else:
+            print(f"✅ Header found: {filepath}")
 
     for dirpath in INCLUDE_DIRS:
         if not os.path.exists(dirpath):

@@ -18,11 +18,27 @@ repos:
     rev: v1.14.1
     hooks:
       - id: mypy
-        additional_dependencies: []
+        additional_dependencies:
+          - tomli==2.0.1
         args: [--ignore-missing-imports]
 
   - repo: local
     hooks:
+      - id: check-version-alignment
+        name: Check version alignment
+        entry: python -m scripts.check_version_alignment --require-package-model-equality
+        language: python
+        additional_dependencies:
+          - tomli==2.0.1
+        pass_filenames: false
+      - id: pylint
+        name: pylint
+        entry: pylint --fail-under=7.5 src/lantern_grammar/
+        language: python
+        additional_dependencies:
+          - pylint==3.3.4
+        types: [python]
+        pass_filenames: false
       - id: check-license-headers
         name: Check license headers
         entry: python -m scripts.check_license_headers

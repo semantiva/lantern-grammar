@@ -63,8 +63,8 @@ grammar = Grammar.load()
 # Inspect manifest / version
 manifest = grammar.manifest()
 print(manifest["model_id"])       # "lantern-grammar.model"
-print(manifest["model_version"])  # e.g. "0.2.1"
-print(grammar.package_version())  # Python distribution version
+print(manifest["model_version"])  # "0.3.0"
+print(grammar.package_version())   # "0.3.0" on the first published package release
 
 # Validate before using in CI / tooling
 report = grammar.validate_integrity()
@@ -134,9 +134,67 @@ What stays outside this package:
 ### Running the tests
 
 ```bash
-pip install -e ".[dev]"   # or: pip install pytest
+pip install -e ".[dev]"
 pytest
 ```
+
+### Release readiness
+
+The authoritative Python package version source is `[project].version` in `pyproject.toml`.
+The authoritative semantic model version source remains `model/manifest.json` via `model_version`.
+
+For the first published `lantern-grammar` package release, keep those two values equal.
+The current release baseline is package `0.3.0` and model `0.3.0`.
+After the first package release, any divergence between package and model versions must follow the governance rules in `DN-LGR-PROP-003`.
+
+Run the same checks locally that the main CI release lane enforces:
+
+```bash
+pip install -e ".[dev,release]"
+python scripts/check_version_alignment.py --require-package-model-equality
+pylint --fail-under=7.5 src/lantern_grammar/
+ruff check src/lantern_grammar/ tests/ scripts/ setup.py
+mypy src/lantern_grammar/
+black --check src/lantern_grammar/ tests/ scripts/ setup.py
+python scripts/check_license_headers.py
+coverage run -m pytest --maxfail=1 -q
+coverage report
+python -m build
+python -m twine check dist/*
+
+python -m venv .venv-smoke
+. .venv-smoke/bin/activate
+python -m pip install --upgrade pip
+python -m pip install dist/*.whl
+python scripts/smoke_test_installed_package.py \
+    --expected-package-version "$(python scripts/check_version_alignment.py --print-package-version)" \
+    --expected-model-version "$(python scripts/check_version_alignment.py --print-model-version)"
+python scripts/generate_license_report.py --output artifacts/license-report.json
+deactivate
+python scripts/generate_sbom.py --python .venv-smoke/bin/python --output artifacts/sbom.cyclonedx.json
+```
+
+This release boundary is intentionally stronger than `python -m build` alone:
+the package must build, the installed wheel must be able to load the bundled model, the pinned toolchain must agree locally and in CI, and the release lane must emit SBOM and license-report artifacts.
+
+### Publishing
+
+The publish job consumes the exact `dist/` artifacts already built and verified earlier in CI; it does not rebuild on the publish step.
+
+To release:
+
+```bash
+PACKAGE_VERSION="$(python scripts/check_version_alignment.py --print-package-version)"
+git tag -a "v${PACKAGE_VERSION}" -m "lantern-grammar ${PACKAGE_VERSION}"
+git push origin "v${PACKAGE_VERSION}"
+```
+
+The tagged GitHub Actions run will:
+- re-run lint, typing, tests, build, `twine check`, and clean-environment smoke validation,
+- upload `dist/*.whl`, `dist/*.tar.gz`, `artifacts/sbom.cyclonedx.json`, and `artifacts/license-report.json`, and
+- publish the verified distributions to PyPI via GitHub OIDC trusted publishing.
+
+Downstream consumers, including Lantern Runtime package closeout, should validate against the published `lantern-grammar` package boundary and the smoke path above rather than a sibling source checkout.
 
 ### Compatibility posture
 

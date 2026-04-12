@@ -14,21 +14,42 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Generate a software bill of materials (SBOM) in SPDX JSON format."""
+"""Generate a software bill of materials (SBOM) in CycloneDX JSON format."""
 
+import argparse
+import shutil
 import subprocess
+import sys
 from pathlib import Path
 
 
-def generate_sbom() -> None:
-    """Generate SBOM using cyclonedx-bom."""
-    output = Path("sbom.spdx.json")
-    cmd = ["cyclonedx-bom", "--output-format", "json", "--output-file", str(output)]
+def generate_sbom(output: Path, python_interpreter: Path) -> None:
+    """Generate SBOM for the target Python environment using cyclonedx-py."""
+    output.parent.mkdir(parents=True, exist_ok=True)
+    cyclonedx = shutil.which("cyclonedx-py")
+    if cyclonedx is None:
+        print("❌ cyclonedx-py not found. Install with: pip install cyclonedx-bom")
+        raise FileNotFoundError("cyclonedx-py")
+
+    cmd = [
+        cyclonedx,
+        "environment",
+        "--pyproject",
+        "pyproject.toml",
+        "--mc-type",
+        "library",
+        "--output-reproducible",
+        "--output-format",
+        "JSON",
+        "--outfile",
+        str(output),
+        str(python_interpreter),
+    ]
     try:
         subprocess.run(cmd, check=True)
         print(f"✅ SBOM generated: {output}")
     except FileNotFoundError:
-        print("❌ cyclonedx-bom not found. Install with: pip install cyclonedx-bom")
+        print("❌ cyclonedx-py not found. Install with: pip install cyclonedx-bom")
         raise
     except subprocess.CalledProcessError as e:
         print(f"❌ SBOM generation failed: {e}")
@@ -36,4 +57,8 @@ def generate_sbom() -> None:
 
 
 if __name__ == "__main__":
-    generate_sbom()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", default="artifacts/sbom.cyclonedx.json")
+    parser.add_argument("--python", default=sys.executable, help="Python interpreter or venv to describe")
+    args = parser.parse_args()
+    generate_sbom(Path(args.output), Path(args.python))
