@@ -1,7 +1,7 @@
-# Lifecycle declarations (GSCLD)
+# Lifecycle declarations
 
-Lantern Grammar publishes a JSON Schema for grammar-schema-conformant lifecycle
-declarations (GSCLDs). A GSCLD is a directory bundle declaring, per artifact family:
+Lantern Grammar publishes a JSON Schema for lifecycle declarations. A lifecycle
+declaration is a directory bundle declaring, per artifact family:
 
 - which statuses apply,
 - which status transitions are permitted, and
@@ -11,6 +11,9 @@ The current schema version is **1.0**. Two schemas are published:
 
 - `lantern_grammar/_schemas/gscld-manifest-1.0.schema.json` — validates `manifest.yaml`
 - `lantern_grammar/_schemas/gscld-family-1.0.schema.json` — validates each family file
+
+(The `gscld-` prefix in those filenames is an internal schema identifier; in code and
+prose use `Lifecycle.manifest_schema()` and `Lifecycle.family_schema()` to access them.)
 
 ## Bundle layout
 

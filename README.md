@@ -2,41 +2,71 @@
 
 **The authoritative language of governed development.**
 
-Lantern Grammar defines the authoritative semantics of artifacts, gates, statuses, and relations used across the Lantern governed-workflow surface. It is expressed as an ECT-conforming model artifact set and evolves through structured change control.
+Lantern Grammar defines the authoritative semantics of artifacts, gates, statuses, and
+relations used across the Lantern governed-workflow surface. It is expressed as an
+ECT-conforming model artifact set and evolves through structured change control.
 
 ## What it defines
 
-- **Artifact classes** — the recognized artifact kinds in the workflow (CH, CI, DB, DC, DIP, SPEC, ARCH, TD, Initiative, Issue, Question, EV, DEC)
-- **Gate entities** — the named semantic checkpoints (GT-030 through GT-130) and their input dependencies
-- **Status values** — the lifecycle states artifacts may occupy
-- **Relation types** — `requires_input`, `requires_evidence`, `requires_status`, `decomposes_to`
-- **Vocabulary terms** — canonical definitions for each artifact and status class
+- **Artifact classes** — the recognized artifact kinds in the workflow (CH, CI, DB, DC,
+  DIP, SPEC, ARCH, TD, Initiative, Issue, Question, EV, DEC)
+- **Gate entities** — the named semantic checkpoints (GT-030 through GT-130) and their
+  input, evidence, and status dependencies
+- **Status values** — twelve generic lifecycle states that artifacts may occupy
+- **Relation types** — `requires_input`, `requires_evidence`, `requires_status`,
+  `decomposes_to`
+- **Vocabulary terms** — canonical labels and definitions for each artifact class and
+  status value
+
+## Documentation
+
+| Document | Purpose |
+|---|---|
+| [docs/introduction.md](docs/introduction.md) | Model composition, core concepts, artifact classes, statuses, gates |
+| [docs/gates/GATES.md](docs/gates/GATES.md) | Semantic summary of each gate |
+| [docs/lifecycle.md](docs/lifecycle.md) | Authoring and validating lifecycle-policy bundles |
+| [docs/upgrade-0.3-to-0.4.md](docs/upgrade-0.3-to-0.4.md) | Migration guide from 0.3.0 to 0.4.0 |
+| [CHANGELOG.md](CHANGELOG.md) | Release history |
 
 ## Repository layout
 
 ```
 model/
-  manifest.json       model identity and namespace declaration
-  index.json          flat index of all objects with locators
+  manifest.json           model identity, version, and namespace declaration
+  index.json              flat index of all objects with file locators
   objects/
-    Entity/           entity objects (artifacts, gates, statuses, relation types)
-    Relation/         relation instances encoding the semantic dependency graph
-    Term/             vocabulary term definitions
+    Entity/               entities: artifacts, gates, statuses, relation types, records
+    Relation/             typed directed links encoding the semantic dependency graph
+    Term/                 vocabulary terms with canonical labels
 docs/
-  gates/GATES.md      non-authoritative semantic summary of gate definitions
+  index.md                documentation entry page
+  introduction.md         model composition and core concepts
+  gates/GATES.md          semantic summary of each gate
+  lifecycle.md            lifecycle-policy bundle authoring and validation
+  upgrade-0.3-to-0.4.md   migration guide
+src/
+  lantern_grammar/        Python package
+    _grammar.py           Grammar class (read-only model projection)
+    _lifecycle.py         Lifecycle class (lifecycle bundle loader and validator)
+    _schemas/             bundled JSON Schemas for the lifecycle bundle manifest and family files
+tests/
+  test_grammar.py         Grammar API tests
+  test_lifecycle.py       Lifecycle API tests
+  fixtures/               test fixture bundles
+CHANGELOG.md              release history
 ```
 
 ## Authoritative semantics
 
-The ECT-conforming JSON objects under `model/` are the model truth. `docs/` content is documentation only and is not model truth.
+The ECT-conforming JSON objects under `model/` are the model truth. `docs/` content is
+documentation only and is not model truth.
 
 ---
 
 ## Python package
 
-The `lantern-grammar` Python package exposes the model above through a
-stable, read-only `Grammar` API.  Consumers should use this API rather than
-parsing the `model/` JSON files directly.
+The `lantern-grammar` Python package exposes the model through a stable, read-only API.
+Consumers should use this API rather than parsing the `model/` JSON files directly.
 
 ### Requirements
 
@@ -52,7 +82,7 @@ pip install -e .
 pip install lantern-grammar
 ```
 
-### Basic usage
+### Grammar API — basic usage
 
 ```python
 from lantern_grammar import Grammar, LanternGrammarLoadError
@@ -60,13 +90,13 @@ from lantern_grammar import Grammar, LanternGrammarLoadError
 # Load the model bundled with the installed distribution
 grammar = Grammar.load()
 
-# Inspect manifest / version
+# Inspect manifest and version
 manifest = grammar.manifest()
 print(manifest["model_id"])       # "lantern-grammar.model"
-print(manifest["model_version"])  # "0.3.0"
-print(grammar.package_version())   # "0.3.0" on the first published package release
+print(manifest["model_version"])  # "0.4.0"
+print(grammar.package_version())  # "0.4.0"
 
-# Validate before using in CI / tooling
+# Validate before using in CI or tooling
 report = grammar.validate_integrity()
 if not report["ok"]:
     raise RuntimeError(f"Lantern Grammar invalid: {report['errors']}")
@@ -92,7 +122,7 @@ for r in rels:
 # Term lookup
 term = grammar.get_term("lg:vocab/term_ch")
 if term:
-    print(term["definition"])  # "Canonical term for Change Intent (CH)."
+    print(term["definition"])
 ```
 
 ### Loading from an explicit directory
@@ -111,16 +141,69 @@ except LanternGrammarLoadError as exc:
     print(f"model invalid: {exc}")
 ```
 
+### Lifecycle API — lifecycle bundle loading and validation
+
+The `Lifecycle` class loads and validates lifecycle declaration bundles. A lifecycle bundle
+is a consumer-authored directory that declares, per artifact family, which statuses apply,
+what transitions are permitted, and what inter-artifact status invariants hold.
+
+```python
+from lantern_grammar import Grammar, Lifecycle
+
+grammar = Grammar.load()
+
+# Load a full bundle from a manifest file
+lifecycle = Lifecycle.from_manifest(grammar, "lifecycle-policy/manifest.yaml")
+
+# Two-level validation: per-file JSON Schema + bundle-level referential checks
+result = lifecycle.validate()
+if not result.ok:
+    for issue in result.issues:
+        print(f"{issue.path}: {issue.message}")
+
+# Query declarations
+families    = lifecycle.artifact_families()
+statuses    = lifecycle.statuses_for("lg:artifacts/ch")
+transitions = lifecycle.transitions_for("lg:artifacts/ch")
+
+# Query inter-artifact constraints for a given status
+constraints = lifecycle.state_constraints_for("lg:artifacts/ch", "lg:statuses/addressed")
+for sc in constraints:
+    for tc in sc.traversals:
+        print(f"slot '{tc.slot}' → {tc.related_family_id}")
+        for rule in tc.rules:
+            print(f"  {rule.statuses} cardinality={rule.cardinality}")
+```
+
+For per-file structural validation without a full bundle:
+
+```python
+import yaml
+with open("lifecycle-policy/ch.yaml") as f:
+    data = yaml.safe_load(f)
+lc = Lifecycle.from_family_dict(grammar, data)
+result = lc.validate()  # structural only; no cross-file checks
+```
+
+Two JSON Schemas are accessible for direct integration:
+
+```python
+manifest_schema = Lifecycle.manifest_schema()  # validates manifest.yaml
+family_schema   = Lifecycle.family_schema()    # validates each family file
+```
+
+See [docs/lifecycle.md](docs/lifecycle.md) for the full bundle format specification.
+
 ### Authority boundary
 
-The `Grammar` API is a **read-only projection** over the authoritative
-`model/` artifacts.  It does not invent or reinterpret model meaning.
+The `Grammar` API is a **read-only projection** over the authoritative `model/`
+artifacts. It does not invent or reinterpret model meaning.
 
 What it provides:
 - model entities (artifacts, gates, statuses, relation types, record classes)
 - model relations
 - vocabulary terms
-- manifest / version metadata
+- manifest and version metadata
 - integrity validation
 - gate-dependency queries
 
@@ -140,14 +223,12 @@ pytest
 
 ### Release readiness
 
-The authoritative Python package version source is `[project].version` in `pyproject.toml`.
-The authoritative semantic model version source remains `model/manifest.json` via `model_version`.
+The authoritative Python package version source is `[project].version` in
+`pyproject.toml`. The authoritative semantic model version source is `model_version` in
+`model/manifest.json`. A pre-commit hook enforces that the two values are equal at every
+commit.
 
-For the first published `lantern-grammar` package release, keep those two values equal.
-The current release baseline is package `0.3.0` and model `0.3.0`.
-After the first package release, any divergence between package and model versions must follow the governance rules in `DN-LGR-PROP-003`.
-
-Run the same checks locally that the main CI release lane enforces:
+Run the same checks locally that the CI release lane enforces:
 
 ```bash
 pip install -e ".[dev,release]"
@@ -174,14 +255,7 @@ deactivate
 python scripts/generate_sbom.py --python .venv-smoke/bin/python --output artifacts/sbom.cyclonedx.json
 ```
 
-This release boundary is intentionally stronger than `python -m build` alone:
-the package must build, the installed wheel must be able to load the bundled model, the pinned toolchain must agree locally and in CI, and the release lane must emit SBOM and license-report artifacts.
-
 ### Publishing
-
-The publish job consumes the exact `dist/` artifacts already built and verified earlier in CI; it does not rebuild on the publish step.
-
-To release:
 
 ```bash
 PACKAGE_VERSION="$(python scripts/check_version_alignment.py --print-package-version)"
@@ -189,23 +263,16 @@ git tag -a "v${PACKAGE_VERSION}" -m "lantern-grammar ${PACKAGE_VERSION}"
 git push origin "v${PACKAGE_VERSION}"
 ```
 
-The tagged GitHub Actions run will:
-- re-run lint, typing, tests, build, `twine check`, and clean-environment smoke validation,
-- upload `dist/*.whl`, `dist/*.tar.gz`, `artifacts/sbom.cyclonedx.json`, and `artifacts/license-report.json`, and
-- publish the verified distributions to PyPI via GitHub OIDC trusted publishing.
-
-Downstream consumers, including Lantern Runtime package closeout, should validate against the published `lantern-grammar` package boundary and the smoke path above rather than a sibling source checkout.
+The tagged GitHub Actions run will re-run lint, typing, tests, build, `twine check`, and
+clean-environment smoke validation, then publish verified distributions to PyPI via
+GitHub OIDC trusted publishing.
 
 ### Compatibility posture
 
-The `Grammar` class and the methods documented above constitute the
-**stability-governed public core** (`lantern_grammar` namespace).  Breaking
-changes to this core require a major version increment.  Additive stable-core
-changes may land in minor versions.
-
-Experimental helpers, if any, live under `lantern_grammar.experimental` and
-carry no compatibility guarantee until explicitly promoted into this
-documentation.
+The `Grammar` class, the `Lifecycle` class, and the methods documented above constitute
+the **stability-governed public core** (`lantern_grammar` namespace). Breaking changes to
+this core require a major version increment. Additive stable-core changes may land in
+minor versions.
 
 ## License
 

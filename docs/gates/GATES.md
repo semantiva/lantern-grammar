@@ -1,191 +1,176 @@
-> **OPTIONAL / Non-authoritative documentation — not model truth.**
+> **Non-authoritative documentation — not model truth.**
 >
-> This file is preserved for context only. The authoritative semantic content is in the ECT-conforming Lantern Grammar model
-> objects under `model/`. This document is a semantic summary of gate concepts and
-> their dependencies on artifact classes, record classes, and status values. It is not a
-> workflow/process specification.
+> This file is a semantic summary of the gates defined in the Lantern Grammar model. The
+> authoritative content is the ECT-conforming JSON objects under `model/objects/Entity/`
+> (gate definitions) and `model/objects/Relation/` (gate dependencies). When this document
+> conflicts with the model, the model is correct.
 
-# GATES - Gate Definitions
+# Gate definitions
 
-This document defines gate concepts and their semantic dependencies as captured in Lantern Grammar.
+Lantern Grammar defines seven named gates. Each gate is a semantic checkpoint: a named
+concept declaring what artifact inputs, evidence records, and status conditions must be
+present before the gate is satisfied. Gates carry no process instructions; they name the
+conditions, not the steps.
 
-Gate ID convention: `GT-###`
+Gate IDs follow the convention `GT-###`. The numeric ordering is meaningful: lower-numbered
+gates precede higher-numbered gates in the overall workflow sequence.
 
-## GT-030: Design Input Pack Lock (DIP baseline lock)
-Purpose:
-- Define the concept of establishing a Design Input Pack (DIP) baseline as an upstream anchor for downstream derivation.
+---
 
-Semantic dependencies:
-- Artifact classes referenced:
-  - Design Input Pack (DIP-####)
-- Status values referenced:
-  - Draft
+## GT-030 — Design Input Pack baseline lock
 
-Record classes referenced:
-- Evidence record(s) (EV-###)
-- Decision record(s) (DEC-###)
+**Model ID:** `lg:gates/gt_030`
 
-## GT-035: SPEC Draft Derivation Preflight (from locked DIP)
-Purpose:
-- Define the concept of checking a SPEC draft for derivation linkage to a DIP baseline.
+**Purpose:** Establishes that a Design Input Pack (DIP) has been locked as a stable
+upstream anchor for downstream derivation work.
 
-Semantic dependencies:
-- Artifact classes referenced:
-  - Design Input Pack (DIP-####)
-  - Requirements Specification (SPEC-####)
-- Status values referenced:
-  - Approved (for DIP)
-  - Draft (for SPEC)
+**Artifact inputs required:**
+- Design Input Pack (`lg:artifacts/dip`)
 
-Record classes referenced:
-- Evidence record(s) (EV-###)
-- Decision record(s) (DEC-###)
+**Status conditions:**
+- DIP: `draft`
 
-## GT-036: ARCH Draft Derivation Preflight (from locked DIP)
-Purpose:
-- Define the concept of checking an ARCH draft for derivation linkage to a DIP baseline.
+**Evidence required:**
+- Decision record (`lg:records/dec`)
+- Evidence record (`lg:records/ev`)
 
-Semantic dependencies:
-- Artifact classes referenced:
-  - Design Input Pack (DIP-####)
-  - Architecture Definition (ARCH-####)
-- Status values referenced:
-  - Approved (for DIP)
-  - Draft (for ARCH)
+---
 
-Record classes referenced:
-- Evidence record(s) (EV-###)
-- Decision record(s) (DEC-###)
+## GT-050 — Requirements Specification readiness
 
-## GT-045: DIP/SPEC/ARCH Coherence Preflight
-Purpose:
-- Define the concept of checking semantic coherence between a DIP and its derived SPEC and ARCH.
+**Model ID:** `lg:gates/gt_050`
 
-Semantic dependencies:
-- Artifact classes referenced:
-  - Design Input Pack (DIP-####)
-  - Requirements Specification (SPEC-####)
-  - Architecture Definition (ARCH-####)
-- Status values referenced:
-  - Approved (for DIP)
-  - Draft (for SPEC, ARCH)
+**Purpose:** Establishes that a Requirements Specification (SPEC) is complete and stable
+enough to be baselined as an upstream input. A locked DIP is required as the approved
+upstream anchor for the SPEC being baselined.
 
-Record classes referenced:
-- Evidence record(s) (EV-###)
-- Decision record(s) (DEC-###)
+**Artifact inputs required:**
+- Requirements Specification (`lg:artifacts/spec`)
+- Design Input Pack (`lg:artifacts/dip`)
 
-## GT-050: Architecture Definition Readiness (ARCH baseline readiness)
-Purpose:
-- Define the concept of ARCH baseline readiness as a prerequisite input for downstream change work.
+**Status conditions:**
+- SPEC: `draft`, `approved`
 
-Semantic dependencies:
-- Artifact classes referenced:
-  - Architecture Definition (ARCH-####)
-- Status values referenced:
-  - Draft
-  - Approved
-  - Superseded
+**Evidence required:**
+- Decision record (`lg:records/dec`)
+- Evidence record (`lg:records/ev`)
 
-Record classes referenced:
-- Evidence record(s) (EV-###)
-- Decision record(s) (DEC-###)
+---
 
-## GT-060: Requirements Specification Readiness (SPEC baseline readiness)
-Purpose:
-- Define the concept of SPEC baseline readiness as a prerequisite input for downstream change work.
+## GT-060 — Architecture Definition readiness
 
-Semantic dependencies:
-- Artifact classes referenced:
-  - Requirements Specification (SPEC-####)
-- Status values referenced:
-  - Draft
-  - Approved
-  - Superseded
+**Model ID:** `lg:gates/gt_060`
 
-Record classes referenced:
-- Evidence record(s) (EV-###)
-- Decision record(s) (DEC-###)
+**Purpose:** Establishes that an Architecture Definition (ARCH) is complete and stable
+enough to be baselined as an upstream input. A locked DIP is required as the approved
+upstream anchor for the ARCH being baselined.
 
-## GT-110: Input Kit Readiness (Entry Gate)
-Purpose:
-- Define the concept of CH input-kit sufficiency for proceeding to design selection.
+**Artifact inputs required:**
+- Architecture Definition (`lg:artifacts/arch`)
+- Design Input Pack (`lg:artifacts/dip`)
 
-Semantic dependencies:
-- Artifact classes referenced:
-  - Change Intent (CH-####)
-  - Test Definition (TD-####)
-  - Architecture Definition (ARCH-####)
-  - Requirements Specification (SPEC-####)
-  - (Optional) Issue (IS-####)
-- Status values referenced:
-  - Proposed (for CH)
-  - Ready
-  - Approved (for TD/ARCH/SPEC)
-  - Superseded (for ARCH/SPEC)
-  - Addressed (for dependency CH, if referenced)
+**Status conditions:**
+- ARCH: `draft`, `approved`
 
-Record classes referenced:
-- Evidence record(s) (EV-###)
-- Decision record(s) (DEC-###)
+**Evidence required:**
+- Decision record (`lg:records/dec`)
+- Evidence record (`lg:records/ev`)
 
-## GT-115: Design Baseline Selection (Design Lock Gate)
-Purpose:
-- Define the concept of selecting a single design candidate and approving a design baseline before implementation selection.
+---
 
-Semantic dependencies:
-- Artifact classes referenced:
-  - Change Intent (CH-####)
-  - Test Definition (TD-####)
-  - Design Candidate (DC-####-<uuid>)
-  - Architecture Definition (ARCH-####)
-  - Requirements Specification (SPEC-####)
-- Status values referenced:
-  - Ready (for CH)
-  - Approved (for TD/ARCH/SPEC)
-  - Candidate (for DC)
+## GT-110 — Input Kit Readiness (entry gate)
 
-Record classes referenced:
-- Evidence record(s) (EV-###)
-- Decision record(s) (DEC-###)
+**Model ID:** `lg:gates/gt_110`
 
-## GT-120: Change Increment Selection (Implementation Selection Gate)
-Purpose:
-- Define the concept of selecting a single CI candidate against a locked Change Intent, Design Baseline, and Test Definition set.
+**Purpose:** Establishes that a Change Intent (CH) has sufficient upstream inputs to
+proceed to design selection. All upstream baseline artifacts (ARCH, SPEC, TD) must be in
+an approved state.
 
-Semantic dependencies:
-- Artifact classes referenced:
-  - Change Intent (CH-####)
-  - Design Baseline (DB-####)
-  - Test Definition (TD-####)
-  - Change Increment (CI-####-*)
-- Status values referenced:
-  - Ready (for CH)
-  - Approved (for DB/TD)
-  - Candidate
-  - Selected
-  - Rejected
+**Artifact inputs required:**
+- Change Intent (`lg:artifacts/ch`)
+- Test Definition (`lg:artifacts/td`)
+- Architecture Definition (`lg:artifacts/arch`)
+- Requirements Specification (`lg:artifacts/spec`)
 
-Record classes referenced:
-- Evidence record(s) (EV-###)
-- Decision record(s) (DEC-###)
+**Status conditions:**
+- CH: `proposed`
+- TD, ARCH, SPEC: `approved`
 
-## GT-130: Integration Verification (Exit Gate)
-Purpose:
-- Define the concept of verifying integration for a selected CI against the locked CH, DB, and TD baseline.
+**Evidence required:**
+- Decision record (`lg:records/dec`)
+- Evidence record (`lg:records/ev`)
 
-Semantic dependencies:
-- Artifact classes referenced:
-  - Change Intent (CH-####)
-  - Design Baseline (DB-####)
-  - Test Definition (TD-####)
-  - Change Increment (CI-####-*)
-- Status values referenced:
-  - Ready (for CH)
-  - Approved (for DB/TD)
-  - Selected (for CI)
-  - Verified
-  - Addressed
+---
 
-Record classes referenced:
-- Evidence record(s) (EV-###)
-- Decision record(s) (DEC-###)
+## GT-115 — Design Baseline Selection (design lock gate)
+
+**Model ID:** `lg:gates/gt_115`
+
+**Purpose:** Establishes that a single Design Candidate has been selected and a Design
+Baseline has been approved, locking the design before implementation begins.
+
+**Artifact inputs required:**
+- Change Intent (`lg:artifacts/ch`)
+- Design Candidate (`lg:artifacts/dc`)
+- Test Definition (`lg:artifacts/td`)
+- Architecture Definition (`lg:artifacts/arch`)
+- Requirements Specification (`lg:artifacts/spec`)
+
+**Status conditions:**
+- CH: `ready`
+- DC: `candidate`
+- TD, ARCH, SPEC: `approved`
+
+**Evidence required:**
+- Decision record (`lg:records/dec`)
+- Evidence record (`lg:records/ev`)
+
+---
+
+## GT-120 — Change Increment Selection (implementation selection gate)
+
+**Model ID:** `lg:gates/gt_120`
+
+**Purpose:** Establishes that a single Change Increment (CI) has been selected against a
+locked Change Intent, Design Baseline, and Test Definition set, committing an
+implementation path.
+
+**Artifact inputs required:**
+- Change Intent (`lg:artifacts/ch`)
+- Design Baseline (`lg:artifacts/db`)
+- Test Definition (`lg:artifacts/td`)
+- Change Increment (`lg:artifacts/ci`)
+
+**Status conditions:**
+- CH: `ready`
+- DB, TD: `approved`
+- CI: `candidate`
+
+**Evidence required:**
+- Decision record (`lg:records/dec`)
+- Evidence record (`lg:records/ev`)
+
+---
+
+## GT-130 — Integration Verification (exit gate)
+
+**Model ID:** `lg:gates/gt_130`
+
+**Purpose:** Establishes that a selected Change Increment has passed integration
+verification against the locked CH, Design Baseline, and TD baseline, completing the
+governed change cycle.
+
+**Artifact inputs required:**
+- Change Intent (`lg:artifacts/ch`)
+- Design Baseline (`lg:artifacts/db`)
+- Test Definition (`lg:artifacts/td`)
+- Change Increment (`lg:artifacts/ci`)
+
+**Status conditions:**
+- CH: `ready`
+- DB, TD: `approved`
+- CI: `selected`
+
+**Evidence required:**
+- Decision record (`lg:records/dec`)
+- Evidence record (`lg:records/ev`)
