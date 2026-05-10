@@ -157,10 +157,10 @@
       "short_name": "rel.gt_050.requires_evidence.ev"
     },
     {
-      "id": "lg:rel/gt_050.requires_input.arch",
+      "id": "lg:rel/gt_050.requires_input.spec",
       "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_050.requires_input.arch.json",
-      "short_name": "rel.gt_050.requires_input.arch"
+      "locator": "model/objects/Relation/lg__rel__gt_050.requires_input.spec.json",
+      "short_name": "rel.gt_050.requires_input.spec"
     },
     {
       "id": "lg:rel/gt_050.requires_input.dip",
@@ -199,10 +199,10 @@
       "short_name": "rel.gt_060.requires_input.dip"
     },
     {
-      "id": "lg:rel/gt_060.requires_input.spec",
+      "id": "lg:rel/gt_060.requires_input.arch",
       "kind": "Relation",
-      "locator": "model/objects/Relation/lg__rel__gt_060.requires_input.spec.json",
-      "short_name": "rel.gt_060.requires_input.spec"
+      "locator": "model/objects/Relation/lg__rel__gt_060.requires_input.arch.json",
+      "short_name": "rel.gt_060.requires_input.arch"
     },
     {
       "id": "lg:rel/gt_060.requires_status.approved",

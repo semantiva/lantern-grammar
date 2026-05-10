@@ -654,3 +654,42 @@ class TestGenericStatusVocabulary:
                 assert (
                     phrase not in defn
                 ), f"{status_id} definition contains family-specific phrase {phrase!r}: {defn!r}"
+
+
+# ===========================================================================
+# TP-LGR-011 — SPEC/ARCH gate ordering correction (PROP-006)
+# ===========================================================================
+
+
+class TestGateOrdering:
+    def test_gt_050_is_spec_readiness(self, grammar):
+        e = grammar.get_entity("lg:gates/gt_050")
+        assert "Requirements Specification" in e["definition"]
+        assert "Architecture" not in e["definition"]
+
+    def test_gt_060_is_arch_readiness(self, grammar):
+        e = grammar.get_entity("lg:gates/gt_060")
+        assert "Architecture Definition" in e["definition"]
+        assert "Requirements Specification" not in e["definition"]
+
+    def test_gt_050_requires_spec_input(self, grammar):
+        deps = grammar.gate_dependencies("lg:gates/gt_050")
+        assert "lg:artifacts/spec" in deps["requires_input"]
+        assert "lg:artifacts/arch" not in deps["requires_input"]
+
+    def test_gt_060_requires_arch_input(self, grammar):
+        deps = grammar.gate_dependencies("lg:gates/gt_060")
+        assert "lg:artifacts/arch" in deps["requires_input"]
+        assert "lg:artifacts/spec" not in deps["requires_input"]
+
+    def test_gt_050_relation_ids_has_spec_not_arch(self, grammar):
+        e = grammar.get_entity("lg:gates/gt_050")
+        rids = e["relation_ids"]
+        assert "lg:rel/gt_050.requires_input.spec" in rids
+        assert "lg:rel/gt_050.requires_input.arch" not in rids
+
+    def test_gt_060_relation_ids_has_arch_not_spec(self, grammar):
+        e = grammar.get_entity("lg:gates/gt_060")
+        rids = e["relation_ids"]
+        assert "lg:rel/gt_060.requires_input.arch" in rids
+        assert "lg:rel/gt_060.requires_input.spec" not in rids

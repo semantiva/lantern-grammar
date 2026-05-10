@@ -1,0 +1,10 @@
+{
+  "definition": "GT-060 requires an Architecture Definition (ARCH) as input.",
+  "id": "lg:rel/gt_060.requires_input.arch",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_input",
+  "short_name": "rel.gt_060.requires_input.arch",
+  "source_entity_id": "lg:gates/gt_060",
+  "status": "Released",
+  "target_entity_id": "lg:artifacts/arch"
+}

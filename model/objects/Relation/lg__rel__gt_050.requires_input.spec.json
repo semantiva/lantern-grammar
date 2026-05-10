@@ -1,0 +1,10 @@
+{
+  "definition": "GT-050 requires a Requirements Specification (SPEC) as input.",
+  "id": "lg:rel/gt_050.requires_input.spec",
+  "kind": "Relation",
+  "relation_type_id": "lg:reltypes/requires_input",
+  "short_name": "rel.gt_050.requires_input.spec",
+  "source_entity_id": "lg:gates/gt_050",
+  "status": "Released",
+  "target_entity_id": "lg:artifacts/spec"
+}

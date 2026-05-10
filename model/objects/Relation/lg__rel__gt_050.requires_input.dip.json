@@ -1,5 +1,5 @@
 {
-  "definition": "GT-050 requires a locked Design Input Pack (DIP) as an approved upstream input for the Architecture Definition being baselined.",
+  "definition": "GT-050 requires a locked Design Input Pack (DIP) as an approved upstream input for the Requirements Specification being baselined.",
   "id": "lg:rel/gt_050.requires_input.dip",
   "kind": "Relation",
   "relation_type_id": "lg:reltypes/requires_input",
