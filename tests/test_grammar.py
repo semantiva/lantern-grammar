@@ -590,3 +590,67 @@ class TestRepr:
     def test_repr_contains_model_version(self, grammar):
         r = repr(grammar)
         assert grammar.manifest()["model_version"] in r
+
+
+# ===========================================================================
+# TP-LGR-010 — Generic status vocabulary completeness (PROP-005)
+# ===========================================================================
+
+_GENERIC_STATUS_IDS = frozenset(
+    [
+        "lg:statuses/addressed",
+        "lg:statuses/approved",
+        "lg:statuses/candidate",
+        "lg:statuses/concluded",
+        "lg:statuses/draft",
+        "lg:statuses/in_progress",
+        "lg:statuses/proposed",
+        "lg:statuses/ready",
+        "lg:statuses/rejected",
+        "lg:statuses/selected",
+        "lg:statuses/superseded",
+        "lg:statuses/verified",
+    ]
+)
+
+
+class TestGenericStatusVocabulary:
+    def test_in_progress_entity_exists(self, grammar):
+        e = grammar.get_entity("lg:statuses/in_progress")
+        assert e is not None
+        assert e["kind"] == "Entity"
+
+    def test_concluded_entity_exists(self, grammar):
+        e = grammar.get_entity("lg:statuses/concluded")
+        assert e is not None
+        assert e["kind"] == "Entity"
+
+    def test_no_initiative_suffixed_statuses(self, grammar):
+        statuses = list(grammar.iter_entities(prefix="lg:statuses/"))
+        initiative = [e["id"] for e in statuses if e["id"].endswith("_initiative")]
+        assert initiative == [], f"Found _initiative-suffixed statuses: {initiative}"
+
+    def test_exactly_twelve_generic_statuses(self, grammar):
+        statuses = {e["id"] for e in grammar.iter_entities(prefix="lg:statuses/")}
+        assert statuses == _GENERIC_STATUS_IDS, (
+            f"Extra: {statuses - _GENERIC_STATUS_IDS}, " f"Missing: {_GENERIC_STATUS_IDS - statuses}"
+        )
+
+    def test_per_status_term_completeness(self, grammar):
+        for status_id in _GENERIC_STATUS_IDS:
+            suffix = status_id.split("/", 1)[1]
+            term_id = f"lg:vocab/term_status_{suffix}"
+            term = grammar.get_term(term_id)
+            assert term is not None, f"Missing vocabulary term for {status_id}: {term_id}"
+            assert "denotes_entity_ids" in term
+            assert status_id in term["denotes_entity_ids"]
+
+    def test_definitions_are_family_agnostic(self, grammar):
+        family_specific_phrases = ["Change Intent", "Change Increment"]
+        for status_id in _GENERIC_STATUS_IDS:
+            e = grammar.get_entity(status_id)
+            defn = e.get("definition", "")
+            for phrase in family_specific_phrases:
+                assert (
+                    phrase not in defn
+                ), f"{status_id} definition contains family-specific phrase {phrase!r}: {defn!r}"

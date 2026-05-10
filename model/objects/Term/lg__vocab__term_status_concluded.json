@@ -1,0 +1,12 @@
+{
+  "definition": "Canonical term for Concluded status.",
+  "denotes_entity_ids": [
+    "lg:statuses/concluded"
+  ],
+  "id": "lg:vocab/term_status_concluded",
+  "kind": "Term",
+  "label": "Concluded",
+  "language": "en",
+  "short_name": "vocab.term_status_concluded",
+  "status": "Released"
+}

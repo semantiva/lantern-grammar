@@ -1,5 +1,5 @@
 {
-  "definition": "Addressed: a Change Intent has been addressed by a verified Change Increment.",
+  "definition": "Addressed: an artifact has been addressed by a verified downstream increment.",
   "id": "lg:statuses/addressed",
   "kind": "Entity",
   "short_name": "statuses.addressed",

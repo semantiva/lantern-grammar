@@ -1,0 +1,12 @@
+{
+  "definition": "Canonical term for Candidate status.",
+  "denotes_entity_ids": [
+    "lg:statuses/candidate"
+  ],
+  "id": "lg:vocab/term_status_candidate",
+  "kind": "Term",
+  "label": "Candidate",
+  "language": "en",
+  "short_name": "vocab.term_status_candidate",
+  "status": "Released"
+}

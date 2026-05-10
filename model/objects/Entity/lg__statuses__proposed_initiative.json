@@ -1,7 +1,0 @@
-{
-  "definition": "Proposed: an Initiative has been identified but is not yet approved for active execution planning.",
-  "id": "lg:statuses/proposed_initiative",
-  "kind": "Entity",
-  "short_name": "statuses.proposed_initiative",
-  "status": "Released"
-}

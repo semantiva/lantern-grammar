@@ -1,0 +1,7 @@
+{
+  "definition": "Concluded: a bounded lifecycle object has reached its terminal state — its intended outcome is complete, or the object has been formally closed without further execution.",
+  "id": "lg:statuses/concluded",
+  "kind": "Entity",
+  "short_name": "statuses.concluded",
+  "status": "Released"
+}

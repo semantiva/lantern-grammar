@@ -1,0 +1,7 @@
+{
+  "definition": "In Progress: an artifact is in active execution following governed selection or readiness confirmation, and before a completion or verification gate.",
+  "id": "lg:statuses/in_progress",
+  "kind": "Entity",
+  "short_name": "statuses.in_progress",
+  "status": "Released"
+}

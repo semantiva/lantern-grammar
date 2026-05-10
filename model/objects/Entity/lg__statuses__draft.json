@@ -1,5 +1,5 @@
 {
-  "definition": "Draft: initial working status indicating an artifact is in progress and has not been baselined.",
+  "definition": "Draft: an artifact is being authored; it has not yet been baselined or submitted for governed review.",
   "id": "lg:statuses/draft",
   "kind": "Entity",
   "short_name": "statuses.draft",

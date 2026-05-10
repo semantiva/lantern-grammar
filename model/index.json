@@ -481,10 +481,10 @@
       "short_name": "statuses.candidate"
     },
     {
-      "id": "lg:statuses/concluded_initiative",
+      "id": "lg:statuses/concluded",
       "kind": "Entity",
-      "locator": "model/objects/Entity/lg__statuses__concluded_initiative.json",
-      "short_name": "statuses.concluded_initiative"
+      "locator": "model/objects/Entity/lg__statuses__concluded.json",
+      "short_name": "statuses.concluded"
     },
     {
       "id": "lg:statuses/draft",
@@ -493,16 +493,10 @@
       "short_name": "statuses.draft"
     },
     {
-      "id": "lg:statuses/draft_initiative",
+      "id": "lg:statuses/in_progress",
       "kind": "Entity",
-      "locator": "model/objects/Entity/lg__statuses__draft_initiative.json",
-      "short_name": "statuses.draft_initiative"
-    },
-    {
-      "id": "lg:statuses/in_progress_initiative",
-      "kind": "Entity",
-      "locator": "model/objects/Entity/lg__statuses__in_progress_initiative.json",
-      "short_name": "statuses.in_progress_initiative"
+      "locator": "model/objects/Entity/lg__statuses__in_progress.json",
+      "short_name": "statuses.in_progress"
     },
     {
       "id": "lg:statuses/proposed",
@@ -511,22 +505,10 @@
       "short_name": "statuses.proposed"
     },
     {
-      "id": "lg:statuses/proposed_initiative",
-      "kind": "Entity",
-      "locator": "model/objects/Entity/lg__statuses__proposed_initiative.json",
-      "short_name": "statuses.proposed_initiative"
-    },
-    {
       "id": "lg:statuses/ready",
       "kind": "Entity",
       "locator": "model/objects/Entity/lg__statuses__ready.json",
       "short_name": "statuses.ready"
-    },
-    {
-      "id": "lg:statuses/ready_initiative",
-      "kind": "Entity",
-      "locator": "model/objects/Entity/lg__statuses__ready_initiative.json",
-      "short_name": "statuses.ready_initiative"
     },
     {
       "id": "lg:statuses/rejected",
@@ -643,10 +625,28 @@
       "short_name": "vocab.term_status_approved"
     },
     {
+      "id": "lg:vocab/term_status_candidate",
+      "kind": "Term",
+      "locator": "model/objects/Term/lg__vocab__term_status_candidate.json",
+      "short_name": "vocab.term_status_candidate"
+    },
+    {
+      "id": "lg:vocab/term_status_concluded",
+      "kind": "Term",
+      "locator": "model/objects/Term/lg__vocab__term_status_concluded.json",
+      "short_name": "vocab.term_status_concluded"
+    },
+    {
       "id": "lg:vocab/term_status_draft",
       "kind": "Term",
       "locator": "model/objects/Term/lg__vocab__term_status_draft.json",
       "short_name": "vocab.term_status_draft"
+    },
+    {
+      "id": "lg:vocab/term_status_in_progress",
+      "kind": "Term",
+      "locator": "model/objects/Term/lg__vocab__term_status_in_progress.json",
+      "short_name": "vocab.term_status_in_progress"
     },
     {
       "id": "lg:vocab/term_status_proposed",

@@ -1,5 +1,5 @@
 {
-  "definition": "Ready: a Change Intent has passed the Input Kit Readiness gate and is eligible for governed downstream progression within its declared scope.",
+  "definition": "Ready: an artifact has passed its readiness gate and is eligible for governed downstream progression within its declared scope.",
   "id": "lg:statuses/ready",
   "kind": "Entity",
   "short_name": "statuses.ready",
