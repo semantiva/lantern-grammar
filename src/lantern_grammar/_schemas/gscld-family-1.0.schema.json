@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lantern-grammar.org/schemas/gscld/1.0/family",
+  "title": "GSCLD Family Declaration v1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "statuses", "transitions", "state_constraints"],
+  "properties": {
+    "id": { "$ref": "#/$defs/artifactFamilyId" },
+    "statuses": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label"],
+        "properties": {
+          "id": { "$ref": "#/$defs/statusId" },
+          "label": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "transitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["from", "to"],
+        "properties": {
+          "from": { "$ref": "#/$defs/statusId" },
+          "to":   { "$ref": "#/$defs/statusId" }
+        }
+      }
+    },
+    "state_constraints": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/stateConstraintEntry" }
+    }
+  },
+  "$defs": {
+    "artifactFamilyId": {
+      "type": "string",
+      "pattern": "^lg:artifacts/[a-z][a-z0-9_]*$"
+    },
+    "statusId": {
+      "type": "string",
+      "pattern": "^lg:statuses/[a-z][a-z0-9_]*$"
+    },
+    "stateConstraintEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "rules"],
+      "properties": {
+        "status": { "$ref": "#/$defs/statusId" },
+        "rules": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": { "$ref": "#/$defs/traversalConstraint" }
+        }
+      }
+    },
+    "traversalConstraint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["related_family_id", "constraints"],
+      "properties": {
+        "related_family_id": { "$ref": "#/$defs/artifactFamilyId" },
+        "constraints": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/cardinalityRule" }
+        }
+      }
+    },
+    "cardinalityRule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["statuses", "cardinality"],
+      "properties": {
+        "statuses": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/statusId" }
+        },
+        "cardinality": { "$ref": "#/$defs/cardinality" }
+      }
+    },
+    "cardinality": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["exact"],
+          "properties": { "exact": { "type": "integer", "minimum": 0 } }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["all"],
+          "properties": { "all": { "const": true } }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["none"],
+          "properties": { "none": { "const": true } }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "anyOf": [
+            { "required": ["min"] },
+            { "required": ["max"] }
+          ],
+          "properties": {
+            "min": { "type": "integer", "minimum": 0 },
+            "max": { "type": "integer", "minimum": 0 }
+          }
+        }
+      ]
+    }
+  }
+}

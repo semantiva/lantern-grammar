@@ -17,6 +17,11 @@ classifiers = [
     "Typing :: Typed",
 ]
 
+dependencies = [
+    "jsonschema>=4.0",
+    "pyyaml>=6.0",
+]
+
 [project.optional-dependencies]
 dev = [
     "black==24.1.1",
@@ -26,6 +31,7 @@ dev = [
     "pytest==8.3.4",
     "ruff==0.1.13",
     "tomli==2.0.1",
+    "types-PyYAML",
 ]
 release = [
     "build==1.2.2.post1",
@@ -40,7 +46,7 @@ include-package-data = true
 where = ["src"]
 
 [tool.setuptools.package-data]
-"lantern_grammar" = ["py.typed"]
+"lantern_grammar" = ["py.typed", "_schemas/*.schema.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

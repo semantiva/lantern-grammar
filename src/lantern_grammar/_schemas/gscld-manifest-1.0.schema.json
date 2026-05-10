@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://lantern-grammar.org/schemas/gscld/1.0/manifest",
+  "title": "GSCLD Bundle Manifest v1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "grammar_compatibility", "families"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+(\\.\\d+)?$"
+    },
+    "grammar_compatibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["min_model_version"],
+      "properties": {
+        "min_model_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+\\.\\d+$"
+        }
+      }
+    },
+    "families": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

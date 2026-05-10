@@ -29,5 +29,28 @@ compatibility-governed API contract.
 
 from ._exceptions import LanternGrammarLoadError
 from ._grammar import Grammar
+from ._lifecycle import (
+    Cardinality,
+    CardinalityRule,
+    Lifecycle,
+    StateConstraint,
+    StatusBinding,
+    TraversalConstraint,
+    Transition,
+    ValidationIssue,
+    ValidationResult,
+)
 
-__all__ = ["Grammar", "LanternGrammarLoadError"]
+__all__ = [
+    "Cardinality",
+    "CardinalityRule",
+    "Grammar",
+    "LanternGrammarLoadError",
+    "Lifecycle",
+    "StateConstraint",
+    "StatusBinding",
+    "TraversalConstraint",
+    "Transition",
+    "ValidationIssue",
+    "ValidationResult",
+]

@@ -20,6 +20,7 @@ repos:
       - id: mypy
         additional_dependencies:
           - tomli==2.0.1
+          - types-PyYAML
         args: [--ignore-missing-imports]
 
   - repo: local
