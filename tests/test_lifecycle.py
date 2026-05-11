@@ -23,6 +23,7 @@ import yaml
 from lantern_grammar import (
     Grammar,
     Lifecycle,
+    LanternGrammarLoadError,
     StatusBinding,
     Transition,
 )
@@ -65,8 +66,44 @@ def test_bundle_validates_ok(grammar):
 def test_from_family_dict_structural_ok(grammar, ch_family_dict):
     lc = Lifecycle.from_family_dict(grammar, ch_family_dict)
     result = lc.validate()
-    # No manifest loaded — only structural check; no grammar entity resolution
+    # No manifest — structural + per-family internal checks; cross-bundle checks skipped
     assert result.ok, f"unexpected issues: {result.issues}"
+
+
+def test_from_family_dict_catches_duplicate_status(grammar, ch_family_dict):
+    data = copy.deepcopy(ch_family_dict)
+    data["statuses"].append(data["statuses"][0].copy())
+    lc = Lifecycle.from_family_dict(grammar, data)
+    result = lc.validate()
+    assert not result.ok
+    assert any("duplicate status" in i.message for i in result.issues)
+
+
+def test_from_family_dict_catches_duplicate_transition(grammar, ch_family_dict):
+    data = copy.deepcopy(ch_family_dict)
+    data["transitions"].append(data["transitions"][0].copy())
+    lc = Lifecycle.from_family_dict(grammar, data)
+    result = lc.validate()
+    assert not result.ok
+    assert any("duplicate transition" in i.message for i in result.issues)
+
+
+def test_from_family_dict_catches_min_greater_than_max(grammar, ch_family_dict):
+    data = copy.deepcopy(ch_family_dict)
+    data["state_constraints"][0]["rules"]["related_cis"]["constraints"].append(
+        {"statuses": ["lg:statuses/verified"], "cardinality": {"min": 5, "max": 1}}
+    )
+    lc = Lifecycle.from_family_dict(grammar, data)
+    result = lc.validate()
+    assert not result.ok
+    assert any("min" in i.message and "max" in i.message for i in result.issues)
+
+
+def test_from_manifest_malformed_families_type(grammar, tmp_path):
+    manifest_path = tmp_path / "manifest.yaml"
+    manifest_path.write_text("schema_version: '1.0'\nfamilies: not_a_list\n")
+    with pytest.raises(LanternGrammarLoadError, match="families.*must be a list"):
+        Lifecycle.from_manifest(grammar, manifest_path)
 
 
 def test_validate_unknown_status_in_family(grammar, ch_family_dict):

@@ -40,14 +40,14 @@ if not result.ok:
         print(f"{issue.path}: {issue.message}")
 ```
 
-For per-file structural validation without a full bundle:
+For single-family validation without a full bundle:
 
 ```python
 import yaml
 with open("lifecycle-policy/ch.yaml") as f:
     data = yaml.safe_load(f)
 lc = Lifecycle.from_family_dict(grammar, data)
-result = lc.validate()  # structural only; no cross-file checks
+result = lc.validate()  # structural + per-family checks; no cross-bundle checks
 ```
 
 ## State constraints and slot names

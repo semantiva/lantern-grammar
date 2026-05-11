@@ -134,8 +134,15 @@ class Lifecycle:
         if not isinstance(manifest, dict):
             raise LanternGrammarLoadError(f"Manifest root must be a mapping; got {type(manifest).__name__}")
         base = manifest_path.parent
+        families_list = manifest.get("families", [])
+        if not isinstance(families_list, list):
+            raise LanternGrammarLoadError(f"Manifest 'families' must be a list; got {type(families_list).__name__}")
         families: dict[str, dict[str, Any]] = {}
-        for rel_path in manifest.get("families", []):
+        for rel_path in families_list:
+            if not isinstance(rel_path, str):
+                raise LanternGrammarLoadError(
+                    f"Manifest 'families' entries must be strings; got {type(rel_path).__name__}"
+                )
             family_path = base / rel_path
             with open(family_path, "r", encoding="utf-8") as f:
                 family_data = yaml.safe_load(f)
@@ -147,10 +154,13 @@ class Lifecycle:
 
     @classmethod
     def from_family_dict(cls, grammar: Grammar, data: dict[str, Any]) -> "Lifecycle":
-        """Wrap a single family dict for per-file structural validation.
+        """Wrap a single family dict for single-family validation.
 
-        Cross-file referential checks are not performed; only structural JSON Schema
-        validation runs. Use from_manifest for full bundle validation.
+        Runs JSON Schema structural validation, per-family internal consistency
+        checks (duplicate statuses, duplicate transitions, min > max cardinality),
+        and grammar entity existence checks. Cross-bundle checks — in particular,
+        whether a related_family_id appears in the same bundle — are not performed
+        because no manifest is present. Use from_manifest for full bundle validation.
         """
         family_id = data.get("id", "")
         return cls(grammar, {}, {family_id: data})
@@ -186,10 +196,13 @@ class Lifecycle:
         if issues:
             return ValidationResult(ok=False, issues=tuple(issues))
 
-        # Bundle-level referential validation (only when a full bundle is loaded)
+        # Per-family internal checks run for every family regardless of manifest presence.
+        # (Duplicate detection, min > max, and grammar entity lookups are per-family.)
+        issues.extend(self._validate_bundle_references())
+
+        # Grammar compatibility and cross-bundle checks require a full manifest.
         if self._manifest:
             issues.extend(self._validate_grammar_compatibility())
-            issues.extend(self._validate_bundle_references())
 
         return ValidationResult(ok=not issues, issues=tuple(issues))
 
@@ -313,7 +326,7 @@ class Lifecycle:
                                 message=f"unknown artifact family: {rf_id}",
                             )
                         )
-                    if rf_id not in declared_family_ids:
+                    if self._manifest and rf_id not in declared_family_ids:
                         results.append(
                             ValidationIssue(
                                 path=f"{slot_path}/related_family_id",

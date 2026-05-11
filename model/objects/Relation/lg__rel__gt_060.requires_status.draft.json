@@ -1,5 +1,5 @@
 {
-  "definition": "GT-060 requires the input SPEC to have status Draft.",
+  "definition": "GT-060 requires the input ARCH to have status Draft.",
   "id": "lg:rel/gt_060.requires_status.draft",
   "kind": "Relation",
   "relation_type_id": "lg:reltypes/requires_status",

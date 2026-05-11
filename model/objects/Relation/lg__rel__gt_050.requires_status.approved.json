@@ -1,5 +1,5 @@
 {
-  "definition": "GT-050 requires the input DIP to have status Approved (locked via GT-030) before the Architecture Definition can be baselined.",
+  "definition": "GT-050 requires the input DIP to have status Approved (locked via GT-030) before the Requirements Specification can be baselined.",
   "id": "lg:rel/gt_050.requires_status.approved",
   "kind": "Relation",
   "relation_type_id": "lg:reltypes/requires_status",
