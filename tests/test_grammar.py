@@ -615,6 +615,11 @@ _GENERIC_STATUS_IDS = frozenset(
 
 
 class TestGenericStatusVocabulary:
+    def test_release_metadata_is_041_for_rejected_definition_broadening(self, grammar):
+        assert grammar.manifest()["model_version"] == "0.4.1"
+        pyproject = (Path(__file__).parents[1] / "pyproject.toml").read_text(encoding="utf-8")
+        assert '\nversion = "0.4.1"\n' in pyproject
+
     def test_in_progress_entity_exists(self, grammar):
         e = grammar.get_entity("lg:statuses/in_progress")
         assert e is not None
@@ -654,6 +659,12 @@ class TestGenericStatusVocabulary:
                 assert (
                     phrase not in defn
                 ), f"{status_id} definition contains family-specific phrase {phrase!r}: {defn!r}"
+
+    def test_rejected_definition_is_generic_not_selection_only(self, grammar):
+        e = grammar.get_entity("lg:statuses/rejected")
+        assert e["definition"] == "Rejected: an artifact was considered and not taken forward."
+        assert "candidate artifact" not in e["definition"]
+        assert "selection context" not in e["definition"]
 
 
 # ===========================================================================

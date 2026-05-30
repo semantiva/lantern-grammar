@@ -109,7 +109,7 @@ declaration (see [lifecycle.md](lifecycle.md)).
 | `lg:statuses/approved` | Approved | Passed approval review |
 | `lg:statuses/verified` | Verified | Passed integration verification |
 | `lg:statuses/addressed` | Addressed | Addressed by a verified downstream increment |
-| `lg:statuses/rejected` | Rejected | Evaluated and not selected |
+| `lg:statuses/rejected` | Rejected | Considered and not taken forward |
 | `lg:statuses/superseded` | Superseded | Replaced by a newer version; no longer active |
 | `lg:statuses/concluded` | Concluded | Reached terminal state — intended outcome complete or formally closed |
 

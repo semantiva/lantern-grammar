@@ -6,6 +6,21 @@ Format: `[package version] — model version` | release date
 
 ---
 
+## [0.4.1] — model 0.4.1 | 2026-05-30
+
+### Model changes
+
+#### Broadened `lg:statuses/rejected` definition (PROP-008)
+
+`lg:statuses/rejected` now uses generic wording: an artifact was considered and
+not taken forward. The previous wording was selection-specific and could be read
+as applying only to candidate artifacts that were evaluated and not selected.
+
+No status entity, relation, gate, or schema file is added or removed by this
+change.
+
+---
+
 ## [0.4.0] — model 0.4.0 | 2026-05-10
 
 ### Model changes

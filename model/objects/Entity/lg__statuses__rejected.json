@@ -1,5 +1,5 @@
 {
-  "definition": "Rejected: a candidate artifact was considered but not chosen within a governed comparison or selection context.",
+  "definition": "Rejected: an artifact was considered and not taken forward.",
   "id": "lg:statuses/rejected",
   "kind": "Entity",
   "short_name": "statuses.rejected",

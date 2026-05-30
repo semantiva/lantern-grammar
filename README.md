@@ -93,8 +93,8 @@ grammar = Grammar.load()
 # Inspect manifest and version
 manifest = grammar.manifest()
 print(manifest["model_id"])       # "lantern-grammar.model"
-print(manifest["model_version"])  # "0.4.0"
-print(grammar.package_version())  # "0.4.0"
+print(manifest["model_version"])  # "0.4.1"
+print(grammar.package_version())  # "0.4.1"
 
 # Validate before using in CI or tooling
 report = grammar.validate_integrity()
