@@ -1,0 +1,7 @@
+{
+  "definition": "Deferred: an item is valid but is not scheduled for action at this time.",
+  "id": "lg:statuses/deferred",
+  "kind": "Entity",
+  "short_name": "statuses.deferred",
+  "status": "Released"
+}

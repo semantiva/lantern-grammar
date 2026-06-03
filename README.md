@@ -12,7 +12,8 @@ ECT-conforming model artifact set and evolves through structured change control.
   DIP, SPEC, ARCH, TD, Initiative, Issue, Question, EV, DEC)
 - **Gate entities** — the named semantic checkpoints (GT-030 through GT-130) and their
   input, evidence, and status dependencies
-- **Status values** — twelve generic lifecycle states that artifacts may occupy
+- **Status values** — twelve generic lifecycle states that artifacts may occupy, plus
+  five issue-lifecycle states for the Issue family
 - **Relation types** — `requires_input`, `requires_evidence`, `requires_status`,
   `decomposes_to`
 - **Vocabulary terms** — canonical labels and definitions for each artifact class and
@@ -93,8 +94,8 @@ grammar = Grammar.load()
 # Inspect manifest and version
 manifest = grammar.manifest()
 print(manifest["model_id"])       # "lantern-grammar.model"
-print(manifest["model_version"])  # "0.4.1"
-print(grammar.package_version())  # "0.4.1"
+print(manifest["model_version"])  # "0.5.0"
+print(grammar.package_version())  # "0.5.0"
 
 # Validate before using in CI or tooling
 report = grammar.validate_integrity()

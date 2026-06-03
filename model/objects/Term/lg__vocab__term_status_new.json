@@ -1,0 +1,12 @@
+{
+  "definition": "Canonical term for New status.",
+  "denotes_entity_ids": [
+    "lg:statuses/new"
+  ],
+  "id": "lg:vocab/term_status_new",
+  "kind": "Term",
+  "label": "New",
+  "language": "en",
+  "short_name": "vocab.term_status_new",
+  "status": "Released"
+}

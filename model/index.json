@@ -463,6 +463,12 @@
       "short_name": "reltypes.requires_status"
     },
     {
+      "id": "lg:statuses/accepted",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/lg__statuses__accepted.json",
+      "short_name": "statuses.accepted"
+    },
+    {
       "id": "lg:statuses/addressed",
       "kind": "Entity",
       "locator": "model/objects/Entity/lg__statuses__addressed.json",
@@ -487,6 +493,12 @@
       "short_name": "statuses.concluded"
     },
     {
+      "id": "lg:statuses/deferred",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/lg__statuses__deferred.json",
+      "short_name": "statuses.deferred"
+    },
+    {
       "id": "lg:statuses/draft",
       "kind": "Entity",
       "locator": "model/objects/Entity/lg__statuses__draft.json",
@@ -497,6 +509,18 @@
       "kind": "Entity",
       "locator": "model/objects/Entity/lg__statuses__in_progress.json",
       "short_name": "statuses.in_progress"
+    },
+    {
+      "id": "lg:statuses/needs_info",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/lg__statuses__needs_info.json",
+      "short_name": "statuses.needs_info"
+    },
+    {
+      "id": "lg:statuses/new",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/lg__statuses__new.json",
+      "short_name": "statuses.new"
     },
     {
       "id": "lg:statuses/proposed",
@@ -515,6 +539,12 @@
       "kind": "Entity",
       "locator": "model/objects/Entity/lg__statuses__rejected.json",
       "short_name": "statuses.rejected"
+    },
+    {
+      "id": "lg:statuses/resolved",
+      "kind": "Entity",
+      "locator": "model/objects/Entity/lg__statuses__resolved.json",
+      "short_name": "statuses.resolved"
     },
     {
       "id": "lg:statuses/selected",
@@ -613,6 +643,12 @@
       "short_name": "vocab.term_spec"
     },
     {
+      "id": "lg:vocab/term_status_accepted",
+      "kind": "Term",
+      "locator": "model/objects/Term/lg__vocab__term_status_accepted.json",
+      "short_name": "vocab.term_status_accepted"
+    },
+    {
       "id": "lg:vocab/term_status_addressed",
       "kind": "Term",
       "locator": "model/objects/Term/lg__vocab__term_status_addressed.json",
@@ -637,6 +673,12 @@
       "short_name": "vocab.term_status_concluded"
     },
     {
+      "id": "lg:vocab/term_status_deferred",
+      "kind": "Term",
+      "locator": "model/objects/Term/lg__vocab__term_status_deferred.json",
+      "short_name": "vocab.term_status_deferred"
+    },
+    {
       "id": "lg:vocab/term_status_draft",
       "kind": "Term",
       "locator": "model/objects/Term/lg__vocab__term_status_draft.json",
@@ -647,6 +689,18 @@
       "kind": "Term",
       "locator": "model/objects/Term/lg__vocab__term_status_in_progress.json",
       "short_name": "vocab.term_status_in_progress"
+    },
+    {
+      "id": "lg:vocab/term_status_needs_info",
+      "kind": "Term",
+      "locator": "model/objects/Term/lg__vocab__term_status_needs_info.json",
+      "short_name": "vocab.term_status_needs_info"
+    },
+    {
+      "id": "lg:vocab/term_status_new",
+      "kind": "Term",
+      "locator": "model/objects/Term/lg__vocab__term_status_new.json",
+      "short_name": "vocab.term_status_new"
     },
     {
       "id": "lg:vocab/term_status_proposed",
@@ -665,6 +719,12 @@
       "kind": "Term",
       "locator": "model/objects/Term/lg__vocab__term_status_rejected.json",
       "short_name": "vocab.term_status_rejected"
+    },
+    {
+      "id": "lg:vocab/term_status_resolved",
+      "kind": "Term",
+      "locator": "model/objects/Term/lg__vocab__term_status_resolved.json",
+      "short_name": "vocab.term_status_resolved"
     },
     {
       "id": "lg:vocab/term_status_selected",

@@ -1,0 +1,7 @@
+{
+  "definition": "Accepted: an item has been triaged as valid and accepted for action.",
+  "id": "lg:statuses/accepted",
+  "kind": "Entity",
+  "short_name": "statuses.accepted",
+  "status": "Released"
+}

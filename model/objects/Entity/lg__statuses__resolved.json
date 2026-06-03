@@ -1,0 +1,7 @@
+{
+  "definition": "Resolved: an item has been resolved through linked downstream work and evidence.",
+  "id": "lg:statuses/resolved",
+  "kind": "Entity",
+  "short_name": "statuses.resolved",
+  "status": "Released"
+}

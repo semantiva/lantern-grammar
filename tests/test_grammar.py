@@ -192,6 +192,23 @@ class TestGetEntity:
         s = grammar.get_entity("lg:statuses/proposed")
         assert s is not None
 
+    def test_issue_lifecycle_status_entities_present(self, grammar):
+        # PROP-010: issue-lifecycle statuses completing the lg:artifacts/issue family.
+        for name in ("new", "needs_info", "accepted", "deferred", "resolved"):
+            sid = f"lg:statuses/{name}"
+            e = grammar.get_entity(sid)
+            assert e is not None, f"Missing issue-lifecycle status entity: {sid}"
+            assert e["id"] == sid
+            assert e["kind"] == "Entity"
+            assert e["status"] == "Released"
+
+    def test_issue_lifecycle_status_terms_present(self, grammar):
+        # PROP-010: each status entity has a denoting Term.
+        for name in ("new", "needs_info", "accepted", "deferred", "resolved"):
+            term = grammar.get_term(f"lg:vocab/term_status_{name}")
+            assert term is not None
+            assert f"lg:statuses/{name}" in term["denotes_entity_ids"]
+
     def test_record_entity_accessible(self, grammar):
         r = grammar.get_entity("lg:records/ev")
         assert r is not None
@@ -613,12 +630,26 @@ _GENERIC_STATUS_IDS = frozenset(
     ]
 )
 
+# PROP-010: issue-lifecycle statuses completing the lg:artifacts/issue family.
+# Distinct from the PROP-005 generic vocabulary, which remains exactly twelve.
+_ISSUE_LIFECYCLE_STATUS_IDS = frozenset(
+    [
+        "lg:statuses/new",
+        "lg:statuses/needs_info",
+        "lg:statuses/accepted",
+        "lg:statuses/deferred",
+        "lg:statuses/resolved",
+    ]
+)
+
+_ALL_STATUS_IDS = _GENERIC_STATUS_IDS | _ISSUE_LIFECYCLE_STATUS_IDS
+
 
 class TestGenericStatusVocabulary:
-    def test_release_metadata_is_041_for_rejected_definition_broadening(self, grammar):
-        assert grammar.manifest()["model_version"] == "0.4.1"
+    def test_release_metadata_is_050_for_issue_lifecycle_statuses(self, grammar):
+        assert grammar.manifest()["model_version"] == "0.5.0"
         pyproject = (Path(__file__).parents[1] / "pyproject.toml").read_text(encoding="utf-8")
-        assert '\nversion = "0.4.1"\n' in pyproject
+        assert '\nversion = "0.5.0"\n' in pyproject
 
     def test_in_progress_entity_exists(self, grammar):
         e = grammar.get_entity("lg:statuses/in_progress")
@@ -635,14 +666,21 @@ class TestGenericStatusVocabulary:
         initiative = [e["id"] for e in statuses if e["id"].endswith("_initiative")]
         assert initiative == [], f"Found _initiative-suffixed statuses: {initiative}"
 
-    def test_exactly_twelve_generic_statuses(self, grammar):
+    def test_generic_vocabulary_remains_exactly_twelve(self, grammar):
+        # PROP-005 invariant preserved: the generic vocabulary is exactly twelve.
         statuses = {e["id"] for e in grammar.iter_entities(prefix="lg:statuses/")}
-        assert statuses == _GENERIC_STATUS_IDS, (
-            f"Extra: {statuses - _GENERIC_STATUS_IDS}, " f"Missing: {_GENERIC_STATUS_IDS - statuses}"
+        assert _GENERIC_STATUS_IDS <= statuses
+        assert len(_GENERIC_STATUS_IDS) == 12
+
+    def test_status_vocabulary_membership(self, grammar):
+        # PROP-010: generic twelve plus the five issue-lifecycle statuses; nothing else.
+        statuses = {e["id"] for e in grammar.iter_entities(prefix="lg:statuses/")}
+        assert statuses == _ALL_STATUS_IDS, (
+            f"Extra: {statuses - _ALL_STATUS_IDS}, " f"Missing: {_ALL_STATUS_IDS - statuses}"
         )
 
     def test_per_status_term_completeness(self, grammar):
-        for status_id in _GENERIC_STATUS_IDS:
+        for status_id in _ALL_STATUS_IDS:
             suffix = status_id.split("/", 1)[1]
             term_id = f"lg:vocab/term_status_{suffix}"
             term = grammar.get_term(term_id)

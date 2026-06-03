@@ -1,0 +1,12 @@
+{
+  "definition": "Canonical term for Needs Info status.",
+  "denotes_entity_ids": [
+    "lg:statuses/needs_info"
+  ],
+  "id": "lg:vocab/term_status_needs_info",
+  "kind": "Term",
+  "label": "Needs Info",
+  "language": "en",
+  "short_name": "vocab.term_status_needs_info",
+  "status": "Released"
+}

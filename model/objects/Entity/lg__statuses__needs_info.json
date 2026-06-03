@@ -1,0 +1,7 @@
+{
+  "definition": "Needs Info: progression is blocked pending additional information.",
+  "id": "lg:statuses/needs_info",
+  "kind": "Entity",
+  "short_name": "statuses.needs_info",
+  "status": "Released"
+}

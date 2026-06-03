@@ -1,0 +1,7 @@
+{
+  "definition": "New: an item has been recorded but not yet triaged or progressed.",
+  "id": "lg:statuses/new",
+  "kind": "Entity",
+  "short_name": "statuses.new",
+  "status": "Released"
+}

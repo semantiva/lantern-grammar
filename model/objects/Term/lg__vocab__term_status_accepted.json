@@ -1,0 +1,12 @@
+{
+  "definition": "Canonical term for Accepted status.",
+  "denotes_entity_ids": [
+    "lg:statuses/accepted"
+  ],
+  "id": "lg:vocab/term_status_accepted",
+  "kind": "Term",
+  "label": "Accepted",
+  "language": "en",
+  "short_name": "vocab.term_status_accepted",
+  "status": "Released"
+}

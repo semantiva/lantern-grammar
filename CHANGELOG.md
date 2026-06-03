@@ -6,6 +6,24 @@ Format: `[package version] — model version` | release date
 
 ---
 
+## [0.5.0] — model 0.5.0 | 2026-06-03
+
+### Model changes
+
+#### Issue-lifecycle status vocabulary (PROP-010)
+
+Adds five status entities completing the lifecycle of the `lg:artifacts/issue`
+family the grammar already declares: `lg:statuses/new`, `lg:statuses/needs_info`,
+`lg:statuses/accepted`, `lg:statuses/deferred`, and `lg:statuses/resolved`, each
+with a denoting vocabulary term. `REJECTED` continues to reuse the existing
+`lg:statuses/rejected` entity (broadened in 0.4.1). The generic status vocabulary
+(PROP-005) remains exactly twelve; these five are a distinct issue-lifecycle set.
+
+No status entity is removed or redefined.
+
+
+---
+
 ## [0.4.1] — model 0.4.1 | 2026-05-30
 
 ### Model changes

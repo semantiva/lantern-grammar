@@ -71,8 +71,9 @@ A `Term` is a vocabulary entry that binds a natural-language label and definitio
 or more entity IDs via `denotes_entity_ids`. Terms are stored in `model/objects/Term/`
 and are the canonical source for display labels.
 
-The `lg:vocab/term_status_*` group provides one term per generic status entity, giving
-each a canonical display label (e.g. `lg:vocab/term_status_in_progress` → "In Progress").
+The `lg:vocab/term_status_*` group provides one term per status entity — the twelve
+generic statuses and the five issue-lifecycle statuses — giving each a canonical display
+label (e.g. `lg:vocab/term_status_in_progress` → "In Progress").
 
 ## Artifact classes
 
@@ -94,9 +95,10 @@ The current model defines the following artifact classes:
 
 ## Lifecycle statuses
 
-The current model defines twelve generic lifecycle statuses, applicable to any artifact
-class. Status applicability per artifact class is declared by the consumer in a lifecycle
-declaration (see [lifecycle.md](lifecycle.md)).
+The current model defines twelve **generic** lifecycle statuses, applicable to any
+artifact class, plus five **issue-lifecycle** statuses for the Issue family. Status
+applicability per artifact class is declared by the consumer in a lifecycle declaration
+(see [lifecycle.md](lifecycle.md)).
 
 | ID | Label | Meaning |
 |---|---|---|
@@ -112,6 +114,17 @@ declaration (see [lifecycle.md](lifecycle.md)).
 | `lg:statuses/rejected` | Rejected | Considered and not taken forward |
 | `lg:statuses/superseded` | Superseded | Replaced by a newer version; no longer active |
 | `lg:statuses/concluded` | Concluded | Reached terminal state — intended outcome complete or formally closed |
+
+The five issue-lifecycle statuses complete the `lg:artifacts/issue` family (which also
+reuses the generic `lg:statuses/rejected`):
+
+| ID | Label | Meaning |
+|---|---|---|
+| `lg:statuses/new` | New | Recorded but not yet triaged |
+| `lg:statuses/needs_info` | Needs Info | Triage blocked pending information |
+| `lg:statuses/accepted` | Accepted | Valid issue; to be converted to a Change Intent |
+| `lg:statuses/deferred` | Deferred | Valid but not scheduled now |
+| `lg:statuses/resolved` | Resolved | Resolved via change/increment/evidence linkage |
 
 ## Gates
 
